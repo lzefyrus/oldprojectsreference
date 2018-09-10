@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://Partnersvc.mcafee.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://Partnersvc.mcafee.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://Partnersvc.mcafee.com">
+      <s:element name="ProcessRequestWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessRequestWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessRequestWSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessRequestWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessRequestWS" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRequestWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessRequestWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="postrequestSoap">
+    <wsdl:operation name="ProcessRequestWS">
+      <wsdl:input message="tns:ProcessRequestWSSoapIn" />
+      <wsdl:output message="tns:ProcessRequestWSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="postrequestSoap" type="tns:postrequestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessRequestWS">
+      <soap:operation soapAction="https://Partnersvc.mcafee.com/ProcessRequestWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="postrequestSoap12" type="tns:postrequestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessRequestWS">
+      <soap12:operation soapAction="https://Partnersvc.mcafee.com/ProcessRequestWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="postrequest">
+    <wsdl:port name="postrequestSoap" binding="tns:postrequestSoap">
+      <soap:address location="http://Partnersvc.mcafee.com/webservice/postrequest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="postrequestSoap12" binding="tns:postrequestSoap12">
+      <soap12:address location="http://Partnersvc.mcafee.com/webservice/postrequest.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

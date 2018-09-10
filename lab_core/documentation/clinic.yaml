@@ -1,0 +1,47 @@
+---
+swagger: "2.0"
+info:
+  description: "initial m2m integration "
+  version: "0.1"
+  title: "lab"
+  contact: {}
+host: "m2m.saracara.com.br"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+security:
+- API digest: []
+paths:
+  /result/{examid}:
+    get:
+      parameters: []
+      responses:
+        200:
+          description: "Status 200"
+          schema:
+            $ref: "#/definitions/Examlist"
+    parameters:
+    - name: "examid"
+      in: "path"
+      required: true
+      type: "string"
+securityDefinitions:
+  API digest:
+    type: "apiKey"
+    name: "Authentication"
+    in: "header"
+definitions:
+  Examlist:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id:
+          type: "number"
+        path:
+          type: "string"
+    example: "[{\"id\" : 213312312, \"path\": \"https://adsadssad.com/asdasd.pdf\"\
+      },{\"id\" : 44444, \"path\": \"https://adsadssad.com/231321132.pdf\"}]"

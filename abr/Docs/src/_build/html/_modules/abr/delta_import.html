@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>abr.delta_import &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html#ednpoint">Ednpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html#return">Return</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#not-ported-phone">Not ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#ported-phone">Ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#errors">Errors:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../main.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../abr.html">ABR package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abr.html#module">Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.importer.html">abr.importer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.models.html">abr.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.utils.html">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for abr.delta_import</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">importer</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">configobj</span>
+<span class="kn">import</span> <span class="nn">pysftp</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">configobj</span><span class="o">.</span><span class="n">ConfigObj</span><span class="p">(</span><span class="s">&#39;config.ini&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="downloadDeltas"><a class="viewcode-back" href="../../abr.delta_import.html#abr.delta_import.downloadDeltas">[docs]</a><span class="k">def</span> <span class="nf">downloadDeltas</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    simple file download </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">pysftp</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s">&#39;sftp&#39;</span><span class="p">][</span><span class="s">&#39;host&#39;</span><span class="p">],</span> <span class="n">username</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s">&#39;sftp&#39;</span><span class="p">][</span><span class="s">&#39;user&#39;</span><span class="p">],</span> <span class="n">password</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s">&#39;sftp&#39;</span><span class="p">][</span><span class="s">&#39;pass&#39;</span><span class="p">])</span> <span class="k">as</span> <span class="n">sftp</span><span class="p">:</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;txt&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;TXT&#39;</span><span class="p">),</span> <span class="n">sftp</span><span class="o">.</span><span class="n">listdir</span><span class="p">()))</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">sftp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">files</span>
+
+</div>
+<div class="viewcode-block" id="run"><a class="viewcode-back" href="../../abr.delta_import.html#abr.delta_import.run">[docs]</a><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main runner method</span>
+
+<span class="sd">    :param bool all: process all files in folder or not</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%Y%m</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+                        <span class="n">format</span><span class="o">=</span><span class="s">&#39;[ </span><span class="si">%(levelname)s</span><span class="s"> ] </span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
+                        <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m-</span><span class="si">%d</span><span class="s"> %H:%M&#39;</span><span class="p">,</span>
+                        <span class="n">filename</span><span class="o">=</span><span class="s">&#39;log/abr</span><span class="si">%s</span><span class="s">.txt&#39;</span> <span class="o">%</span> <span class="n">now</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s">&quot;data/delta&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s">&#39;../imported/&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">download</span><span class="p">:</span>
+        <span class="n">process</span> <span class="o">=</span> <span class="n">downloadDeltas</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">all</span> <span class="ow">or</span> <span class="n">download</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">process</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">&quot;*.txt&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">process</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;importing: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">file</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">importer</span><span class="o">.</span><span class="n">FileParseAbr</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s">&#39;../imported/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">now</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">&#39;../imported/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="nb">file</span><span class="p">))</span>
+    <span class="nb">exit</span><span class="p">()</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">&quot;ABR delta importing&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-a&quot;</span><span class="p">,</span> <span class="s">&quot;--all&quot;</span><span class="p">,</span>
+                        <span class="n">dest</span><span class="o">=</span><span class="s">&quot;all&quot;</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                        <span class="n">action</span><span class="o">=</span><span class="s">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">&quot;Run parser for all files in data folder&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-r&quot;</span><span class="p">,</span> <span class="s">&quot;--run_only&quot;</span><span class="p">,</span>
+                        <span class="n">dest</span><span class="o">=</span><span class="s">&quot;run&quot;</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                        <span class="n">action</span><span class="o">=</span><span class="s">&#39;store_false&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">&quot;Dont download new files from sftp server, overrides the -a option&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">run</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">all</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">run</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

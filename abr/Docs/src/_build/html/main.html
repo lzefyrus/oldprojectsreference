@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plataforma de provisionameto - ABR &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="index.html" />
+    <link rel="next" title="ABR package" href="abr.html" />
+    <link rel="prev" title="Plataforma de provisionameto - ABR" href="usage.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#return">Return</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#not-ported-phone">Not ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#ported-phone">Ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#errors">Errors:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="abr.html">ABR package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="abr.html#module">Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.importer.html">abr.importer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.models.html">abr.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.utils.html">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="usage.html" title="Previous Chapter: Plataforma de provisionameto - ABR"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Plataforma de pr...</span>
+    </a>
+  </li>
+  <li>
+    <a href="abr.html" title="Next Chapter: ABR package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ABR package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/main.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="plataforma-de-provisionameto-abr">
+<h1>Plataforma de provisionameto - ABR<a class="headerlink" href="#plataforma-de-provisionameto-abr" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>ABR</strong> is a system that delivers information about brazilian phone
+numbers reggarding operator, state, type and portability status.</p>
+<div class="section" id="technology">
+<h3>Technology<a class="headerlink" href="#technology" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="git-repo">
+<h4>GIT REPO<a class="headerlink" href="#git-repo" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://server11.whitelabel.com.br/portabilidadenumerica/portabilidadenumerica">https://server11.whitelabel.com.br/portabilidadenumerica/portabilidadenumerica</a></p>
+</div>
+<div class="section" id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>SO Windows, OSX or Linux</li>
+<li>Python 3.4+</li>
+<li>PIP</li>
+<li>Internet access for package download</li>
+<li>virtualenv <em>not required, but prior</em></li>
+<li>root access <em>only if port 80 is used</em></li>
+</ul>
+</div>
+<div class="section" id="servers">
+<h4>Servers<a class="headerlink" href="#servers" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Flask app server: <a class="reference external" href="http://flask.pocoo.org/">http://flask.pocoo.org/</a></li>
+<li>Crate.io database: <a class="reference external" href="http://www.crate.io/">http://www.crate.io/</a></li>
+</ul>
+</div>
+<div class="section" id="packages-python-3-4">
+<h4>Packages - Python 3.4<a class="headerlink" href="#packages-python-3-4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>alabaster</li>
+<li>Babel</li>
+<li>beautifulsoup4 - <em>HTML Parser like jQuery</em></li>
+<li>configobj - <em>Configuration file</em></li>
+<li>crate - <em>Database connector</em></li>
+<li>docutils</li>
+<li>ecdsa</li>
+<li>Flask</li>
+<li>Flask-SQLAlchemy</li>
+<li>gnureadline</li>
+<li>itsdangerous</li>
+<li>Jinja2</li>
+<li>MarkupSafe</li>
+<li>netstruct</li>
+<li>paramiko</li>
+<li>pycrypto</li>
+<li>Pygments</li>
+<li>pysftp</li>
+<li>pytz</li>
+<li>requests</li>
+<li>six</li>
+<li>snowballstemmer</li>
+<li>Sphinx - <em>Documentation</em></li>
+<li>sphinx-rtd-theme</li>
+<li>SQLAlchemy - <em>DB ORM</em></li>
+<li>Unidecode</li>
+<li>urllib3</li>
+<li>Werkzeug - <em>Http service for performance</em></li>
+<li>wheel</li>
+<li>gunicorn</li>
+</ul>
+</div>
+</div>
+<div class="section" id="project-structure">
+<h3>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="files">
+<h4>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>abr<ul>
+<li>data - <strong>*import files folder*</strong><ul>
+<li>delta</li>
+<li>full</li>
+</ul>
+</li>
+<li>Docs<ul>
+<li>Interno - <strong>*internal implementation*</strong></li>
+<li>Recebido - <strong>*received files*</strong></li>
+<li>src - <strong>*apidoc source files*</strong></li>
+</ul>
+</li>
+<li>log - <strong>*parser and site log files*</strong></li>
+<li>abr_site_parser.py - <strong>*FLASK REST API main filed*</strong></li>
+<li>config.ini - <strong>*configuration file*</strong></li>
+<li>delta_import.py - <strong>*delta importer with sftp download*</strong></li>
+<li>importer.py - <strong>*general purpose site, file and data parser and
+importer*</strong></li>
+<li>models.py - <strong>*database models classes*</strong></li>
+<li>operator.sql - <strong>*some operators insert script*</strong></li>
+<li>readme.txt - <strong>*readme file*</strong></li>
+<li>requirements.txt - <strong>*pyton dependencies via pip*</strong></li>
+<li>tables.sql - <strong>*table creation sql*</strong></li>
+<li>utils.py - <strong>*general utility file*</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="instalation">
+<h3>Instalation<a class="headerlink" href="#instalation" title="Permalink to this headline">¶</a></h3>
+<p>with virtualenv</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;cd &lt;destination folder&gt;
+
+&gt;vittualenv -p &lt;path of python3&gt; env_abr
+&gt;source env_abr/bin/activate
+
+
+&gt;git clone https://server11.whitelabel.com.br/portabilidadenumerica/portabilidadenumerica.git abr
+
+&gt;cd abr
+&gt;pip install -r requirements.txt
+</pre></div>
+</div>
+<p>Configure the <em>config.ini</em> file with the paths and dadabase information</p>
+<p>for app server run:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;source env_abr/bin/activate
+&gt;gunicorn -w 50 -b 0.0.0.0:8889 abr_site_parser.py:app
+</pre></div>
+</div>
+<p>manual delta import <strong>*this can set as a CRON JOB*</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;source env_abr/bin/activate
+&gt;python delta_import.py -h
+usage: delta_import.py [-h] [-a] [-r]
+
+ABR delta importing
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -a, --all       Run parser for all files in data folder
+  -r, --run_only  Dont download new files from sftp server, overrides the -a
+                  option
+
+EX:
+&gt;python delta_import.py -a (downloads files from server and runs parser for all files in the downloaded folder)
+&gt;python delta_import.py -r (only runs parser for all files in the downloaded folder, no download)
+</pre></div>
+</div>
+<p>import base data and full file <strong>*ensure there is no data on
+database*</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;source env_abr/bin/activate
+&gt;screen
+&gt;python importer.py
+</pre></div>
+</div>
+<p>that script will take a lot of time to run, the progress can be seen on
+the log files</p>
+<blockquote>
+<div>be aware that www.anatel.gov.br will block calls from Amazon
+servers; so the DDD table will need to be populated by hand and the
+<strong>run_all</strong> value must be set to <strong>0</strong> in config file</div></blockquote>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

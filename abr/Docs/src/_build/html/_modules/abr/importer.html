@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>abr.importer &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html#ednpoint">Ednpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html#return">Return</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#not-ported-phone">Not ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#ported-phone">Ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../usage.html#errors">Errors:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../main.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../main.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../main.html#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../abr.html">ABR package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../abr.html#module">Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.importer.html">abr.importer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.models.html">abr.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../abr.utils.html">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for abr.importer</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">models</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">translateImage</span><span class="p">,</span> <span class="n">translateArbOperator</span><span class="p">,</span> <span class="n">checkMobile</span><span class="p">,</span> <span class="n">insertOperators</span><span class="p">,</span> <span class="n">translateOperator</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">unidecode</span>
+
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">configobj</span>
+
+
+<div class="viewcode-block" id="AbrSite"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.AbrSite">[docs]</a><span class="k">class</span> <span class="nc">AbrSite</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main import for DDDs and Teleco default mobile operator numbers for each DDD available</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">DDD</span> <span class="o">=</span> <span class="s">&quot;0 11 12 13 14 15 16 17 18 19 21 22 24 27 28 31 32 33 34 35 37 38 41 42 43 44 45 46 47 48 49 51 53 54 55 61 62 63 64 65 66 67 68 69 71&quot;</span> <span class="o">+</span> \
+          <span class="s">&quot;73 74 75 77 79 81 82 83 84 85 86 87 88 89 91 92 93 94 95 96 97 98 99&quot;</span>
+    <span class="n">DDD</span> <span class="o">=</span> <span class="n">DDD</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">URL_STATES</span> <span class="o">=</span> <span class="s">&quot;http://www.anatel.gov.br/hotsites/CodigosNacionaisLocalidade/TelefoneCelular-CodigosDeArea.htm&quot;</span>
+    <span class="n">URL_OPERATORS</span> <span class="o">=</span> <span class="s">&quot;http://www.teleco.com.br/carrega_numeros_operadora.asp&quot;</span>
+
+<div class="viewcode-block" id="AbrSite.getAreaCodes"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.AbrSite.getAreaCodes">[docs]</a>    <span class="k">def</span> <span class="nf">getAreaCodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_all</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main method for importing</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">run_all</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;Updating the States, operatos and DDD values to DB&#39;</span><span class="p">)</span>
+            <span class="n">states_text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">URL_STATES</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">states_text</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+
+                <span class="nb">exit</span><span class="p">()</span>
+
+            <span class="n">betext</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">states_text</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+            <span class="n">states</span> <span class="o">=</span> <span class="n">betext</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">&#39;escritorios3&#39;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">states</span><span class="p">:</span>
+                <span class="nb">id</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">ddds</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">findChildren</span><span class="p">(</span><span class="s">&#39;strong&#39;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ddds</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="s">&#39;-&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+                            <span class="n">many</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">many</span><span class="p">:</span>
+                                <span class="n">ddd</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Ddd</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span>
+                                    <span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="p">))</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+                                <span class="k">if</span> <span class="ow">not</span> <span class="n">ddd</span><span class="p">:</span>
+                                    <span class="n">ddd</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Ddd</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+                                    <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ddd</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">ddd</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Ddd</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span>
+                                <span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">text</span><span class="p">))</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+                            <span class="k">if</span> <span class="ow">not</span> <span class="n">ddd</span><span class="p">:</span>
+                                <span class="n">ddd</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Ddd</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">text</span><span class="p">),</span> <span class="n">state</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+                                <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ddd</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">area_codes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Ddd</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+        <span class="n">operators</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Operator</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">area</span> <span class="ow">in</span> <span class="n">area_codes</span><span class="p">:</span>
+            <span class="n">content_text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">URL_OPERATORS</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">dd</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">content_text</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">&#39;error retrieving url for ddd </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+            <span class="n">content_operators</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">content_text</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="n">heads</span> <span class="o">=</span> <span class="n">content_operators</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s">&#39;thead tr th img&#39;</span><span class="p">)</span>
+            <span class="n">contents</span> <span class="o">=</span> <span class="n">content_operators</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s">&#39;tbody tr&#39;</span><span class="p">)</span>
+
+            <span class="n">findex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+            <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">heads</span><span class="p">:</span>
+                <span class="n">findex</span> <span class="o">=</span> <span class="n">findex</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;index: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">findex</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">&#39;src&#39;</span><span class="p">])</span>
+                <span class="n">operator</span> <span class="o">=</span> <span class="n">translateImage</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">&#39;src&#39;</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">operator</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">tb</span> <span class="ow">in</span> <span class="n">contents</span><span class="p">:</span>
+                        <span class="n">td</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s">&#39;td&#39;</span><span class="p">)[</span><span class="n">findex</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)</span>
+                        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">td</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">td</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">td</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+                            <span class="n">start</span> <span class="o">=</span> <span class="n">end</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">td</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                                <span class="n">end</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                            <span class="n">cnl</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Cnl</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                             <span class="n">uf</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">state</span><span class="p">,</span>
+                                             <span class="n">cnl</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">cnl_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">place</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">province</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">tarifation_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">prefix</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                             <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                             <span class="n">operator_id</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                             <span class="n">initial_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">start</span><span class="p">),</span>
+                                             <span class="n">final_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">end</span><span class="p">),</span>
+                                             <span class="n">cnl_local_area_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                             <span class="n">is_mobile</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                             <span class="n">ddd</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                             <span class="n">created_at</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+                            <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cnl</span><span class="p">)</span>
+                            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                               <span class="n">uf</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">state</span><span class="p">,</span>
+                                               <span class="n">cnl</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">cnl_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">place</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">province</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">tarifation_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">prefix</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                               <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                               <span class="n">operator_id</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                               <span class="n">initial_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">start</span><span class="p">),</span>
+                                               <span class="n">final_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">end</span><span class="p">),</span>
+                                               <span class="n">cnl_local_area_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                               <span class="n">is_mobile</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                               <span class="n">ddd</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                               <span class="n">created_at</span><span class="o">=</span><span class="bp">None</span><span class="p">))</span>
+                    <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+</div></div>
+<div class="viewcode-block" id="Record"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.Record">[docs]</a><span class="k">class</span> <span class="nc">Record</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    simple mock object </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+</div>
+<div class="viewcode-block" id="FileParseAbr"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseAbr">[docs]</a><span class="k">class</span> <span class="nc">FileParseAbr</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parsers the file and adds to the current phone data deltas or full file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets the data and open the file for parsing</span>
+
+<span class="sd">        :param str file: file path to be processed</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;Starting fileparse&#39;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">number_of_lines</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bufcount</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> has </span><span class="si">%s</span><span class="s"> lines&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">number_of_lines</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&#39;UTF-8&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lazy</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">readLines</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;File Error: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+            <span class="nb">exit</span><span class="p">()</span>
+
+    <span class="c"># functions for converting input fields to usable data</span>
+
+<div class="viewcode-block" id="FileParseAbr.bufcount"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseAbr.bufcount">[docs]</a>    <span class="k">def</span> <span class="nf">bufcount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        open the file 1M at a time</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">buf_size</span> <span class="o">=</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span>
+        <span class="n">read_f</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span>
+        <span class="n">buf</span> <span class="o">=</span> <span class="n">read_f</span><span class="p">(</span><span class="n">buf_size</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">buf</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">+=</span> <span class="n">buf</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+            <span class="n">buf</span> <span class="o">=</span> <span class="n">read_f</span><span class="p">(</span><span class="n">buf_size</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">lines</span>
+</div>
+<div class="viewcode-block" id="FileParseAbr.readLines"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseAbr.readLines">[docs]</a>    <span class="k">def</span> <span class="nf">readLines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        line reader and spliter for csv file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">sline</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;;&#39;</span><span class="p">)</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sline</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">date_mark</span> <span class="o">=</span> <span class="n">sline</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Header</span><span class="p">(</span><span class="n">generated</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parseDate</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                                            <span class="n">number_of_items</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+                <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;Fatal error, no header found&#39;</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="c"># self.processFile(line, number)</span>
+
+    <span class="c"># def processFile(self, line, number):</span>
+        <span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">sline</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;;&#39;</span><span class="p">)</span>
+
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">sline</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">sline</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;0&#39;</span><span class="p">:</span>
+
+                    <span class="n">update</span> <span class="o">=</span> <span class="bp">True</span>
+
+                    <span class="n">phone</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Phone</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">phone</span><span class="p">:</span>
+                        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;phone not found: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+                        <span class="n">phone</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Phone</span><span class="p">()</span>
+                        <span class="n">update</span> <span class="o">=</span> <span class="bp">False</span>
+                        <span class="n">phone</span><span class="o">.</span><span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+                        <span class="n">phone</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+                    <span class="bp">self</span><span class="o">.</span><span class="n">lazy</span><span class="p">,</span> <span class="n">oop</span> <span class="o">=</span> <span class="n">translateArbOperator</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lazy</span><span class="p">,</span> <span class="n">sline</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;Operator id: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">oop</span><span class="p">))</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">operator</span> <span class="o">=</span> <span class="n">oop</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">portability_id</span> <span class="o">=</span> <span class="n">sline</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">portability_type</span> <span class="o">=</span> <span class="n">sline</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="n">sline</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">new_spid</span> <span class="o">=</span> <span class="n">sline</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">eot</span> <span class="o">=</span> <span class="n">sline</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+                    <span class="c"># phone.is_mobile = checkMobile(sline[2])</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">is_mobile</span> <span class="o">=</span> <span class="bp">False</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">activation_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parseDate</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parseDate</span><span class="p">(</span><span class="n">sline</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span>
+                    <span class="n">phone</span><span class="o">.</span><span class="n">updated_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">update</span><span class="p">:</span>
+                        <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
+
+                    <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;Record error line: </span><span class="si">%s</span><span class="se">\n</span><span class="s"> </span><span class="si">%s</span><span class="s"> &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
+                <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+</div>
+<div class="viewcode-block" id="FileParseAbr.parseDate"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseAbr.parseDate">[docs]</a>    <span class="k">def</span> <span class="nf">parseDate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dateStr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        parses the date from file</span>
+
+<span class="sd">        :param str dateStr: umparsed date</span>
+<span class="sd">        :return: datetime obj</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dateStr</span><span class="p">[:</span><span class="mi">14</span><span class="p">],</span> <span class="s">&#39;%Y%m</span><span class="si">%d</span><span class="s">%H%M%S&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+</div></div>
+<div class="viewcode-block" id="FileParseCnl"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseCnl">[docs]</a><span class="k">class</span> <span class="nc">FileParseCnl</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parse CNL information by operator</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">file</span><span class="p">,</span> <span class="n">is_delta</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">is_mobile</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            :param str file: path of the file to be parsed</span>
+<span class="sd">            :param bool is_delta: type of file</span>
+<span class="sd">            :param bool is_mobile: sets the parser for CNL Mobile file model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;Starting fileparse cnl&#39;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&#39;cp1252&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_delta</span> <span class="o">=</span> <span class="n">is_delta</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_mobile</span><span class="p">:</span>
+                <span class="n">models</span><span class="o">.</span><span class="n">Cnl</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_mobile</span> <span class="o">=</span> <span class="n">is_mobile</span>
+
+            <span class="c"># functions for converting input fields to usable data</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cnv_date_dmy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+                <span class="n">s</span><span class="p">,</span> <span class="s">&quot;</span><span class="si">%d</span><span class="s">%m%Y&quot;</span><span class="p">)</span>  <span class="c"># ddmmyyyy</span>
+
+            <span class="c"># field specs (field name, start pos (1-relative), len, converter</span>
+            <span class="c"># func)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_mobile</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="p">(</span><span class="s">&#39;uf&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;scnl&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;ccnl&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;place&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;city&#39;</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;codtax&#39;</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;prefix&#39;</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;operator&#39;</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;start&#39;</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;end&#39;</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="c"># (&#39;lat&#39;, 161, 8, self.cnv_int),</span>
+                    <span class="c"># (&#39;hem&#39;, 169, 5, self.cnv_text),</span>
+                    <span class="c"># (&#39;log&#39;, 173, 8, self.cnv_int),</span>
+                    <span class="c"># (&#39;loccnl&#39;, 182, 4, self.cnv_text),</span>
+                <span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="p">(</span><span class="s">&#39;codtax&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;prefix&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;operator&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_text</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;start&#39;</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s">&#39;end&#39;</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnv_int</span><span class="p">),</span>
+                <span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">operators</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;File Not Found: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileParseCnl.readLines"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseCnl.readLines">[docs]</a>    <span class="k">def</span> <span class="nf">readLines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return:yelded line</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">line</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_for_read</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="FileParseCnl.processFile"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseCnl.processFile">[docs]</a>    <span class="k">def</span> <span class="nf">processFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        makes the parse and adds the data on the database</span>
+
+<span class="sd">        :param str line: yelded line</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># self.fieldspecs.sort(key=lambda x: x[1])  # just in case</span>
+
+        <span class="c"># build the format for struct.unpack</span>
+        <span class="n">unpack_len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">unpack_fmt</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">fieldspec</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">fieldspec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">fieldspec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="o">&gt;</span> <span class="n">unpack_len</span><span class="p">:</span>
+                <span class="n">unpack_fmt</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start</span> <span class="o">-</span> <span class="n">unpack_len</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;x&quot;</span>
+            <span class="n">unpack_fmt</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;s&quot;</span>
+            <span class="n">unpack_len</span> <span class="o">=</span> <span class="n">end</span>
+        <span class="n">field_indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span><span class="p">))</span>
+        <span class="n">unpacker</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">Struct</span><span class="p">(</span><span class="n">unpack_fmt</span><span class="p">)</span><span class="o">.</span><span class="n">unpack_from</span>
+
+        <span class="c"># The guts of this loop would of course be hidden away in a function/method</span>
+        <span class="c"># and could be made less ugly</span>
+        <span class="n">ll</span> <span class="o">=</span> <span class="n">unidecode</span><span class="o">.</span><span class="n">unidecode</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39; &#39;</span>
+        <span class="n">raw_fields</span> <span class="o">=</span> <span class="n">unpacker</span><span class="p">(</span><span class="n">ll</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;UTF-8&#39;</span><span class="p">))</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Record</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">field_indices</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span>
+                    <span class="n">r</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">fieldspecs</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">3</span><span class="p">](</span><span class="n">raw_fields</span><span class="p">[</span><span class="n">x</span><span class="p">]))</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">operators</span><span class="p">,</span> <span class="n">operator</span> <span class="o">=</span> <span class="n">translateOperator</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">operators</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">operator</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_mobile</span><span class="p">:</span>
+                <span class="n">cnl</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Cnl</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                 <span class="n">uf</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">cnl</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">cnl_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">place</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">province</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">tarifation_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">prefix</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">,</span>
+                                 <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                 <span class="n">operator_id</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                 <span class="n">initial_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span>
+                                     <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="s">&quot;{0:04d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">start</span><span class="p">)))),</span>
+                                 <span class="n">final_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span>
+                                     <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="s">&quot;{0:04d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">end</span><span class="p">)))),</span>
+                                 <span class="n">cnl_local_area_cod</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+                                 <span class="n">is_mobile</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                 <span class="n">ddd</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cnl</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Cnl</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                 <span class="n">uf</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">uf</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+                                 <span class="n">cnl</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">ccnl</span><span class="p">,</span>
+                                 <span class="n">cnl_cod</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">scnl</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+                                 <span class="n">place</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">place</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+                                 <span class="n">province</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+                                 <span class="n">tarifation_cod</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">,</span>
+                                 <span class="n">prefix</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">,</span>
+                                 <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                 <span class="n">operator_id</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                                 <span class="n">initial_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span>
+                                     <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="s">&quot;{0:04d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">start</span><span class="p">)))),</span>
+                                 <span class="n">final_phone</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span>
+                                     <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">prefix</span><span class="p">,</span> <span class="s">&quot;{0:04d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">end</span><span class="p">)))),</span>
+                                 <span class="n">cnl_local_area_cod</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">,</span>
+                                 <span class="n">is_mobile</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                 <span class="n">ddd</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">codtax</span><span class="p">))</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cnl</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="c"># models.db.session.commit()</span>
+</div>
+<div class="viewcode-block" id="FileParseCnl.run"><a class="viewcode-back" href="../../abr.importer.html#abr.importer.FileParseCnl.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        simple run script</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readLines</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">processFile</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">models</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</div></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%Y%m</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+                        <span class="n">format</span><span class="o">=</span><span class="s">&#39;[ </span><span class="si">%(levelname)s</span><span class="s"> ] </span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
+                        <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m-</span><span class="si">%d</span><span class="s"> %H:%M&#39;</span><span class="p">,</span>
+                        <span class="n">filename</span><span class="o">=</span><span class="s">&#39;log/abr</span><span class="si">%s</span><span class="s">.txt&#39;</span> <span class="o">%</span> <span class="n">now</span><span class="p">)</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">configobj</span><span class="o">.</span><span class="n">ConfigObj</span><span class="p">(</span><span class="s">&#39;config.ini&#39;</span><span class="p">)</span>
+
+    <span class="c"># FileParseCnl(config[&#39;cnl&#39;][&#39;path&#39;])</span>
+    <span class="n">FileParseCnl</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s">&#39;cnl&#39;</span><span class="p">][</span><span class="s">&#39;pathmobile&#39;</span><span class="p">],</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="c"># AbrSite().getAreaCodes(run_all=int(config[&#39;extra&#39;][&#39;run_all&#39;]))</span>
+    <span class="c"># insertOperators()</span>
+    <span class="c"># FileParseAbr(config[&#39;abr&#39;][&#39;delta_path&#39;])</span>
+    <span class="c"># FileParseAbr(config[&#39;abr&#39;][&#39;full_path&#39;])</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

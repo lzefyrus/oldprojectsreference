@@ -1,0 +1,16 @@
+Hi Marcus, Nancy,
+
+Please be informed that the commercial account for QBE was created and below is the combination of ProductId & LicenceCount:
+ProductId (KSS Code)	License Count
+KISMD	1
+
+
+·              URL to send/receive commands: https://america.kss.kaspersky-labs.com/soap/upi
+·              URL for statistic portal: https://kss-info.kaspersky.com/Account/LogOn
+
+Please find attached also the credentials for both portals.
+
+The recommended format for QBE SubscriberID is:
+FSVASQBEKISMD100000000
+
+Please feel free to ask me questions if any.

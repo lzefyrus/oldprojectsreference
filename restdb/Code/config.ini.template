@@ -1,0 +1,146 @@
+# Configuration data to use on reststore and oauth provider server
+
+#unique value data
+
+[tornado]
+    port = 8889
+    sockets = 50
+    type = 'production'
+    loglevel = 10
+
+[redis]
+    host = '10.170.40.10'
+    port = 6379
+    db = 10
+    pass = None
+
+[provisioner]
+    [[production]]
+        [[[fsecure]]]
+            host = 'http://lbi-provisionador.aws.whitelabel.com.br:8889/v2/fsecure/vivo/name'
+        [[[funambol]]]
+            host = 'http://provisionador-homol.whitelabel.com.br:8889/v2/funambol/vivo/provisioning/'
+            clients = ['01503faab9654fe49aaed87a2c15d26ee', '01503faab9654fe49aaed87a2c15d26e']
+    [[homol]]
+        [[[fsecure]]]
+            host = 'http://provisionador-homol.whitelabel.com.br:8889/v2/fsecure/vivo/name'
+        [[[funambol]]]
+            host = 'http://provisionador-homol.whitelabel.com.br:8889/v2/funambol/vivo/provisioning/'
+            clients = ['01503faab9654fe49aaed87a2c15d26ee', '01503faab9654fe49aaed87a2c15d26e']
+
+[databases]
+    [[redis]]
+        #resis server
+        host = '10.170.40.10'
+        port = 6379
+        db = 10
+        pass = None
+
+    [[production]]
+
+        [[[vivo]]]
+        host = 'master-db.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_vivo'
+
+        [[[gvt]]]
+        host = 'master-db.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_gvt'
+
+        [[[algar]]]
+        host = 'master-db.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_ctbc'
+
+        [[[tim]]]
+        host = 'master-db.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_tim'
+
+        [[[nextel]]]
+        host = 'master-db.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_nextel'
+
+        [[[oi]]]
+        host = 'oi-prod.fsvas.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'oi_prod'
+
+        [[[movistar]]]
+        host = 'home-movistar.cxxtosrctcoa.sa-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'db_movistar'
+
+        [[[hero]]]
+        host = 'api-hero.clkadcgt8mnt.sa-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = 'rC4tJf6S9Dri6FR4ITcx'
+        db_name = 'base_hero'
+
+
+
+    [[homol]]
+
+        [[[vivo]]]
+        host = 'vivo-homol-virginia.cegp3ffftjdi.us-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = '1eMbBqLu2KxPL08AzIHdkPsXSmn0ZYBA'
+        db_name = 'homol_base_vivo'
+
+
+        [[[gvt]]]
+        host = 'mysql-homol-dht.fsvas.com'
+        user = 'restdb'
+        pass = 'Lz1PVysKc8dLbrUbOuiQmH6o25SJwsj7'
+        db_name = 'base_gvt'
+
+
+        [[[tasa]]]
+        host = 'db-tasa-homol.c0wqbjh2t9ai.sa-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = '71eNxzSYuFDIJLUjFbalYdXP6mcnAIwk'
+        db_name = 'db_tasa_homol'
+
+
+        [[[hero]]]
+        host = 'hero-homol.clkadcgt8mnt.sa-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = 'vwQOixgtmcaCjdFr12jueGXoN8W9VLQ9'
+        db_name = 'db_hero_homol'
+
+
+        [[[algar]]]
+        host = 'mysql-homol-dht.fsvas.com'
+        user = 'restdb'
+        pass = 'Lz1PVysKc8dLbrUbOuiQmH6o25SJwsj7'
+        db_name = 'base_ctbc'
+
+
+        [[[tim]]]
+        host = 'mysql-homol-dht.fsvas.com'
+        user = 'restdb'
+        pass = 'Lz1PVysKc8dLbrUbOuiQmH6o25SJwsj7'
+        db_name = 'base_tim'
+
+
+        [[[nextel]]]
+        host = 'mysql-homol-dht.fsvas.com'
+        user = 'restdb'
+        pass = 'Lz1PVysKc8dLbrUbOuiQmH6o25SJwsj7'
+        db_name = 'base_nextel'
+
+
+        [[[oi]]]
+        host = 'homol.cq10hgg58lmz.sa-east-1.rds.amazonaws.com'
+        user = 'restdb'
+        pass = '9llfm0jE6oULkJyukS0h6NyZaO8myT43'
+        db_name = 'oi_homol'

@@ -1,0 +1,367 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://goodies.pixabay.com/jquery/auto-complete/jquery.auto-complete.css">
+    <link rel="stylesheet" href="https://assets.zendesk.com/apps/sdk-assets/css/2/zendesk_garden.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.16/jquery.datetimepicker.min.css">
+    <link rel="stylesheet"
+          href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <title>Concierge Update</title>
+    <style>
+        .bootstrap-tagsinput input {
+            display: none;
+        }
+
+        .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front li:nth-of-type(odd) {
+            background-color: #dddddd;
+        }
+
+        .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front li:nth-of-type(even) {
+            background-color: #ffffff;
+        }
+
+        .col-sm input,
+        .alert{
+            width: 100%;
+        }
+
+        .bootstrap-tagsinput{
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .minusone {
+            color: #dc3545;
+            display: block;
+            float: right;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container" id="main">
+
+    <form id="zenform">
+        <input type="hidden" value="{{ticket}}" name="ticket" id="ticket">
+        <h2 style="margin-bottom: 10px; text-align: center">Agendamento de exames por laboratório</h2>
+        <div class="rowItem">
+            <div class="row" style="margin-top: 5px">
+                <div class="alert alert-light" role="alert">Pacote de agendamento</div>
+            </div>
+            <div class="row" class="border-1 rounded border-secondary">
+                <div class="col-sm">
+                    <input id="laboratory1" class="laboratories field" placeholder="Laboratório" onkeypress="return event.keyCode != 13;" />
+                    <input type="hidden" id="laboratory1_id" name="laboratory1_id"/>
+                </div>
+                <div class="col-sm">
+                    <input type="text" class="datetime field" name="date1" onkeypress="return event.keyCode != 13;"/>
+                </div>
+                <div class="col-sm">
+                    <input type="text" class="form-control exams field" id="exams1" value=""
+                           placeholder="Exames" onkeypress="return event.keyCode != 13;" />
+                    <input type="text" readonly="readonly" id="exams1_id"
+                           name="exams1_id" class="tagsinput" value=""/>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="plusdiv">
+            <div class="col-sm">
+                <a class="btn btn-primary" href="#" role="button" id="plusone">
+                    +
+                </a>
+            </div>
+        </div>
+        <div class="row" style="text-align: center; padding: 10px">
+            <input class="btn btn-warning btn-lg" type="submit" value="Enviar" style="margin: 50% 50%"/>
+        </div>
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.90/jsrender.min.js"></script>
+
+<script src="https://goodies.pixabay.com/jquery/auto-complete/jquery.auto-complete.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script src="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.16/jquery.datetimepicker.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script id="mtemplate" type="text/x-jsrender">
+<div class="rowItem">
+    <div class="row" style="margin-top: 5px">
+        <div class="alert alert-light" role="alert">Pacote de agendamento<a class="minusone" href="#" role="button">remover</a></div>
+    </div>
+    <div class="row" class="border-1 rounded border-secondary">
+        <div class="col-sm">
+        <input id="laboratory{% templatetag openvariable %}:num{% templatetag closevariable %}" class="laboratories field" placeholder="Laboratório" onkeypress="return event.keyCode != 13;" />
+        <input type="hidden" id="laboratory{% templatetag openvariable %}:num{% templatetag closevariable %}_id" name="laboratory{% templatetag openvariable %}:num{% templatetag closevariable %}_id"/>
+        </div>
+        <div class="col-sm">
+        <input type="text" class="datetime field" name="date{% templatetag openvariable %}:num{% templatetag closevariable %}" onkeypress="return event.keyCode != 13;"/>
+        </div>
+        <div class="col-sm">
+        <input type="text" class="form-control exams field" id="exams{% templatetag openvariable %}:num{% templatetag closevariable %}" value=""
+    placeholder="Exames" onkeypress="return event.keyCode != 13;" />
+        <input type="text" readonly="readonly" id="exams{% templatetag openvariable %}:num{% templatetag closevariable %}_id"
+    name="exams{% templatetag openvariable %}:num{% templatetag closevariable %}_id" class="tagsinput" value=""/>
+        </div>
+    </div>
+
+</div>
+</script>
+
+
+
+<!--<script id="headeradf" type="text/x-jsrender">-->
+    <!--<input type="hidden" value="" name="ticket" id="ticket">-->
+    <!--<div class="row" style="margin-top: 5px">-->
+        <!--<div class="alert alert-light" role="alert">Exames para aprovação</div>-->
+    <!--</div>-->
+    <!--<div class="row" style="margin-top: 5px" id="ctt">-->
+    <!--</div>-->
+    <!--<div class="row" style="text-align: center; padding: 10px">-->
+        <!--<input class="btn btn-warning btn-lg" type="submit" value="Enviar" style="margin: 50% 50%"/>-->
+    <!--</div>-->
+<!--</script>-->
+<!--<script id="contentadf" type="text/x-jsrender">-->
+
+    <!--<div class="form-check">-->
+        <!--<input class="form-check-input" type="checkbox" value="" id="exam_{% templatetag openvariable %}:examid{% templatetag closevariable %}">-->
+        <!--<label class="form-check-label" for="exam_{% templatetag openvariable %}:examid{% templatetag closevariable %}">-->
+          <!--{% templatetag openvariable %}:examnames{% templatetag closevariable %}-->
+        <!--</label>-->
+    <!--</div>-->
+
+<!--</script>-->
+
+<script type="application/javascript">
+    // Initialise the Zendesk JavaScript API client
+    // https://developer.zendesk.com/apps/docs/apps-v2
+    try {
+    var client = ZAFClient.init();
+    client.invoke('resize', {width: '100%', height: '900px'});
+    client.context().then(function (context) {
+        $('#ticket').val(context.ticketId);
+            url = '//{{ request.get_host }}/zendesk/check_adf?ticket_id=' + context.ticketId,
+            $.get(url).success(function (data) {
+                window.location = "//{{ request.get_host }}/zendesk?zat=true&ticket_id=" + context.ticketId;
+        });
+    });
+
+    }
+    catch(err) {
+        console.log(err.message)
+    }
+    // Initialize Firebase
+    var config = {{fb_settings | safe}};
+    firebase.initializeApp(config);
+    const auth = firebase.auth();
+    const db = firebase.database();
+
+    var qtd = 1;
+
+    var exams = [];
+    var laboratories = [];
+
+    // CSFR
+    var csrftoken = Cookies.get('csrftoken');
+
+    var template = $.templates("#mtemplate");
+
+    var exams_search = {
+        minChars: 2,
+        allowDuplicates: false,
+        source: function (term, suggest) {
+            // term = term.toLowerCase();
+            ref = db.ref('/exams/');
+            var suggestions = [];
+            ref.orderByChild('name').startAt(term.toUpperCase()).endAt(term + '~').once('value').then(function (snapshot) {
+                var es = snapshot.val();
+                $.each(es, function (i, item) {
+                    if (item) {
+                        suggestions.push([item.name + ' - ' + item.description, i])
+                    }
+                });
+                if (suggestions.length <= 0){
+                    ref.orderByChild('search').startAt(term).endAt(term + '~').once('value').then(function (snapshot) {
+                        var es = snapshot.val();
+                        $.each(es, function (i, item) {
+                            if (item) {
+                                suggestions.push([item.name + ' - ' + item.description, i])
+                            }
+                        });
+
+                        return suggest(suggestions);
+                    });
+                }
+                return suggest(suggestions);
+            });
+        },
+        renderItem: function (item, search) {
+            search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
+            return '<div class="autocomplete-suggestion" data-langname="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '"> ' + item[0].replace(re, "<b>$1</b>") + '</div>';
+        },
+        onSelect: function (e, term, item) {
+            caller = item[0].ownerDocument.activeElement.id;
+            vitem = $('#' + caller + "_id");
+            vitem.tagsinput('add', {id: parseInt(item.attr('data-lang')), label: item[0].innerText});
+            $("#" + item[0].ownerDocument.activeElement.id).val('');
+            e.preventDefault();
+        }
+    };
+
+    var datetime_prefs = {
+        format: 'd/m/Y H:i',
+        minDate:'+1970/01/02',
+        step:5,
+        mask:true
+    };
+
+    var tags_prefs = {
+        itemValue: 'id',
+        itemText: 'label',
+        tagClass: 'btn btn-primary btn-sm'
+    };
+
+    var labsComplete = {
+        minLength: 0,
+        source: laboratories,
+        focus: function (event, ui) {
+            $(this).val(ui.item.label);
+            return false;
+        },
+        select: function (event, ui) {
+            $(this).val(ui.item.label);
+            $('#'+ this.id + '_id').val(ui.item.value);
+            return false;
+        }
+    };
+
+    function plusone() {
+        qtd += 1;
+        $(template.render({"num": qtd})).insertBefore("#plusdiv");
+        $('.tagsinput').tagsinput(tags_prefs);
+        $('.datetime').datetimepicker(datetime_prefs);
+        $('.exams:not([autocomplete])').autoComplete(exams_search);
+        $(".laboratories").autocomplete(labsComplete);
+    }
+
+    $("#zenform")
+        .on('click', "#plusone", plusone)
+        .on('click', ".minusone", function () {
+        self = $(this);
+        self.parent().parent().parent().remove();
+    });
+
+    $().ready(function () {
+
+        $.datetimepicker.setLocale('pt-BR');
+
+        $.ajaxSetup({
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Basic emVuZGVzazoxMjNxd2UxMjM=',
+                'X-CSRFToken': csrftoken
+            }
+        });
+
+        $('.tagsinput').tagsinput(tags_prefs);
+        $('.datetime').datetimepicker(datetime_prefs);
+
+        auth.signInAnonymously().catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+        });
+
+        $('#zenform').on('submit', function (e) {
+            e.preventDefault();
+            var form = this;
+
+            $.confirm({
+                title: 'Envio de dados!',
+                content: 'Esta ação não pode ser desfeita, corfirma?',
+                buttons: {
+                    confirm: function () {
+                        var dd = {};
+                        $(form).serializeArray().forEach(function (x) {
+                            dd[x.name] = x.value;
+                        });
+
+                        var wait = $.alert({
+                            title: 'Dados atualizando...',
+                            content: 'Gravando prescrições, aguarde e não feche a janela'
+                        });
+
+                        $.post('//{{ request.get_host }}/zendesk/update_prescription/', JSON.stringify(dd)).done(function (data) {
+                            wait.close();
+                            $.alert({
+                                title: 'Envio',
+                                content: 'Sucesso'
+                            });
+                        }).error(function (data) {
+                            wait.close();
+                            $.alert({
+                                title: 'Erro no envio!',
+                                content: data.responseJSON.detail
+                            });
+                        })
+
+                    },
+                    cancel: function () {
+
+                    }
+                }
+            });
+        });
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                var isAnonymous = user.isAnonymous;
+                var uid = user.uid;
+                db.ref('/labs/').once('value').then(function (snapshot) {
+                    var labs = snapshot.val();
+                    $.each(labs, function (i, item) {
+                        if (item) {
+                            laboratories.push({value: i, label: item.description});
+                        }
+                    });
+                    // autocomplete
+                    $(".laboratories").autocomplete(labsComplete);
+                });
+
+                $('.exams').autoComplete(exams_search);
+
+            }
+
+        });
+
+
+    });
+</script>
+</body>
+</html>

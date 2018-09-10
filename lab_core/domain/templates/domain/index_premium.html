@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='shortcut icon' type='image/x-icon' href="{% static 'domain/img/favicon.ico' %}" />
+    <title>Sara Care</title>
+    <link rel="stylesheet" href="{% static 'domain/css/premium.style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+</head>
+<body>
+<header class="banner">
+    <h1 class="banner--title"><img src="{% static 'domain/img/sara.png' %}" alt="Sara"></h1>
+    <div class="banner--featured">
+        <span class="featured--title">Ganhe tempo no laboratório.</span>
+        <span class="featured--description">Sara faz o trabalho duro pra você.</span>
+    </div>
+    <div class="banner--stores">
+        <p class="stores--title">Baixe em:</p>
+        <a class="stores--link" href="https://play.google.com/store/apps/details?id=care.sara.app&hl=pt_BR">
+            <img src="{% static 'domain/img/play.png' %}" alt=""></a>
+        <a class="stores--link" href="https://itunes.apple.com/app/id1234338190"><img src="{% static 'domain/img/ios.png' %}" alt=""></a>
+    </div>
+</header>
+
+<section class="video">
+    <h2 class="video--title">Sara te auxilia em todo o processo</h2>
+    <div class="video--frame">
+        <iframe width="100%" height="440" src="https://www.youtube.com/embed/qJAft90hIrE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="howto">
+    <h3 class="howto--title">Veja como funciona</h3>
+    <ul class="howto--list">
+        <li class="howto--item">
+            <img src="{% static 'domain/img/howto-1.png' %}" alt="" class="howto--item-image">
+            <p class="howto--item-text">Fotografe pedido médico e carteirinha</p>
+        </li>
+        <span class="howto--arrow"></span>
+        <li class="howto--item">
+            <img src="{% static 'domain/img/howto-2.png' %}" alt="" class="howto--item-image">
+            <p class="howto--item-text">Sara informa os laboratórios disponíveis</p>
+        </li>
+        <span class="howto--arrow"></span>
+        <li class="howto--item">
+            <img src="{% static 'domain/img/howto-3.png' %}" alt="" class="howto--item-image">
+            <p class="howto--item-text">Você marca os exames pelo app e vê o preparo</p>
+        </li>
+        <span class="howto--arrow"></span>
+        <li class="howto--item">
+            <img src="{% static 'domain/img/howto-4.png' %}" alt="" class="howto--item-image">
+            <p class="howto--item-text">No laboratório, você tem prioridade</p>
+        </li>
+        <span class="howto--arrow"></span>
+        <li class="howto--item">
+            <img src="{% static 'domain/img/howto-5.png' %}" alt="" class="howto--item-image">
+            <p class="howto--item-text">Os resultados vão aparecer direto no Sara</p>
+        </li>
+    </ul>
+</section>
+
+<footer class="download">
+    <p class="download--title">Baixe em:</p>
+    <a class="download--link" href="https://play.google.com/store/apps/details?id=care.sara.app&hl=pt_BR"><img
+            src="{% static 'domain/img/play.png' %}" alt=""></a>
+    <a class="download--link" href="https://itunes.apple.com/app/id1234338190"><img src="{% static 'domain/img/ios.png' %}" alt=""></a>
+</footer>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-102495982-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

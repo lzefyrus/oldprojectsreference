@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="SupplierPartnerReportingManagement" targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.gvt.com.br/GvtCommonEntities" xmlns:WL5G3N2="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sce="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <!-- includes -->
+      <xsd:import namespace="http://www.gvt.com.br/GvtCommonEntities" schemaLocation="GvtCommonEntities.xsd"/>
+      <xsd:import namespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" schemaLocation="supplierPartnerReportingManagement.xsd"/>
+      <!-- types -->
+      <xsd:element name="createCustomerProblemIn" nillable="false" type="sce:createCustomerProblemIn"/>
+      <xsd:element name="createCustomerProblemOut" nillable="false" type="sce:createCustomerProblemOut"/>
+      <xsd:element name="closeCustomerProblemIn" nillable="false" type="sce:closeCustomerProblemIn"/>
+      <xsd:element name="closeCustomerProblemOut" nillable="false" type="sce:closeCustomerProblemOut"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="GVTHeader">
+    <WL5G3N0:part element="WL5G3N1:version" name="GVTHeader"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="gvtBusinessServiceResponseFault">
+    <WL5G3N0:part element="WL5G3N1:gvtBusinessServiceResponseFault" name="fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createCustomerProblemRequest">
+    <WL5G3N0:part element="WL5G3N2:createCustomerProblemIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createCustomerProblemResponse">
+    <WL5G3N0:part element="WL5G3N2:createCustomerProblemOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeCustomerProblemRequest">
+    <WL5G3N0:part element="WL5G3N2:closeCustomerProblemIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeCustomerProblemResponse">
+    <WL5G3N0:part element="WL5G3N2:closeCustomerProblemOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="SupplierPartnerReportingManagement">
+    <WL5G3N0:operation name="createCustomerProblem">
+      <WL5G3N0:input message="WL5G3N2:createCustomerProblemRequest"/>
+      <WL5G3N0:output message="WL5G3N2:createCustomerProblemResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeCustomerProblem">
+      <WL5G3N0:input message="WL5G3N2:closeCustomerProblemRequest"/>
+      <WL5G3N0:output message="WL5G3N2:closeCustomerProblemResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="SupplierPartnerReportingManagementSOAP" type="WL5G3N2:SupplierPartnerReportingManagement">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="createCustomerProblem">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/createCustomerProblem"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeCustomerProblem">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="SupplierPartnerReportingManagement">
+    <WL5G3N0:port binding="WL5G3N2:SupplierPartnerReportingManagementSOAP" name="SupplierPartnerReportingManagementSOAP">
+      <WL5G3N3:address location="http://CTARO9-5018.gvt.net.br:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

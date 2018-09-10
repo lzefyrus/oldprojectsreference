@@ -1,0 +1,82 @@
+<!-- Request -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+   <soapenv:Header>
+      <gvt:version>?</gvt:version>
+   </soapenv:Header>
+   <soapenv:Body>
+      <sup:closeCustomerProblemIn>
+         <!--Optional:-->
+         <sup1:customerOrderCallback>
+            <sup1:ID>?</sup1:ID>
+            <sup1:interactionDateComplete>?</sup1:interactionDateComplete>
+            <sup1:interactionStatus>?</sup1:interactionStatus>
+            <sup1:description>?</sup1:description>
+         </sup1:customerOrderCallback>
+      </sup:closeCustomerProblemIn>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- Response Fault -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+      <gvt:version>?</gvt:version>
+   </soapenv:Header>
+   <soapenv:Body xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+      <soapenv:Fault>
+         <faultcode>soap-env:Server</faultcode>
+         <faultstring>Error in operation : closeCustomerProblem</faultstring>
+         <faultactor>/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement</faultactor>
+         <detail>
+            <gvt:gvtBusinessServiceResponseFault>
+               <gvt:gvtBusinessServiceResponse>
+                  <gvt:responseStatus>FATAL_ERROR</gvt:responseStatus>
+                  <gvt:messages>
+                     <gvt:description>com.bea.wli.sb.stages.StageException: {err}XP0021: "?": can not cast to {http://www.w3.org/2001/XMLSchema}double: error: double: Invalid double value: ?</gvt:description>
+                     <gvt:statusCode>3</gvt:statusCode>
+                     <gvt:statusDetail>Erro não tratador pelo fluxo de serviço</gvt:statusDetail>
+                     <gvt:system>CONSUMER</gvt:system>
+                  </gvt:messages>
+               </gvt:gvtBusinessServiceResponse>
+            </gvt:gvtBusinessServiceResponseFault>
+         </detail>
+      </soapenv:Fault>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- Response Success -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sup:closeCustomerProblemOut>
+         <sup1:gvtBusinessServiceResponse>
+            <gvt:responseStatus>SUCCESS</gvt:responseStatus>
+            <!--Zero or more repetitions:-->
+            <gvt:messages>
+               <gvt:description>Operação realizada com Sucesso</gvt:description>
+               <gvt:statusCode>0</gvt:statusCode>
+               <gvt:statusDetail>Operação realizada com Sucesso</gvt:statusDetail>
+               <gvt:system>QUEUE</gvt:system>
+            </gvt:messages>
+         </sup1:gvtBusinessServiceResponse>
+      </sup:closeCustomerProblemOut>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- Response Business Error -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sup:closeCustomerProblemOut>
+         <sup1:gvtBusinessServiceResponse>
+            <gvt:responseStatus>BUSINESS_ERROR</gvt:responseStatus>
+            <!--Zero or more repetitions:-->
+            <gvt:messages>
+               <gvt:description>Ocorreu um erro na postagem na fila de conclusão da solicitação de serviço.</gvt:description>
+               <gvt:statusCode>8.02-005</gvt:statusCode>
+               <gvt:statusDetail>Ocorreu um erro na postagem na fila de conclusão da solicitação de serviço.</gvt:statusDetail>
+               <gvt:system>QUEUE</gvt:system>
+            </gvt:messages>
+         </sup1:gvtBusinessServiceResponse>
+      </sup:closeCustomerProblemOut>
+   </soapenv:Body>
+</soapenv:Envelope>

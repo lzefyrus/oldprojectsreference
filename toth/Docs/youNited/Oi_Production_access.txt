@@ -1,0 +1,5 @@
+Safe Avenue provisioning integration for Oi
+
+Base URL: https://safeavenue-na.f-secure.com/api/oi_brazil/v3.0
+username: oi-brazil-api
+password: vyo4r8qm#wSg

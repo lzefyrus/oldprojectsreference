@@ -1,0 +1,230 @@
+models:
+# KASPERSKY
+  getProvisioningKaspersky:
+    id: getProvisioningKaspersky
+    description: "Json com o retorno de criacao de customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataGetProvisioningKaspersky
+
+  postProvisioningKaspersky:
+    id: postProvisioningKaspersky
+    description: "Json com o retorno de criacao de customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataPostProvisioningKaspersky
+  putProvisioningKaspersky:
+    id: putProvisioningKaspersky
+    description: "Json com o retorno de alteracao de customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataPutProvisioningKaspersky
+  deleteProvisioningKaspersky:
+    id: deleteProvisioningKaspersky
+    description: "Json com o retorno de suspencao de customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataDeleteProvisioningKaspersky
+
+  # OBJ DATA GET
+  dataGetProvisioningKaspersky:
+    id: dataGetProvisioningKaspersky
+    description: "Obj de retorno padrao de GET"
+    required:
+      - ActivationCode
+      - TransactionId
+      - StatusChangeTime
+      - StartTime
+      - UnitId
+      - Timestamp
+      - Status
+      - SubscriberId
+      - EndTime
+      - ProductId
+      - LicenseCount
+    properties:
+      ActivationCode:
+        type: string
+      TransactionId:
+        type: string
+      StatusChangeTime:
+        type: string
+      StartTime:
+        type: string
+      UnitId:
+        type: string
+      Timestamp:
+        type: string
+      Status:
+        type: string
+      SubscriberId:
+        type: string
+      EndTime:
+        type: string
+      ProductId:
+        type: string
+      LicenseCount:
+        type: integer
+
+  # OBJ DATA POST
+  dataPostProvisioningKaspersky:
+    id: dataPostProvisioningKaspersky
+    description: "Obj de retorno padrao de POST"
+    required:
+      - ActivationCode
+      - TransactionId
+      - UnitId
+      - Timestamp
+      - SubscriberId
+    properties:
+      ActivationCode:
+        type: string
+      TransactionId:
+        type: string
+      UnitId:
+        type: string
+      Timestamp:
+        type: string
+      SubscriberId:
+        type: string
+
+  # OBJ DATA PUT
+  dataPutProvisioningKaspersky:
+    id: dataPutProvisioningKaspersky
+    description: "Obj de retorno padrao de PUT"
+    required:
+      - TransactionId
+      - UnitId
+      - Timestamp
+      - SubscriberId
+    properties:
+      ActivationCode:
+        type: string
+      TransactionId:
+        type: string
+      UnitId:
+        type: string
+      Timestamp:
+        type: string
+      SubscriberId:
+        type: string
+
+  # OBJ DATA DELETE
+  dataDeleteProvisioningKaspersky:
+    id: dataDeleteProvisioningKaspersky
+    description: "Obj de retorno padrao de DELETE"
+    required:
+      - TransactionId
+      - UnitId
+      - Timestamp
+      - SubscriberId
+    properties:
+      ActivationCode:
+        type: string
+      TransactionId:
+        type: string
+      UnitId:
+        type: string
+      Timestamp:
+        type: string
+      SubscriberId:
+        type: string
+
+# ASSISTENCIA
+  getProvisioningAssistencia:
+    id: getProvisioningAssistencia
+    description: "Json com o retorno de um customer"
+    required:
+      - status
+      - return
+      - data
+    properties:
+      status:
+        type: number
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+  postProvisioningAssistencia:
+    id: postProvisioningAssistencia
+    description: "Json com o retorno de criacao de customer"
+    required:
+      - status
+      - return
+      - data
+    properties:
+      status:
+        type: number
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+  putProvisioningAssistencia:
+    id: putProvisioningAssistencia
+    description: "Json com o retorno de alteracao de customer"
+    required:
+      - status
+      - return
+      - data
+    properties:
+      status:
+        type: number
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataCustomer
+  deleteProvisioningAssistencia:
+    id: deleteProvisioningAssistencia
+    description: "Json com o retorno de suspencao de customer"
+    required:
+      - status
+      - return
+      - data
+    properties:
+      status:
+        type: number
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+# OBJ DATA VAZIO
+  data:
+    id: data
+    description: "Obj de retorno vazio"

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+indent() {
+    RE="s/^/       /"
+    [ $(uname) == "Darwin" ] && sed -l "$RE" || sed -u "$RE"
+}
+
+python manage.py migrate --no-input  2>&1 | sed '/^Migrating/d;/^$/d;/^ /d' | indent
+python manage.py createinitialrevisions

@@ -1,0 +1,264 @@
+apis:
+#KASPERSKY
+  - path: /v2/kaspersky/qbe/provisioning/{key}
+    operations:
+      - method: GET
+        summary: Get user info.
+        notes: ""
+        nickname: getProvisioningKaspersky
+        type: getProvisioningKaspersky
+        parameters:
+          - name: key
+            description: "Unique identifier of the Subscriber whose subscription must be discontinued. 1-50 alphanumeric sequence"
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+          - code: 200
+            message: OK
+
+  - path: /v2/kaspersky/qbe/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Add a new user.
+        notes: ""
+        nickname: postProvisioningKaspersky
+        type: postProvisioningKaspersky
+        parameters:
+          - name: key
+            description: "Unique identifier of the Subscriber whose subscription must be discontinued. 1-50 alphanumeric sequence The recommended format for QBE is: FSVASQBEKISA100000000"
+            required: true
+            type: string
+            paramType: path
+          - name: ProductId
+            description:  "Unique identifier of the application, for which the subscription is being activated. Application type cannot be changed during the subscription period. String value. Acceptable values are defined individually for each service provider."
+            required: true
+            type: string
+            paramType: query
+          - name: LicenseCount
+            description: "The number of licenses for subscription. Licenses count cannot be changed during the subscription period. 1 is selected by default if the value is not specified. Acceptable values are defined individually for each service provider"
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+          - code: 401
+            message: Error - Details in return.
+
+  - path: /v2/kaspersky/qbe/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: "Update an existing user."
+        notes: ""
+        nickname: putProvisioningKaspersky
+        type: putProvisioningKaspersky
+        parameters:
+          - name: key
+            description: "Unique identifier of the Subscriber whose subscription must be discontinued. 1-50 alphanumeric sequence The recommended format for QBE is: FSVASQBEKISA100000000"
+            required: true
+            type: string
+            paramType: path
+          - name: typeChange
+            description: "1 - Change Licenses Number, 2 - Renew, 3 - Pause, 4 - Resume"
+            required: true
+            type: string
+            paramType: query
+          - name: LicenseCount
+            description: "The number of licenses for subscription. Licenses count cannot be changed during the subscription period. 1 is selected by default if the value is not specified. Acceptable values are defined individually for each service provider"
+            required: false
+            type: string
+            paramType: query
+          - name: ProductId
+            description:  "Unique identifier of the application, for which the subscription is being activated. Application type cannot be changed during the subscription period. String value. Acceptable values are defined individually for each service provider."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+          - code: 401
+            message: Error - Details in return.
+
+  - path: /v2/kaspersky/qbe/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Delete user.
+        notes: ""
+        nickname: deleteProvisioningKaspersky
+        type: deleteProvisioningKaspersky
+        parameters:
+          - name: key
+            description: "Unique identifier of the Subscriber whose subscription must be discontinued. 1-50 alphanumeric sequence The recommended format for QBE is: FSVASQBEKISA100000000"
+            required: true
+            type: string
+            paramType: path
+          - name: typeCancel
+            description: "1 - SoftCancel, 2 - HardCancel"
+            required: true
+            type: string
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+          - code: 401
+            message: Error - Details in return.
+
+# ASSISTENCIA
+  - path: /v2/assistencia/qbe/provisioning/{key}
+    operations:
+      - method: POST
+        summary: "Metodo para a criacao de uma nova venda para o cliente."
+        notes: ""
+        nickname: postProvisioningAssistencia
+        type: postProvisioningAssistencia
+        parameters:
+          - name: key
+            description: ""
+            required: true
+            type: string
+            paramType: path
+          - name: productCode
+            description: "Código do produto do parceiro"
+            required: true
+            type: string
+            paramType: query
+          - name: numDocument
+            description: "Número do documento do cliente (sem caracteres e espaços)"
+            required: false
+            type: string
+            paramType: query
+          - name: msisdn
+            description: "Número do celular do cliente (sem caracteres e espaços)"
+            required: false
+            type: string
+            paramType: query
+          - name: externalCode
+            description: "Código único de identificação do cliente no parceiro"
+            required: false
+            type: string
+            paramType: query
+          - name: name
+            description: "Nome do Cliente"
+            required: false
+            type: string
+            paramType: query
+          - name: email
+            description: "Email do Cliente"
+            required: false
+            type: string
+            paramType: query
+          - name: birthDate
+            description: "Data de aniversário do cliente (dd/mm/aaaa)"
+            required: false
+            type: string
+            paramType: query
+          - name: addressType
+            description: "Logradouro"
+            required: false
+            type: string
+            paramType: query
+          - name: address
+            description: "Endereço do Cliente"
+            required: false
+            type: string
+            paramType: query
+          - name: number
+            description: "Número do endereço"
+            required: false
+            type: number
+            paramType: query
+          - name: complement
+            description: "Complemento do endereço"
+            required: false
+            type: string
+            paramType: query
+          - name: neighborhood
+            description: "Bairro"
+            required: false
+            type: string
+            paramType: query
+          - name: city
+            description: "Cidade"
+            required: false
+            type: string
+            paramType: query
+          - name: state
+            description: "Estado"
+            required: false
+            type: string
+            paramType: query
+          - name: zipcode
+            description: "CEP"
+            required: false
+            type: string
+            paramType: query
+          - name: status
+            description: "Status do cliente (Ativo, Suspenso ou Cancelado)"
+            required: false
+            type: string
+            paramType: query
+          - name: suspensionDate
+            description: "Data de suspensão (dd/mm/aaaa hh:mm:ss)"
+            required: false
+            type: string
+            paramType: query
+          - name: cancellationDate
+            description: "Data de cancelamento (dd/mm/aaaa hh:mm:ss)"
+            required: false
+            type: string
+            paramType: query
+          - name: modificationDate
+            description: "Data de criação (dd/mm/aaaa hh:mm:ss)"
+            required: false
+            type: string
+            paramType: query
+          - name: creationDate
+            description: "Data de modificação (dd/mm/aaaa hh:mm:ss)"
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/assistencia/qbe/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: "Método para o bloqueio/desbloqueio do servico do cliente."
+        notes: ""
+        nickname: deleteProvisioningAssistencia
+        type: deleteProvisioningAssistencia
+        parameters:
+          - name: key
+            description: "Chave para o sistema de assistência."
+            required: true
+            type: string
+            paramType: path
+          - name: enabled
+            description: "(0 - Disabled, 1 - Enabled)."
+            required: true
+            type: number
+            paramType: query
+          - name: productCode
+            description: "Código do produto do parceiro"
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/assistencia/qbe/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: "Método para o cancelamento definitivo do serviço."
+        notes: ""
+        nickname: deleteProvisioningAssistencia
+        type: deleteProvisioningAssistencia
+        parameters:
+          - name: key
+            description: "Chave para o sistema de assistência."
+            required: true
+            type: string
+            paramType: path
+          - name: productCode
+            description: "Código do produto do parceiro"
+            required: false
+            type: string
+            paramType: query
+        responseMessages:

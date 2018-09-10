@@ -1,0 +1,473 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "Algar",
+        "description": "Esta é a primeira versão da API Restful de Integração da Algar com o Global SDP. Através dela é possível que o backend utilize diversos serviços oferecidos pela Algar, bem como a Algar envie notificações para o backend.\nEstas são as possibilidades de utilização da nossa API:\n- Assinatura (Backend)\n- Cancelamento (Backend)\n- MT (Backend)\n- Notificação de Assinatura (Algar)\n- Notificação de Autenticação (Algar)\n"
+    },
+    "host": "10.170.128.55:8080",
+    "basePath": "/algar/v1",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "Assinatura (Backend)"
+        },
+        {
+            "name": "Cancelamento (Backend)"
+        },
+        {
+            "name": "MT (Backend)"
+        },
+        {
+            "name": "Notificação de Assinatura (Algar)"
+        },
+        {
+            "name": "Notificação de Autenticação (Algar)"
+        }
+    ],
+    "paths": {
+        "/backend/signature": {
+            "post": {
+                "tags": [
+                    "Assinatura (Backend)"
+                ],
+                "description": "Envia uma assinatura para a API da Algar.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "service_id",
+                        "in": "body",
+                        "description": "Service id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "channel_id",
+                        "in": "body",
+                        "description": "Channel id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "la",
+                        "in": "body",
+                        "description": "LA",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "app_specific",
+                        "in": "body",
+                        "description": "app_specific",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal error"
+                    }
+                }
+            }
+        },
+        "/backend/cancellation": {
+            "post": {
+                "tags": [
+                    "Cancelamento (Backend)"
+                ],
+                "description": "Envia um cancelamento para a API da Algar.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string-"
+                        }
+                    },
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "service_id",
+                        "in": "body",
+                        "description": "Service id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "channel_id",
+                        "in": "body",
+                        "description": "Channel id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal error"
+                    }
+                }
+            }
+        },
+        "/backend/mt": {
+            "post": {
+                "tags": [
+                    "MT (Backend)"
+                ],
+                "description": "Envia MT para um msisdn.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "service_id",
+                        "in": "body",
+                        "description": "Service id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "channel_id",
+                        "in": "body",
+                        "description": "Channel id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "in": "body",
+                        "description": "Message",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "la",
+                        "in": "body",
+                        "description": "LA",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdns",
+                        "in": "body",
+                        "description": "msisdns",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "message_header",
+                        "in": "body",
+                        "description": "message_header",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "validity",
+                        "in": "body",
+                        "description": "validity",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "schedule",
+                        "in": "body",
+                        "description": "schedule",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "notification",
+                        "in": "body",
+                        "description": "notification",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "retries",
+                        "in": "body",
+                        "description": "retries",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mo_message_id",
+                        "in": "body",
+                        "description": "mo_message_id",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "app_specific",
+                        "in": "body",
+                        "description": "app_specific",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "app_request_id",
+                        "in": "body",
+                        "description": "app_request_id",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal error"
+                    }
+                }
+            }
+        },
+        "/notification/signature": {
+            "post": {
+                "tags": [
+                    "Notificação de Assinatura (Algar)"
+                ],
+                "description": "Recebe notificação de assinatura da Algar.",
+                "parameters": [
+                    {
+                        "name": "XML",
+                        "in": "body",
+                        "description": "XML descrito na documentação da Algar.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal error"
+                    }
+                }
+            }
+        },
+        "/notification/authentication": {
+            "post": {
+                "tags": [
+                    "Notificação de Autenticação (Algar)"
+                ],
+                "description": "Recebe notificação de autenticação da Algar.",
+                "parameters": [
+                    {
+                        "name": "XML",
+                        "in": "body",
+                        "description": "XML descrito na documentação da Algar.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal error"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+
+	<xs:import schemaLocation="GvtCommonEntities.xsd" namespace="http://www.gvt.com.br/GvtCommonEntities"/>
+
+	<!-- Types -->
+	<xs:complexType name="createCustomerProblemIn">
+		<xs:sequence>
+			<xs:element name="customerProblem" type="tns:CustomerProblem" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="createCustomerProblemOut">
+		<xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- closeCustomerProblem -->
+	<xs:complexType name="closeCustomerProblemIn">
+		<xs:sequence>
+			<xs:element name="customerOrderCallback" type="tns:CustomerProblemCallBack" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="closeCustomerProblemOut">
+		<xs:sequence>
+			<xs:element name="gvtBusinessServiceResponse" type="gvt:gvtBusinessServiceResponse"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.CustomerDomain.CustomerProblem -->
+	<xs:complexType name="CustomerProblem">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="interactionDate" type="xs:dateTime" minOccurs="1" maxOccurs="1" nillable="false"/>
+			<xs:element name="description " type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="involvesCustomer" type="tns:Customer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="orderProtocol" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="InvolvesProduct" type="tns:ProductBundle" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="CustomerProblemType" type="tns:AtomicTypification" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.CustomerDomain.Customer -->
+	<xs:complexType name="Customer">
+		<xs:sequence>
+			<xs:element name="documentNumber" type="xs:string" minOccurs="1"/>
+			<xs:element name="Individual" type="tns:Individual" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="contactabelVia" type="tns:ContactMedium" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.CommonBusinessEntitiesDomain.Individual -->
+	<xs:complexType name="Individual">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ProductBundle">
+		<xs:sequence>
+			<xs:element name="serviceId" type="xs:string" minOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1"/>
+			<xs:element name="ProductSpecification" type="tns:ProductSpecification" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ProductSpecification">
+		<xs:sequence>
+			<xs:element name="productNumber" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Types -->
+	<xs:complexType name="AtomicTypification">
+		<xs:sequence>
+			<xs:element name="label" type="xs:string" minOccurs="1"/>
+			<xs:element name="value" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ContactMedium">
+		<xs:sequence>
+			<xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CustomerProblemCallBack">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:string" minOccurs="1"/>
+			<xs:element name="interactionDateComplete" type="dateTime" minOccurs="1"/>
+			<xs:element name="interactionStatus" type="xs:string" minOccurs="1"/>
+			<xs:element name="description" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,174 @@
+#!/bin/bash
+
+###
+#usage: main.py [-h] [-d] [-hm] [-p] [-debug] [-s] [-i INSTANCES]
+#python3 main.py (-d OR -p OR -hm) (optionals) -s -debug -i 100
+#optional arguments:
+#  -h, --help            show this help message and exit
+#  -d, --devel           Run server in develop mode
+#  -hm, --homol          Run server in homologation mode
+#  -p, --prod            Run server in production mode
+#  -debug, --debug       Enable debug mode
+#  -s, --swagger         Load Swagger
+#  -i INSTANCES, --instances INSTANCES Number of instances
+###
+
+# Script inicializacao provisionador
+
+### CORES
+VERDE="\033[1;32m"
+AMARELO="\033[1;33m"
+AZUL="\033[1;34m"
+VERMELHO="\033[1;31m"
+END="\033[m"
+###
+
+## CONFIG
+#Diretorio da Venv sem barra no final
+DIRVENV='/root/venvProvisionador'
+# Diretorio do codigo fonte
+DIRCODE='/media/sf_provisionador'
+# Numero de instancias default
+INSTANCES='10'
+# Level da aplicacao
+LEVEL='-d'
+# Debug Mode, desativar quando estiver mais maduro
+DEBUG='--debug'
+# Swagger ativo, desativar quando estiver com todos os ambientes de homologacao ativos
+SWAGGER='-s'
+
+#usuario que vai rodar a aplicacao
+USER='root'
+# arquivo onde vai armazenar o pid do daemon
+PIDFILE="/var/run/provisionador.pid"
+
+ProgressBar() {
+    tput civis
+    for X in $(seq 20)
+    do  
+        for i in ..
+        do  
+            echo -en "\033[1D$i"
+            sleep .1
+        done
+    done
+    tput cnorm
+}
+
+
+case $1 in
+    start)
+        # Comando primario para iniciar a aplicacao
+        COMANDO="main.py"
+        #screen -S test -d -m -c /dev/null -- sh -c 'date; exec $SHELL'
+
+        # Verifica o Level
+        if [ -n "$3" ]; then
+            if [[ "$3"  =~ ^(-d|-hm|-p)$ ]]; then
+                COMANDO="$COMANDO $3"
+            else
+                echo "'$3' Invalid agument, use (-d OR -p OR -hm)"
+                exit
+            fi
+        else
+            COMANDO="$COMANDO $LEVEL"
+        fi
+
+        # Verifica o Swager
+        if [ -n "$4" ]; then
+            if [[ "$4"  =~ ^(-s|--swagger)$ ]]; then
+                COMANDO="$COMANDO $4"
+            else
+                echo "'$4' Invalid agument, use (-s OR --swagger)"
+                exit
+            fi
+        else
+            COMANDO="$COMANDO $SWAGGER"
+        fi
+
+        # Verifica o debug
+        if [ -n "$5" ]; then
+            if [[ "$5"  =~ ^(-debug|--debug)$ ]]; then
+                COMANDO="$COMANDO $5"
+            else
+                echo "'$5' Invalid agument, use (-debug OR --debug)"
+                exit
+            fi
+        else
+            COMANDO="$COMANDO $DEBUG"
+        fi
+
+        # Verifica as instancias
+        if [ -n "$6" ]; then
+            if [[ "$6" = *[[:digit:]]* ]] && [[ "$6" -ge "10" && "$6" -le "200" ]]; then
+                COMANDO="$COMANDO -i $6"
+            else
+                echo "'$6' Invalid agument, only numbers [>= 10 and <= 200]"
+                exit
+            fi
+        else
+            COMANDO="$COMANDO -i $INSTANCES"
+        fi
+
+        # para o servico antes
+        $0 stop $2
+        sleep 0.5
+
+        # Chama a funcao de progresso
+        echo -en "Starting Provisionador "
+        ProgressBar
+
+        if [ $2 ]  && [ $2 = 'screen' ]; then
+            # Abre a screens
+            eval "/usr/bin/screen -S provisionador-$$ -d -m -c /dev/null -- bash -c 'exec $SHELL'"
+            # Inicia a Venv
+            eval "/usr/bin/screen -S provisionador-$$ -X stuff 'source $DIRVENV/bin/activate'`echo -ne '\015'`"
+            # Vai para o diretorio da aplicacao e executa o python
+            eval "/usr/bin/screen -S provisionador-$$ -X stuff 'cd $DIRCODE;python $COMANDO'`echo -ne '\015'`"
+        else
+            /sbin/start-stop-daemon --start --background --user $USER --group $USER --chuid $USER -b --make-pidfile --pidfile $PIDFILE --chdir $DIRCODE --exec $DIRVENV/bin/python -- $DIRCODE/$COMANDO
+        fi
+        echo -e " [\033[0;32m ok\033[m ]"
+    ;;
+
+    stop)
+        # Chama a funcao de progresso
+        echo -en "Stopping Provisionador "
+        ProgressBar
+
+        # mata o servico em caso de screen
+        /usr/bin/screen -ls | tail -n +2 | head -n -2 | awk '{print $1}' | grep 'provisionador' | xargs -I{} screen -S {} -X quit
+
+        # mata o servico em caso de daemon
+        if [ -e $PIDFILE ]; then
+            if [ -e /proc/$(cat $PIDFILE) ]; then
+                /sbin/start-stop-daemon --stop --pidfile $PIDFILE > /dev/null
+            fi
+            rm $PIDFILE
+        fi
+        echo -e " [\033[0;32m ok\033[m ]"
+    ;;
+
+    help)
+        echo -en "Usage: provisionador start [optionals] (screen OR deamon) (-d OR -p OR -hm) -s -debug instances\n\r"
+        echo "Options:
+          screen    : Run server in screen
+          deamon    : Run server with Linux daemon 
+          -d        : Run server in develop mode
+          -hm       : Run server in homologation mode
+          -p        : Run server in production mode
+          -debug    : Enable debug mode
+          -s        : Load Swagger
+          instances : Number of instances [>= 10 and <= 200]"
+    ;;
+
+    restart)
+        $0 start
+    ;;
+
+    *)
+        $0 help
+        echo 'Usage: "stop|start|restart|help"'
+    ;;
+
+esac

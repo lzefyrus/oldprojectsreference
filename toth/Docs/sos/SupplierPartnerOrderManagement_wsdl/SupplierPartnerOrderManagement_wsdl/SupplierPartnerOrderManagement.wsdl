@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="SupplierPartnerOrderManagement" targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/SupplierPartnerOrderManagement" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.gvt.com.br/GvtCommonEntities" xmlns:WL5G3N2="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/SupplierPartnerOrderManagement" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/SupplierPartnerOrderManagement" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:spom="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/supplierPartnerOrderManagementEntities" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/SupplierPartnerOrderManagement" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <!-- includes -->
+      <xsd:import namespace="http://www.gvt.com.br/GvtCommonEntities" schemaLocation="GvtCommonEntities.xsd"/>
+      <xsd:import namespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/supplierPartnerOrderManagementEntities" schemaLocation="supplierPartnerOrderManagementEntities.xsd"/>
+      <xsd:element name="orderPublicationIn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="customerOrder" type="spom:CustomerOrder"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orderPublicationOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="gvtBusinessServiceResponse" type="gvt:gvtBusinessServiceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="closeOrderPublicationIn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="customerOrderCallback" type="spom:CustomerOrderCallback"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="closeOrderPublicationOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="gvtBusinessServiceResponse" type="gvt:gvtBusinessServiceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="GVTHeader">
+    <WL5G3N0:part element="WL5G3N1:version" name="GVTHeader"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="gvtBusinessServiceResponseFault">
+    <WL5G3N0:part element="WL5G3N1:gvtBusinessServiceResponseFault" name="fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="orderPublicationRequest">
+    <WL5G3N0:part element="WL5G3N2:orderPublicationIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="orderPublicationResponse">
+    <WL5G3N0:part element="WL5G3N2:orderPublicationOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeOrderPublicationRequest">
+    <WL5G3N0:part element="WL5G3N2:closeOrderPublicationIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeOrderPublicationResponse">
+    <WL5G3N0:part element="WL5G3N2:closeOrderPublicationOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="SupplierPartnerOrderManagement">
+    <WL5G3N0:operation name="orderPublication">
+      <WL5G3N0:input message="WL5G3N2:orderPublicationRequest"/>
+      <WL5G3N0:output message="WL5G3N2:orderPublicationResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeOrderPublication">
+      <WL5G3N0:input message="WL5G3N2:closeOrderPublicationRequest"/>
+      <WL5G3N0:output message="WL5G3N2:closeOrderPublicationResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="SupplierPartnerOrderManagementSOAP" type="WL5G3N2:SupplierPartnerOrderManagement">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="orderPublication">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierOrderManagement/SupplierOrderManagement"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeOrderPublication">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierOrderManagement/closeOrderPublication"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="SupplierPartnerOrderManagement">
+    <WL5G3N0:port binding="WL5G3N2:SupplierPartnerOrderManagementSOAP" name="SupplierPartnerOrderManagementSOAP">
+      <WL5G3N3:address location="http://CTARO9-5018.gvt.net.br:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/SupplierPartnerOrderManagement"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

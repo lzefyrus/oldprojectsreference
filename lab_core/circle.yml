@@ -1,0 +1,16 @@
+machine:
+  environment:
+    APP_ENVIRONMENT: ci
+
+  python:
+    version: 3.5.2
+
+database:
+  post:
+  - psql -c "CREATE EXTENSION postgis;" -d circle_test
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: lab-core-staging

@@ -1,0 +1,13 @@
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/wsdl','http://localhost:8889/tim/fit/v1/mock/billing');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/aws_access_key_id','AKIAJEWSX554NY7HKILQ');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/aws_secret_access_key','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');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/region_name','us-east-1');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/stream','globalsdp-timfit-billing');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/shard','shardId-000000000000');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/kinesis/iterator','TRIM_HORIZON');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/billing/file/path','/tmp/globalsdp-timfit-billing.txt');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/smpp/host/1','127.0.0.1');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/smpp/host/2','127.2222');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/smpp/port','2775');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/smpp/login','smppclient1');
+INSERT INTO `gateway`.`config` (`key`,`value`) VALUES ('tim/fit/v1/smpp/password','password1');

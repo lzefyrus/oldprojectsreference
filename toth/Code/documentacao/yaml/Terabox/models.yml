@@ -1,0 +1,746 @@
+models:
+# FUNAMBOL
+  getProvisioningFunambol:
+    id: getProvisioningFunambol
+    description: "Json com o retorno de um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: dataListCustomer
+
+  # Adiciona um  customer
+  postProvisioningFunambol:
+    id: postProvisioningFunambol
+    description: "Json com o retorno da adicao de um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # Altera um  customer
+  deleteProvisioningFunambol:
+    id: deleteProvisioningFunambol
+    description: "Json com o retorno da delecao de um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # Altera um  customer
+  putProvisioningFunambol:
+    id: putProvisioningFunambol
+    description: "Json com o retorno da alteracao de um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+  # Lista de todos os roles
+  getRolesFunambol:
+    id: getRolesFunambol
+    description: "Json com o retorno da lista de roles disponiveis"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objRole
+
+  # Lista os roles de um usuario
+  getLicensesFunambol:
+    id: getLicensesFunambol
+    description: "Json com o retorno da lista de roles"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objRole
+  # seta um role ah um customer
+  postLicensesFunambol:
+    id: postLicensesFunambol
+    description: "Json com o retorno da adicao de um role ah um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+  # altera um role ah um customer
+  putLicensesFunambol:
+    id: putLicensesFunambol
+    description: "Json com o retorno da adicao de um role ah um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # Login
+  postLoginFunambol:
+    id: postLoginFunambol
+    description: "Json com o retorno do login do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objLogin
+
+  # LogOut
+  postLogoutFunambol:
+    id: postLogoutFunambol
+    description: "Json com o retorno do logout do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # Quota
+  getQuotaFunambol:
+    id: getQuotaFunambol
+    description: "Json com o retorno da quota do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objQuota
+
+  # Quota
+  getSearchFunambol:
+    id: getSearchFunambol
+    description: "Json com o retorno da busca do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objSearch
+  # Lista os dispositivo de um usuario
+  getDevicesFunambol:
+    id: getDevicesFunambol
+    description: "Json com o retorno da lista de dispositivos"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objGetDevicesFunambol
+  # seta um dispositivo ah um customer
+  postDevicesFunambol:
+    id: postDevicesFunambol
+    description: "Json com o retorno da adicao de um dispositivo em um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objPostDevicesFunambol
+
+  # altera um dispositivo ah um customer
+  putDevicesFunambol:
+    id: putDevicesFunambol
+    description: "Json com o retorno da adicao de um dispositivo ah um customer"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # altera um dispositivo ah um customer
+  deleteDevicesFunambol:
+    id: deleteDevicesFunambol
+    description: "Json com o retorno da delecao de um dispositivo"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+  # altera um dispositivo ah um customer
+  deleteDevicesUnlinkFunambol:
+    id: deleteDevicesUnlinkFunambol
+    description: "Json com o retorno da delecao de um dispositivo"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: data
+
+  # Lista de todos os roles
+  getProfileFunambol:
+    id: getProfileFunambol
+    description: "Json com o retorno do profile do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objProfileFunambol
+
+  # lista as imagem do usuario
+  getPicturesFunambol:
+    id: getPicturesFunambol
+    description: "Json com o retorno das imagens do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objPicturesFunambol
+
+  # lista os audios do usuario
+  getAudiosFunambol:
+    id: getAudiosFunambol
+    description: "Json com o retorno dos audios do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objAudiosFunambol
+
+  # lista os videos do usuario
+  getVideosFunambol:
+    id: getVideosFunambol
+    description: "Json com o retorno dos videos do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objVideosFunambol
+
+  # lista os arquivos do usuario
+  getFilesFunambol:
+    id: getFilesFunambol
+    description: "Json com o retorno dos arquivos do usuario"
+    required:
+      - return
+      - data
+    properties:
+      return:
+        type: string
+        enum:
+          - OK
+      data:
+        $ref: objFilesFunambol
+
+  # OBJ DATA DEVICES
+  objGetDevicesFunambol:
+    id: objGetDevicesFunambol
+    description: "Obj de retorno padrao de phones do user"
+    required:
+      - user
+    properties:
+      user:
+        $ref: objGetUserPhones
+
+  # OBJ DATA DEVICES
+  objPostDevicesFunambol:
+    id: objPostDevicesFunambol
+    description: "Obj de retorno padrao de phones do user"
+    required:
+      - user
+    properties:
+      user:
+        $ref: objPostUserPhones
+
+  # OBJ GET USER PHONE
+  objGetUserPhones:
+    id: objGetUserPhones
+    description: "Obj de GET User phones"
+    required:
+      - phones
+    properties:
+      phones:
+          schema:
+          type: list
+          items:
+            $ref: userPhoneList
+
+  # OBJ post USER PHONE
+  objPostUserPhones:
+    id: objPostUserPhones
+    description: "Obj de POST User phones"
+    required:
+      - phone
+    properties:
+      phone:
+        $ref: userPhone
+
+  # OBJ DATA userPhone
+  userPhone:
+    id: userPhone
+    description: "Obj de retorno de inserção de um device"
+    required:
+      - deviceid
+    properties:
+      deviceid:
+        type: integer
+
+  # OBJ QUOTA
+  objQuota:
+    id: objQuota
+    description: "Obj de Search"
+    required:
+      - free
+      - softdeleted
+      - quota
+    properties:
+      validationkey:
+        type: integer
+      jsessionid:
+        type: integer
+      quota:
+        type: integer
+
+  # OBJ SEARCH
+  objSearch:
+    id: objSearch
+    description: "Obj de Quota"
+    required:
+      - user
+    properties:
+      user:
+          schema:
+          type: list
+          items:
+            $ref: userSearch
+
+  # OBJ LOGIN
+  objLogin:
+    id: objLogin
+    description: "Obj de login"
+    required:
+      - validationkey
+      - jsessionid
+      - dataListRoles
+    properties:
+      validationkey:
+        type: string
+      jsessionid:
+        type: string
+      roles:
+          schema:
+          type: list
+          items:
+            $ref: dataListRoles
+
+  # OBJ DATA ROLES
+  dataListRoles:
+    id: dataListRoles
+    description: "Obj de retorno padrao dos roles"
+    required:
+      - name
+      - description
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+
+  # OBJ DATA
+  dataListCustomer:
+    id: dataListCustomer
+    description: "Obj de retorno padrao de customer"
+    required:
+      - user
+      - phones
+      - emails
+      - config
+    properties:
+      user:
+        $ref: user
+
+  # OBJ de search User
+  userSearch:
+    id: userSearch
+    description: "Retorna a busca do usuario"
+    required:
+     - firstname
+     - lastname
+     - useremail
+     - timezone
+     - active
+     - userid
+     - photo 
+    properties:
+      firstname:
+          type: string
+      lastname:
+          type: string
+      useremail:
+          type: string
+      timezone:
+          type: string
+      active:
+          type: boolean
+      userid:
+          type: string
+      photo:
+          type: boolean
+
+  # OBJ de User
+  user:
+    id: user
+    description: "Retorna o user"
+    required:
+     - generic
+     - phones
+     - emails
+     - config
+    properties:
+      generic:
+        $ref: generic
+      phones:
+          schema:
+          type: list
+          items:
+            $ref: userPhoneList
+      emails:
+          type: list
+      config:
+        $ref: config
+
+  # OBJ GENERIC
+  generic:
+    id: generic
+    description: "Obj de retorno de user"
+    required:
+     - firstname
+     - lastname
+     - useremail
+     - timezone
+     - active
+     - userid
+     - photo 
+     - mailingl
+     - male
+     - birthday
+    properties:
+      firstname:
+          type: string
+      lastname:
+          type: string
+      useremail:
+          type: string
+      timezone:
+          type: string
+      active:
+          type: boolean
+      userid:
+          type: string
+      photo:
+          type: boolean
+      mailingl:
+          type: boolean
+      male:
+          type: boolean
+      birthday:
+          type: string
+
+  # OBJ de CONFIG
+  config:
+    id: config
+    description: "Retorna o obj de config"
+    required:
+     - media
+    properties:
+      media:
+        $ref: media
+  # OBJ de MEDIA
+  media:
+    id: media
+    description: "Retorna o obj de media"
+    required:
+     - paths
+    properties:
+      paths:
+        $ref: paths
+
+  # OBJ PATH
+  paths:
+    id: paths
+    description: "Obj de retorno de paths"
+    required:
+     - picture
+     - audio
+     - file
+     - video
+    properties:
+      picture:
+          type: string
+      audio:
+          type: string
+      file:
+          type: string
+      video:
+          type: string
+
+  # OBJ DATA userPhone
+  userPhoneList:
+    id: userPhoneList
+    description: "Obj de retorno padrao de phones do user"
+    required:
+      - phones
+    properties:
+      phones:
+        $ref: phones
+  # OBJ DATA USERPHONE
+  phones:
+    id: phones
+    description: "Obj de retorno padrao de phones"
+    required:
+      - deviceid
+      - phonenumber
+      - modelid
+      - carrierid
+      - countrya2
+      - active
+      - converttmz
+    properties:
+      deviceid:
+        type: integer
+      phonenumber:
+        type: string
+      modelid:
+        type: integer
+      carrierid:
+        type: integer
+      countrya2:
+        type: string
+      active:
+        type: boolean
+      converttmz:
+        type: integer
+
+  # OBJ DATA USERPHONE
+  phone:
+    id: phone
+    description: "Obj de retorno padrao de phones"
+    required:
+      - deviceid
+    properties:
+      deviceid:
+        type: integer
+
+  # OBJ de DATA vazio
+  data:
+    id: data
+    description: "Retorna o data vazio"
+
+  # OBJ ROLE
+  objRole:
+    id: objRole
+    description: "Obj de roles"
+    required:
+      - dataListRoles
+    properties:
+      roles:
+          schema:
+          type: list
+          items:
+            $ref: dataListRoles
+
+  # OBJ DATA ROLES
+  dataListRoles:
+    id: dataListRoles
+    description: "Obj de retorno padrao dos roles"
+    required:
+      - name
+      - description
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+
+  # OBJ PROFILE
+  objProfileFunambol:
+    id: objProfileFunambol
+    description: "Obj de Profiles"
+    required:
+      - dataListProfile
+    properties:
+      lastsynchronizations:
+          schema:
+          type: list
+          items:
+            $ref: dataListProfile
+
+  # OBJ DATA PROFILE
+  dataListProfile:
+    id: dataListProfle
+    description: "Obj de retorno padrao do profile"
+    required:
+      - deviceid
+      - devicedescription
+      - devicetype
+      - endsync
+      - linkstatus
+      - startsync
+      - status
+      - syncsource
+      - synctype
+    properties:
+      deviceid:
+        type: string
+      devicedescription:
+        type: string
+      devicetype:
+        type: string
+      endsync:
+        type: number
+      linkstatus:
+        type: string
+      startsync:
+        type: number
+      status:
+        type: number
+      syncsource:
+        type: string
+      synctype:
+        type: number
+
+  # OBJ PICTURE
+  objPicturesFunambol:
+    id: objPicturesFunambol
+    description: "Obj de Pictures"
+    required:
+      - count
+    properties:
+      count:
+          type: number
+
+  # OBJ FILES
+  objFilesFunambol:
+    id: objFilesFunambol
+    description: "Obj de Files"
+    required:
+      - count
+    properties:
+      count:
+          type: number
+
+  # OBJ VIDEOS
+  objVideosFunambol:
+    id: objVideosFunambol
+    description: "Obj de Videos"
+    required:
+      - count
+    properties:
+      count:
+          type: number
+
+  # OBJ AUDIOS
+  objAudiosFunambol:
+    id: objAudiosFunambol
+    description: "Obj de Audios"
+    required:
+      - count
+    properties:
+      count:
+          type: number
+
+# OBJ DATA VAZIO
+  data:
+    id: data
+    description: "Obj de retorno vazio"

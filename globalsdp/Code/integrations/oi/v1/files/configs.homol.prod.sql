@@ -1,0 +1,77 @@
+/*
+-- Query: SELECT * FROM gateway.config c where c.key like '%oi%'
+LIMIT 0, 1000
+
+-- Date: 2015-12-10 09:11
+*/
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (125,'oi/v1/billing/user','Message successfully received.');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (126,'oi/v1/billing/password','Could not receive message. Internal Server Error.');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (127,'oi/v1/user','fsuser');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (128,'oi/v1/password','fspass');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (129,'oi/v1/host','http://mt.mensageria.whitelabel.com.br');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (130,'oi/v1/mt/url','dispatcherssl.pl');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (131,'oi/v1/billing/wsdl','http://esbvas.oi.net.br/OCS/VerificarDisponibilidadeSaldoClienteProxySoap');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (132,'oi/v1/checkcredit/wsdl','http://esbvas.oi.net.br/OCS/VerificarDisponibilidadeSaldoClienteProxySoap?wsdl');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (133,'oi/v1/mt/charset/default','ISO-8859-1');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (134,'oi/v1/mt/smsc','SMSCOIFREE');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (135,'oi/v1/backend/host/fs','http://gwoi.whitelabel.com.br');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (136,'oi/v1/backend/mo/url/fs','mo/api.php');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (183,'oi/v1/mt/default-la/user','fsvas');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (184,'oi/v1/mt/default-la/password','oifsvas');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (185,'oi/v1/billing/3324/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (186,'oi/v1/billing/3324/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (187,'oi/v1/billing/3325/user','30928');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (188,'oi/v1/billing/3325/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (189,'oi/v1/billing/3326/user','30928');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (190,'oi/v1/billing/3326/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (191,'oi/v1/billing/3327/user','30317');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (192,'oi/v1/billing/3327/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (193,'oi/v1/billing/3328/user','30317');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (194,'oi/v1/billing/3328/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (195,'oi/v1/billing/3329/user','30339');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (196,'oi/v1/billing/3329/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (197,'oi/v1/billing/3330/user','30339');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (198,'oi/v1/billing/3330/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (199,'oi/v1/billing/3331/user','30717');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (200,'oi/v1/billing/3331/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (201,'oi/v1/billing/3332/user','30717');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (202,'oi/v1/billing/3332/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (203,'oi/v1/billing/3333/user','30282');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (204,'oi/v1/billing/3333/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (205,'oi/v1/billing/3334/user','30282');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (206,'oi/v1/billing/3334/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (207,'oi/v1/billing/3335/user','30455');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (208,'oi/v1/billing/3335/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (209,'oi/v1/billing/3336/user','30455');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (210,'oi/v1/billing/3336/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (211,'oi/v1/billing/3587/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (212,'oi/v1/billing/3587/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (213,'oi/v1/billing/3590/user','30928');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (214,'oi/v1/billing/3590/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (215,'oi/v1/billing/3589/user','30928');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (216,'oi/v1/billing/3589/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (217,'oi/v1/billing/3329/user','30339');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (218,'oi/v1/billing/3329/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (219,'oi/v1/billing/3757/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (220,'oi/v1/billing/3757/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (221,'oi/v1/billing/3764/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (222,'oi/v1/billing/3764/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (223,'oi/v1/billing/3758/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (224,'oi/v1/billing/3758/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (225,'oi/v1/billing/3759/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (226,'oi/v1/billing/3759/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (227,'oi/v1/billing/3760/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (228,'oi/v1/billing/3760/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (229,'oi/v1/billing/3761/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (230,'oi/v1/billing/3761/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (231,'oi/v1/billing/3762/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (232,'oi/v1/billing/3762/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (233,'oi/v1/billing/3763/user','30406');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (234,'oi/v1/billing/3763/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (235,'oi/v1/backend/host/fs-entertainment','http://brtec-mo2.sorte7.com.br');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (236,'oi/v1/backend/mo/url/fs-entertainment','api/mo_fsvas_oi.php');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (237,'oi/v1/fs-entertainment/las','[77211,77213,77214,77216,77217,77219,77221,77222,77227,77231,77233,77234,77235,77241,77243,77244,77245,77247,77248,77249,77251,77261,77262,77263,77264,77265,77267,77269,77271,77279,77281,77282,77283,77284,77285,77286,77291,77292,77298,77411,77419,77447,77449,77471,77611,77647,77811,77111,77113,77114,77116,77117,77119,77121,77122,77127,77131,77133,77134,77135,77141,77143,77144,77145,77147,77148,77149,77151,77161,77162,77163,77164,77165,77167,77169,77171,77179,77181,77182,77183,77184,77185,77186,77191,77192,77198,77311,77319,77347,77349,77371,77511,77547,77911,77000,22020]');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (241,'oi/v1/billing/3190/user','32295');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (242,'oi/v1/billing/3190/password','1234');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (243,'oi/v1/billing/329/user','30575');
+INSERT INTO `config` (`id`,`key`,`value`) VALUES (244,'oi/v1/billing/329/password','1234');

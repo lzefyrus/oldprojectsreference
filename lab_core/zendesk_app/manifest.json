@@ -1,0 +1,17 @@
+{
+  "name": "SaraCare",
+  "author": {
+    "name": "Roundpegs",
+    "email": "sandro.lourenco@roundpe.gs",
+    "url": "https://staging.saracare.com.br/zendesk"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": "https://www.saracare.com.br/zendesk?zat=true"
+    }
+  },
+  "version": "1.1",
+  "frameworkVersion": "2.0"
+}

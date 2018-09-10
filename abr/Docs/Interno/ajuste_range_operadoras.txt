@@ -1,0 +1,20 @@
+﻿Entrar na URL: http://www.teleco.com.br/num_cel.asp
+
+Encontre a descrição: Consulte as faixas das operadoras por DDD
+
+Selecione DDD 11, vai ser listado todos as faixas de telefone DE-ATE por operadoras. Copie um por um e crie os inserts da forma abaixo
+
+INSERT INTO range_operadoras VALUES ('', 2, 11,92021, 92021);
+os campos são
+//id, id_operadora, id_ddd, range_de, range_ate
+
+BANCO ABR tem 2 tabelas com id/descricao   "DDD e OPERADORA"
+Os DDD estão na tabela "ddd" e de acordo com o DDD deve ser colocado o seu ID  "ID 11 = DDD 21"
+
+AS OPERADORAS estão na tabela "operadoras" e de acordo com a OPERADORA deve ser colocado o seu ID "ID 2 = OPERADORA CLARO"
+
+Executar um truncate na tabela range_operadoras.
+
+Executar os inserts
+
+O processo é manual e não rapido. Existe uma tabela de CNL no site da Anatel com as faixas das operadoras fixas e moveis, mas o mesmo não é atualizado.

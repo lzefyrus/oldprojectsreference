@@ -1,0 +1,8 @@
+.navbar-brand {
+	padding: 7px;
+	overflow: hidden;
+}
+
+.navbar-brand>img {
+	max-width: 80px;
+}

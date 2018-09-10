@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sara Care - KPI</title>
+</head>
+<body>
+<header class="banner">
+    <h1>Atendimentos x Prescrições</h1>
+</header>
+
+<section>
+    <table border="1" cellpadding="1" cellspacing="1">
+        <thead>
+            <tr>
+                <th colspan="3">Mensal</th>
+            </tr>
+            <tr>
+                <th>Mes</th>
+                <th>Prescrições</th>
+                <th>Abertura de ficha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for k, v in month.items reversed %}
+            <tr>
+                <td>{{ k }}</td>
+                <td>{{ v.prescription }}</td>
+                <td>{{ v.schedule }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+<br>
+<br>
+<br>
+<section>
+    <table border="1" cellpadding="1" cellspacing="1">
+        <thead>
+        <tr>
+            <th colspan="3">Diário</th>
+        </tr>
+        <tr>
+            <th>Dia</th>
+            <th>Prescrições</th>
+            <th>Abertura de ficha</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for k, v in day.items reversed %}
+        <tr>
+            <td>{{ k }}</td>
+            <td>{{ v.prescription }}</td>
+            <td>{{ v.schedule }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

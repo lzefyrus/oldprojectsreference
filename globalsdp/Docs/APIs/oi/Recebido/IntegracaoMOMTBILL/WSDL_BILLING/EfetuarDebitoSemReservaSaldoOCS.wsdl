@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s0:definitions targetNamespace="http://alsb.telemar/wsdl/EfetuarDebitoSemReservaSaldoOCS" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSRequest" xmlns:s2="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSResponse" xmlns:s3="http://alsb.telemar/wsdl/EfetuarDebitoSemReservaSaldoOCS" xmlns:s4="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:types>
+    <xsd:schema elementFormDefault="unqualified" xmlns:bireq="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSRequest" xmlns:bires="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://alsb.telemar/wsdl/EfetuarDebitoSemReservaSaldoOCS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSRequest" schemaLocation="EfetuarDebitoSemReservaSaldoOCSRequest.xsd"/>
+      <xsd:import namespace="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSResponse" schemaLocation="EfetuarDebitoSemReservaSaldoOCSResponse.xsd"/>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="EfetuarDebitoSemReservaSaldoOCSRequest">
+    <s0:part element="s1:EfetuarDebitoSemReservaSaldoOCSRequest" name="EfetuarDebitoSemReservaSaldoOCSRequest"/>
+  </s0:message>
+  <s0:message name="EfetuarDebitoSemReservaSaldoOCSResponse">
+    <s0:part element="s2:EfetuarDebitoSemReservaSaldoOCSResponse" name="EfetuarDebitoSemReservaSaldoOCSResponse"/>
+  </s0:message>
+  <s0:portType name="EfetuarDebitoSemReservaSaldoOCSPort">
+    <s0:operation name="EfetuarDebitoSemReservaSaldoOCS">
+      <s0:input message="s3:EfetuarDebitoSemReservaSaldoOCSRequest"/>
+      <s0:output message="s3:EfetuarDebitoSemReservaSaldoOCSResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="EfetuarDebitoSemReservaSaldoOCSSoap" type="s3:EfetuarDebitoSemReservaSaldoOCSPort">
+    <s4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="EfetuarDebitoSemReservaSaldoOCS">
+      <s4:operation soapAction="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCS"/>
+      <s0:input>
+        <s4:body use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s4:body use="literal"/>
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="EfetuarDebitoSemReservaSaldoOCS">
+    <s0:port binding="s3:EfetuarDebitoSemReservaSaldoOCSSoap" name="EfetuarDebitoSemReservaSaldoOCSSoap">
+      <s4:address location="http://beaqasalsbocs.telemar:80/OCS/EfetuarDebitoSemReservaSaldoOCSProxySoap"/>
+    </s0:port>
+  </s0:service>
+</s0:definitions>

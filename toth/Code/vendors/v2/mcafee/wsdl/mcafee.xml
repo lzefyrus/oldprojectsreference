@@ -1,0 +1,23 @@
+<PARTNERCONTEXT>
+	<HEADER>
+		<PARTNER PARTNER_ID="{{partnerid}}"/>
+	</HEADER>
+	<DATA>
+		<CUSTOMERCONTEXT ID="{{id}}" REQUESTTYPE="{{requesttype}}">
+		<ACCOUNT>
+			<EMAILADDRESS>{{email}}</EMAILADDRESS>
+			<FIRSTNAME>{{firstname}}</FIRSTNAME>
+			<LASTNAME>{{lastname}}</LASTNAME>
+			<PASSWORD>{{password}}</PASSWORD>
+			<PREFERENCES>
+				<PREFERENCE TYPE="LANG">pt-br</PREFERENCE>
+			</PREFERENCES>
+		</ACCOUNT>
+		<ORDER PARTNERREF="{{partnerref}}" REF="{{ref}}">
+			<ITEMS>
+				<ITEM SKU="{{sku}}" {{qty_item}} {{license_size}} ACTION="{{action}}"/>
+			</ITEMS>
+		</ORDER>
+		</CUSTOMERCONTEXT>
+	</DATA>
+</PARTNERCONTEXT>

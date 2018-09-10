@@ -1,0 +1,593 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "TIM",
+        "description": "Esta é a primeira versão da API Restful de Integração da TIM com o Global SDP. Através dela é possível que backend utilize diversos serviços oferecidos pela TIM.\nEstas são algumas das possibilidades de utilização da nossa API:\n- Cancelamento (Backend)\n- MT (Backend)\n- Billing (Backend)\n- Billing Status (Backend)\n- Migração (Backend)\n- Notificação (TIM)\n- MO (TIM)\n"
+    },
+    "host": "10.170.128.55:8080",
+    "basePath": "/tim/v1",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "Cancelamento (Backend)"
+        },
+        {
+            "name": "MT (Backend)"
+        },
+        {
+            "name": "Billing (Backend)"
+        },
+        {
+            "name": "Billing Status (Backend)"
+        },
+        {
+            "name": "Migração (Backend)"
+        },
+        {
+            "name": "Notificação (TIM)"
+        },
+        {
+            "name": "MO (TIM)"
+        }
+    ],
+    "paths": {
+        "/backend/cancellation": {
+            "post": {
+                "tags": [
+                    "Cancelamento (Backend)"
+                ],
+                "description": "Envia um cancelamento para a API da TIM.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subscription_id",
+                        "in": "body",
+                        "description": "Id da assinatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/backend/mt": {
+            "post": {
+                "tags": [
+                    "MT (Backend)"
+                ],
+                "description": "Envia MT para um msisdn já cadastrado.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "la",
+                        "in": "body",
+                        "description": "LA a ser enviado",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "in": "body",
+                        "description": "Mensagem que será o conteúdo do MT",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subscription_id",
+                        "in": "body",
+                        "description": "Id da assinatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created - Success"
+                    },
+                    "401": {
+                        "description": "Unauthorized - customer not subscribed to the service"
+                    }
+                }
+            }
+        },
+        "/backend/billing": {
+            "post": {
+                "tags": [
+                    "Billing (Backend)"
+                ],
+                "description": "Envia uma cobrança para a API da TIM.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "amount",
+                        "in": "body",
+                        "description": "Quantia a ser enviada (geralmente 1 para a FS).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "in": "body",
+                        "description": "Id da aplicação definido pela TIM (AppId).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mandate_id",
+                        "in": "body",
+                        "description": "Operação. Valor \"1\" para Débito Direto.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "body",
+                        "description": "Contract ID (tripleta).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "reference_code",
+                        "in": "body",
+                        "description": "Identicação do provedor de serviço da TIM (CSPid)",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "service_id",
+                        "in": "body",
+                        "description": "Identicação do provedor de serviço da TIM (CSPid) no seu backend.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tax_amount",
+                        "in": "body",
+                        "description": "Será utilizado em funcionalidades futura. Passar o valor \"0\".",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transaction_status",
+                        "in": "body",
+                        "description": "Especifica qual o tipo de cobrança requisitado. Passar o valor \"Charged\"",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subscription_id",
+                        "in": "body",
+                        "description": "Id da assinatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "body",
+                        "description": "Descrição opcional do motivo da cobrança;",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful GET Query Status or List Transactions request."
+                    },
+                    "201": {
+                        "description": "Created - The charging or refund transaction was successful."
+                    },
+                    "202": {
+                        "description": "Processing - The server cannot immediately answer if the charging or refund transaction was successful, please query the status later."
+                    },
+                    "400": {
+                        "description": "Bad request - Check the error message and correct the request syntax."
+                    },
+                    "401": {
+                        "description": "Authentication failure - Check your OneAPI provider’s authentication requirements."
+                    },
+                    "403": {
+                        "description": "Forbidden - Please provide authentication credentials."
+                    },
+                    "404": {
+                        "description": "Not found - Mistake in the host or path of the service URI."
+                    },
+                    "405": {
+                        "description": "Method not supported - In OneAPI Locationv v1 only GET is supported."
+                    },
+                    "503": {
+                        "description": "Server busy and service unavailable - Please retry the request."
+                    }
+                }
+            }
+        },
+        "/backend/billing/status": {
+            "post": {
+                "tags": [
+                    "Billing Status (Backend)"
+                ],
+                "description": "Verifica o status uma cobrança anteriormente enviada para a API da TIM.",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "transacion_id",
+                        "in": "body",
+                        "description": "Id único da transação de Billing. Fornecido em “Location” ou “resourceURL” no corpo da resposta de Billing.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful GET Query Status or List Transactions request."
+                    },
+                    "400": {
+                        "description": "Bad request - Check the error message and correct the request syntax."
+                    },
+                    "401": {
+                        "description": "Authentication failure - Check your OneAPI provider’s authentication requirements."
+                    },
+                    "403": {
+                        "description": "Forbidden - Please provide authentication credentials."
+                    },
+                    "404": {
+                        "description": "Not found - Mistake in the host or path of the service URI."
+                    },
+                    "405": {
+                        "description": "Method not supported - In OneAPI Locationv v1 only GET is supported."
+                    },
+                    "503": {
+                        "description": "Server busy and service unavailable - Please retry the request."
+                    }
+                }
+            }
+        },
+        "/backend/migration": {
+            "post": {
+                "tags": [
+                    "Migração (Backend)"
+                ],
+                "description": "Migra um usário de um plano para outro",
+                "parameters": [
+                    {
+                        "name": "user-key",
+                        "in": "header",
+                        "description": "user-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user-secret",
+                        "in": "header",
+                        "description": "user-secret provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "tunnel-key",
+                        "in": "header",
+                        "description": "tunnel-key provido pelo nucleo duro",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "msisdn",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "application_id",
+                        "in": "body",
+                        "description": "Id da aplicação definido pela TIM (AppId).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful POST Transactions request."
+                    },
+                    "400": {
+                        "description": "Bad request - Check the error message and correct the request syntax."
+                    },
+                    "404": {
+                        "description": "Not found - Mistake in the host or path of the service URI."
+                    }
+                }
+            }
+        },
+        "/notification": {
+            "post": {
+                "tags": [
+                    "Notificação (TIM)"
+                ],
+                "description": "Recebe notificação da TIM (Assinatura ou Cancelamento)",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "body",
+                        "description": "Id da assinatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "applicationName",
+                        "in": "body",
+                        "description": "Id da aplicação definido pela TIM (AppId).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subscriberAddress",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operation",
+                        "in": "body",
+                        "description": "Subscribe para Assinatura. Unsubscribe para Cancelamento.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful POST Transactions request."
+                    },
+                    "400": {
+                        "description": "Bad request - Check the error message and correct the request syntax."
+                    },
+                    "404": {
+                        "description": "Not found - Mistake in the host or path of the service URI."
+                    }
+                }
+            }
+        },
+        "/mo": {
+            "post": {
+                "tags": [
+                    "MO (TIM)"
+                ],
+                "description": "Recebe MO da TIM",
+                "parameters": [
+                    {
+                        "name": "subscriber",
+                        "in": "body",
+                        "description": "msisdn no formato tel:99999999 com código de área e do país.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "subscriberMessage",
+                        "in": "body",
+                        "description": "Comando enviado pelo usuário. Exemplo \"Ajuda\"",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "shortCode",
+                        "in": "body",
+                        "description": "L.A",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful POST Transactions request."
+                    },
+                    "400": {
+                        "description": "Bad request - Check the error message and correct the request syntax."
+                    },
+                    "404": {
+                        "description": "Not found - Mistake in the host or path of the service URI."
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1763 @@
+[ 03-28 15:54 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 15:55 ][ INFO ][               web.py:1971 -          log_request() ] 200 GET / (::1) 24.44ms
+[ 03-28 15:55 ][ WARNING ][               web.py:1971 -          log_request() ] 404 GET /login/facebook (::1) 5.32ms
+[ 03-28 15:55 ][ INFO ][               web.py:1971 -          log_request() ] 200 GET /favicon.ico (::1) 8.97ms
+[ 03-28 15:55 ][ WARNING ][               web.py:1971 -          log_request() ] 404 GET /facebook/login (::1) 2.78ms
+[ 03-28 15:55 ][ WARNING ][               web.py:1971 -          log_request() ] 404 GET /login (::1) 1.13ms
+[ 03-28 15:55 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 3.04ms
+[ 03-28 15:56 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 44, in get
+    'token': self.session.getCookieOrToken()})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/session.py", line 187, in flush
+    self.driver.save(self._id, self.session, self._expires)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 36, in save
+    self.client.set(session_id, session_data)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 1072, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 15:56 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 15:58 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 15:58 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 6.64ms
+[ 03-28 16:00 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:00 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 8.58ms
+[ 03-28 16:00 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:01 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 16.64ms
+[ 03-28 16:02 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:02 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 12.06ms
+[ 03-28 16:02 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:02 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 4.71ms
+[ 03-28 16:03 ][ INFO ][   http1connection.py: 253 -        _read_message() ] Malformed HTTP message from ::1: Malformed HTTP request line
+[ 03-28 16:03 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 7.91ms
+[ 03-28 16:03 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:03 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:04 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:04 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 14.37ms
+[ 03-28 16:04 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:04 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 155.74ms
+[ 03-28 16:05 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:05 ][ INFO ][   http1connection.py: 253 -        _read_message() ] Malformed HTTP message from ::1: Malformed HTTP request line
+[ 03-28 16:05 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:05 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:05 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:06 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:06 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:06 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:09 ][ ERROR ][               web.py:1548 -        log_exception() ] Uncaught exception GET / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/', version='HTTP/1.1', remote_ip='::1', headers={'Cache-Control': 'max-age=0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Host': 'localhost:8889', 'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,pt;q=0.6,pt-BR;q=0.4,es;q=0.2', 'Cookie': 'Idea-8c0f32fa=0f6076c1-85fd-4d86-aa15-e877d64f2397; djdt=hide; csrftoken=FoRSCyBPpImtxNtl3UQHFsJy8cIq8VVSOLdhgkZC8KVMbQ9KSTst4nYpfaI5esOs; _ga=GA1.1.267753179.1484922365; msid=7fc353d4084b4eb79c8a6f7ab1558c3f', 'Accept-Encoding': 'gzip, deflate, sdch, br'})
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:09 ][ ERROR ][               web.py:1971 -          log_request() ] 500 GET / (::1) 152106.34ms
+[ 03-28 16:11 ][ ERROR ][               web.py: 996 -           send_error() ] Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 994, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1022, in write_error
+    "message": self._reason,
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:12 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 7.82ms
+[ 03-28 16:13 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:13 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:13 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:13 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:16 ][ ERROR ][               web.py:1548 -        log_exception() ] Uncaught exception GET / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/', version='HTTP/1.1', remote_ip='::1', headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Host': 'localhost:8889', 'Cache-Control': 'no-cache', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'djdt=hide; csrftoken=FoRSCyBPpImtxNtl3UQHFsJy8cIq8VVSOLdhgkZC8KVMbQ9KSTst4nYpfaI5esOs; _ga=GA1.1.267753179.1484922365; msid=7fc353d4084b4eb79c8a6f7ab1558c3f', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Accept-Language': 'en-US,en;q=0.8,pt;q=0.6,pt-BR;q=0.4,es;q=0.2'})
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:16 ][ ERROR ][               web.py:1971 -          log_request() ] 500 GET / (::1) 152434.59ms
+[ 03-28 16:16 ][ ERROR ][               web.py:1548 -        log_exception() ] Uncaught exception GET / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/', version='HTTP/1.1', remote_ip='::1', headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Host': 'localhost:8889', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Connection': 'keep-alive', 'Cookie': 'djdt=hide; csrftoken=FoRSCyBPpImtxNtl3UQHFsJy8cIq8VVSOLdhgkZC8KVMbQ9KSTst4nYpfaI5esOs; _ga=GA1.1.267753179.1484922365; msid=7fc353d4084b4eb79c8a6f7ab1558c3f', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Accept-Language': 'en-US,en;q=0.8,pt;q=0.6,pt-BR;q=0.4,es;q=0.2'})
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:16 ][ ERROR ][               web.py:1971 -          log_request() ] 500 GET / (::1) 152497.66ms
+[ 03-28 16:18 ][ ERROR ][               web.py: 996 -           send_error() ] Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 994, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1022, in write_error
+    "message": self._reason,
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:18 ][ WARNING ][               web.py:1971 -          log_request() ] 404 GET /ads (::1) 3.74ms
+[ 03-28 16:19 ][ ERROR ][               web.py: 996 -           send_error() ] Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 994, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1022, in write_error
+    "message": self._reason,
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:29 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 03-28 16:30 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:34 ][ ERROR ][               web.py:1548 -        log_exception() ] Uncaught exception GET / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8889', method='GET', uri='/', version='HTTP/1.1', remote_ip='::1', headers={'Accept-Language': 'en-US,en;q=0.8,pt;q=0.6,pt-BR;q=0.4,es;q=0.2', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': 'localhost:8889', 'Upgrade-Insecure-Requests': '1', 'Cookie': 'Idea-8c0f32fa=0f6076c1-85fd-4d86-aa15-e877d64f2397; djdt=hide; csrftoken=FoRSCyBPpImtxNtl3UQHFsJy8cIq8VVSOLdhgkZC8KVMbQ9KSTst4nYpfaI5esOs; _ga=GA1.1.267753179.1484922365; msid=7fc353d4084b4eb79c8a6f7ab1558c3f', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:34 ][ ERROR ][               web.py:1971 -          log_request() ] 500 GET / (::1) 152113.60ms
+[ 03-28 16:36 ][ ERROR ][               web.py: 996 -           send_error() ] Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "main.py", line 42, in get
+    'user_id': self.session.get('id'),
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 994, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1022, in write_error
+    "message": self._reason,
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 03-28 16:44 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 03-28 16:44 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 4.85ms
+[ 03-28 16:46 ][ ERROR ][   http1connection.py:  54 -             __exit__() ] Uncaught exception
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2047, in finish
+    self.execute()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 2080, in execute
+    **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1467, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/gen.py", line 285, in wrapper
+    yielded = next(result)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/face_auth.py", line 63, in get
+    extra_params={"scope": "email"})
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 478, in wrapper
+    future.result()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 237, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/concurrent.py", line 466, in wrapper
+    result = f(*args, **kwargs)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/auth.py", line 600, in authorize_redirect
+    url_concat(self._OAUTH_AUTHORIZE_URL, args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 684, in redirect
+    self.finish()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 956, in finish
+    self.on_finish()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 148, in on_finish
+    self.session.flush()  # try to save session
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+KeyboardInterrupt
+[ 04-06 14:40 ][ INFO ][           process.py: 133 -       fork_processes() ] Starting 20 processes
+[ 04-06 14:41 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 13.00ms
+[ 04-06 14:43 ][ ERROR ][         face_auth.py:  63 -                  get() ] Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 04-06 14:43 ][ INFO ][               web.py:1971 -          log_request() ] 302 GET /auth/login (::1) 1.98ms
+[ 04-06 14:45 ][ ERROR ][               web.py:1548 -        log_exception() ] Uncaught exception GET /api/user (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8889', method='GET', uri='/api/user', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Content-Type': 'application/json', 'Authorization': 'd820611149694f43996d7a90d4780595', 'Accept': '*/*', 'Host': '127.0.0.1:8889', 'Cache-Control': 'no-cache', 'Cookie': 'csrftoken=UtMOc7aJJqtqnJZ07SiUx8z9QH5wRTIyYpSLam1PU0os2re7fJL3uMWfuhropSPr', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.8,pt;q=0.6,pt-BR;q=0.4,es;q=0.2', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'})
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 439, in connect
+    sock = self._connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 494, in _connect
+    raise err
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 482, in _connect
+    sock.connect(socket_address)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/tornado/web.py", line 1446, in _execute
+    result = self.prepare()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 160, in prepare
+    user = self.get_user()
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 177, in get_user
+    if self.session.get('id'):
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 129, in session
+    return self._create_mixin(self, '__session_manager', TokenSess)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 133, in _create_mixin
+    setattr(context, inner_property_name, session_handler(context))
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 43, in __init__
+    self.__init_session_object()  # initialize session object
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 94, in __init_session_object
+    self.session = self.__get_session_object_from_driver(session_id)
+  File "/Users/sandrol/Documents/projects/bradesco-next-game/backend/server/utils.py", line 123, in __get_session_object_from_driver
+    return self.driver.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/torndsession/redissession.py", line 26, in get
+    session_data = self.client.get(session_id)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 880, in get
+    return self.execute_command('GET', name)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/client.py", line 578, in execute_command
+    connection.send_command(*args)
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/Users/sandrol/.virtualenvs/next-game/lib/python3.5/site-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.
+[ 04-06 14:45 ][ ERROR ][               web.py:1971 -          log_request() ] 500 GET /api/user (127.0.0.1) 152360.87ms
+[ 04-06 14:46 ][ ERROR ][         face_auth.py:  63 -                  get() ] Error 60 connecting to nextme.sety1f.ng.0001.sae1.cache.amazonaws.com:6379. Operation timed out.

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions
+		targetNamespace	= "http://schemas.kaspersky.com/services/subscription/2.0/"
+		xmlns:tns		= "http://schemas.kaspersky.com/services/subscription/2.0/"
+		xmlns:wsdl		= "http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap		= "http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:s			= "http://www.w3.org/2001/XMLSchema"
+		xmlns:tm		= "http://microsoft.com/wsdl/mime/textMatching/"
+		xmlns:soapenc	= "http://schemas.xmlsoap.org/soap/encoding/"
+		xmlns:mime		= "http://schemas.xmlsoap.org/wsdl/mime/"
+		xmlns:http		= "http://schemas.xmlsoap.org/wsdl/http/"
+		>
+
+	<wsdl:service name="KasperskySubscriptionService">
+		<wsdl:port name="KasperskySubscriptionServiceSoap" binding="tns:KasperskySubscriptionServiceBinding">
+			<soap:address location="https://cca.kaspersky.com/soap/upi" />
+		</wsdl:port>
+	</wsdl:service>
+
+	<wsdl:binding name="KasperskySubscriptionServiceBinding" type="tns:KasperskySubscriptionServicePortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="SubscriptionRequest">
+			<soap:operation soapAction="http://schemas.kaspersky.com/services/subscription/subscriptionRequest" style="document" />
+			<wsdl:input>
+				<soap:header message="tns:SubscriptionRequestAccessInfo" part="AccessInfo" use="literal" />
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:portType name="KasperskySubscriptionServicePortType">
+		<wsdl:operation name="SubscriptionRequest">
+			<wsdl:input message="tns:SubscriptionRequestMessageIn" />
+			<wsdl:output message="tns:SubscriptionRequestMessageOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:message name="SubscriptionRequestMessageIn">
+		<wsdl:part name="SubscriptionRequestContainer" element="tns:SubscriptionRequestContainer" />
+	</wsdl:message>
+
+	<wsdl:message name="SubscriptionRequestMessageOut">
+		<wsdl:part name="SubscriptionResponseContainer" element="tns:SubscriptionResponseContainer" />
+	</wsdl:message>
+
+	<wsdl:message name="SubscriptionRequestAccessInfo">
+		<wsdl:part name="AccessInfo" element="tns:AccessInfo" />
+	</wsdl:message>
+
+	<wsdl:types>
+
+		<s:schema targetNamespace="http://schemas.kaspersky.com/services/subscription/2.0/"
+				  elementFormDefault="qualified"
+				  >
+
+			<s:element name="AccessInfo">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="UserName" type="s:string" />
+						<s:element minOccurs="1" maxOccurs="1" name="Password" type="s:string" />
+					</s:sequence>
+					<s:anyAttribute />
+				</s:complexType>
+			</s:element>
+
+			<s:element name="SubscriptionRequestContainer">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="Timestamp" type="s:dateTime" />
+						<s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s:string" />
+						<s:element minOccurs="1" maxOccurs="1" name="SubscriptionRequest" type="tns:SubscriptionRequestItemCollection">
+							<s:unique name="uniqueUnitId">
+								<s:selector xpath="Activate|Renew|SoftCancel|HardCancel|Pause|Resume"/>
+								<s:field xpath="@UnitId"/>
+							</s:unique>
+						</s:element>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+			<s:complexType name="SubscriptionRequestItemCollection">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Activate" type="tns:SubscriptionRequestActivateItem" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Renew" type="tns:SubscriptionRequestRenewItem" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SoftCancel" type="tns:SubscriptionRequestSoftCancelItem" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="HardCancel" type="tns:SubscriptionRequestHardCancelItem" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Resume" type="tns:SubscriptionRequestResumeItem" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Pause" type="tns:SubscriptionRequestPauseItem" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:simpleType name="EndTimeType">
+				<s:union memberTypes="s:dateTime">
+					<s:simpleType>
+						<s:restriction base="s:string">
+							<s:enumeration value="indefinite" />
+						</s:restriction>
+					</s:simpleType>
+				</s:union>
+			</s:simpleType>
+
+			<s:simpleType name="ActivationTypeEnum">
+				<s:restriction base="s:string">
+					<s:enumeration value="Standard" />
+					<s:enumeration value="Secondary" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:attributeGroup name="UnitIdAndSubscriberIdGroup">
+				<s:attribute name="UnitId" type="s:nonNegativeInteger" use="required" />
+				<s:attribute name="SubscriberId" type="s:string" use="required" />
+			</s:attributeGroup>
+
+			<s:complexType name="SubscriptionRequestActivateItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attribute name="StartTime" type="s:dateTime" use="required" />
+				<s:attribute name="EndTime" type="tns:EndTimeType" use="required" />
+				<s:attribute name="LicenseCount" type="s:positiveInteger" use="optional" default="1" />
+				<s:attribute name="ProductId" type="s:string" use="required" />
+				<s:attribute name="ActivationType" type="tns:ActivationTypeEnum" use="optional" default="Standard" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionRequestRenewItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attribute name="EndTime" type="tns:EndTimeType" use="required" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionRequestHardCancelItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attribute name="EndTime" type="s:dateTime" use="required" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionRequestSoftCancelItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attribute name="EndTime" type="s:dateTime" use="required" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionRequestPauseItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attribute name="PauseTime" type="s:dateTime" use="required" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionRequestResumeItem">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+			</s:complexType>
+
+			<s:attributeGroup name="ErrorCodeAndMessageGroup">
+				<s:attribute name="ErrorCode" type="s:integer" use="required" />
+				<s:attribute name="ErrorMessage" type="s:string" use="optional" />
+			</s:attributeGroup>
+
+			<s:complexType name="ResponseItemErrorType">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+				<s:attributeGroup ref="tns:ErrorCodeAndMessageGroup" />
+			</s:complexType>
+
+			<s:complexType name="TransactionErrorType">
+				<s:attributeGroup ref="tns:ErrorCodeAndMessageGroup" />
+			</s:complexType>
+
+			<s:element name="SubscriptionResponseContainer">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="Timestamp" type="s:dateTime" />
+						<s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s:string" />
+						<s:choice>
+							<s:element minOccurs="1" maxOccurs="1" name="TransactionError" type="tns:TransactionErrorType" />
+							<s:sequence>
+								<s:element minOccurs="0" maxOccurs="1" name="SubscriptionResponse" type="tns:SubscriptionResponseItemCollection" />
+								<s:element minOccurs="0" maxOccurs="1" name="SubscriptionError" type="tns:SubscriptionResponseErrorCollection" />
+							</s:sequence>
+						</s:choice>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+			<s:complexType name="BaseResponseItemType">
+				<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+			</s:complexType>
+
+			<s:complexType name="SubscriptionResponseItemCollection">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Activate">
+						<s:complexType>
+							<s:attributeGroup ref="tns:UnitIdAndSubscriberIdGroup" />
+							<s:attribute name="ActivationCode" type="s:string" use="required" />
+						</s:complexType>
+					</s:element>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Renew" type="tns:BaseResponseItemType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SoftCancel" type="tns:BaseResponseItemType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="HardCancel" type="tns:BaseResponseItemType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Resume" type="tns:BaseResponseItemType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Pause" type="tns:BaseResponseItemType" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="SubscriptionResponseErrorCollection">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="ActivateError" type="tns:ResponseItemErrorType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="RenewError" type="tns:ResponseItemErrorType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="HardCancelError" type="tns:ResponseItemErrorType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SoftCancelError" type="tns:ResponseItemErrorType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="PauseError" type="tns:ResponseItemErrorType" />
+					<s:element minOccurs="0" maxOccurs="unbounded" name="ResumeError" type="tns:ResponseItemErrorType" />
+				</s:sequence>
+			</s:complexType>
+
+		</s:schema>
+
+	</wsdl:types>
+
+</wsdl:definitions>

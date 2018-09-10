@@ -1,0 +1,54 @@
+{
+	"owner": "154767",
+	"lastUpdatedBy": "154767",
+	"lastRevision": 85252869,
+	"team": null,
+	"id": "16bd7927-bf03-069e-4071-9860cafabd57",
+	"name": "algar-partner",
+	"description": null,
+	"remoteLink": null,
+	"order": [
+		"5d39d895-e7ab-890f-3e2e-7179e9191df5",
+		"982b274c-d485-b9f5-1fbd-845fe38d7900"
+	],
+	"requests": [
+		{
+			"id": "5d39d895-e7ab-890f-3e2e-7179e9191df5",
+			"headers": "Content-Type: text/xml\n",
+			"url": "http://10.170.128.55:8888/algar/v1/mo",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1449077571232,
+			"name": "mo",
+			"description": "Send mo from Algar to backend",
+			"collectionId": "16bd7927-bf03-069e-4071-9860cafabd57",
+			"rawModeData": "<smsmo_request company_id=\"7\" service_id=\"23\">\n   <carrier_id>8</carrier_id>\n   <dispatcher_id>18</dispatcher_id>\n   <application_id>41</application_id>\n   <message_id>A434FD01</message_id>\n   <session_id>A434FDB2</session_id>\n   <large_account>500</large_account>\n   <source country_code=\"\">3191234567</source>\n   <request_datetime>2005021205</request_datetime>\n   <text binary=\"false\">ALO</text>\n</smsmo_request>"
+		},
+		{
+			"id": "982b274c-d485-b9f5-1fbd-845fe38d7900",
+			"headers": "Content-Type: text/xml\n",
+			"url": "http://10.170.128.55:8888/algar/v1/notification/signature",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1449077823351,
+			"name": "notification",
+			"description": "Receive signature/auth notification from Algar",
+			"collectionId": "16bd7927-bf03-069e-4071-9860cafabd57",
+			"rawModeData": "<notification_request status=\"12\" application_id=\"1\">\n\t<dispatcher_id>18</dispatcher_id>\n\t<message_id>A434FD01</message_id>\n\t<smsc_message_id>09923DF1</smsc_message_id>\n\t<source>500</source>\n\t<destination>3191234567</destination>\n    <request_datetime>2005021205</request_datetime>\n    <notification_datetime>2005021205</notification_datetime>\n    <package id=\"A434FD01\" index=\"1\"/>\n    <app_specific_id>Teste</app_specific_id>\n    <description code=\"0\">Message delivered to destination</description> \n</notification_request>"
+		}
+	]
+}

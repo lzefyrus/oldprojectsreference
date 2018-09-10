@@ -1,0 +1,1824 @@
+apis:
+# MCAFEE
+  - path: /v2/mcafee/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Add a new user.
+        notes: "VirusScan Antivirus - 686-28581-mvs - 60 day(s) trial subscription without auto-renewal. Device McAfee Multi Access  - 686-68816-1dmma - 1 month(s) paid subscription with 1 month(s) auto-renewal."
+        nickname: postProvisioningMcaFee
+        type: postProvisioningMcaFee
+        parameters:
+          - name: key
+            description: "Specifies a unique identifier that the Partner assigns to a specific customer. This ID remains constant during the customer’s life time."
+            required: true
+            type: string
+            paramType: path
+          - name: password
+            description: "Contains the customer’s password. If the Partner requests McAfee to generate a random password for each user, then this field will be blank."
+            required: true
+            type: password
+            paramType: query
+          - name: email
+            description:  "Contains the customer’s email address."
+            required: true
+            type: string
+            paramType: query
+          - name: license_size
+            description:  "license Size"
+            required: true
+            type: number
+            paramType: query
+          - name: partnerref
+            description:  "Specifies a unique Partner order reference number associated with an order. The Partner sends the order number for the customer’s order."
+            required: true
+            type: string
+            paramType: query
+          - name: sku
+            description:  "Specifies the product ID or the stock-keeping unit (SKU) number that the customer intends to purchase or cancel. Either McAfee provides SKUs to the Partner or the Partner specifies the SKUs to use. If the Partner provides SKUs, McAfee maps the Partner SKUs to the McAfee product IDs."
+            required: true
+            type: string
+            paramType: query
+          - name: partnerid
+            description:  "Specifies the number that McAfee assigns to each Partner."
+            required: true
+            type: string
+            paramType: query
+          - name: firstname
+            description: "Contains the customer’s first name."
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: "Contains the customer’s last name."
+            required: false
+            type: string
+            paramType: query
+          - name: ref
+            description:  "Contains the McAfee order reference number."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/mcafee/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Update an existing user.
+        notes: For the update of a user is necessary to pass his id in the carrier and already it will be the same in key in Funambol.
+        nickname: putProvisioningMcaFee
+        type: putProvisioningMcaFee
+        parameters:
+          - name: key
+            description: "Specifies a unique identifier that the Partner assigns to a specific customer. This ID remains constant during the customer’s life time."
+            required: true
+            type: string
+            paramType: path
+          - name: password
+            description: "Contains the customer’s password. If the Partner requests McAfee to generate a random password for each user, then this field will be blank."
+            required: true
+            type: password
+            paramType: query
+          - name: email
+            description:  "Contains the customer’s email address."
+            required: true
+            type: string
+            paramType: query
+          - name: license_size
+            description:  "license Size"
+            required: true
+            type: number
+            paramType: query
+          - name: sku
+            description:  "Specifies the product ID or the stock-keeping unit (SKU) number that the customer intends to purchase or cancel. Either McAfee provides SKUs to the Partner or the Partner specifies the SKUs to use. If the Partner provides SKUs, McAfee maps the Partner SKUs to the McAfee product IDs."
+            required: true
+            type: string
+            paramType: query
+          - name: partnerid
+            description:  "Specifies the number that McAfee assigns to each Partner."
+            required: true
+            type: string
+            paramType: query
+          - name: partnerref
+            description:  "Specifies a unique Partner order reference number associated with an order. The Partner sends the order number for the customer’s order."
+            required: false
+            type: string
+            paramType: query
+          - name: firstname
+            description: "Contains the customer’s first name."
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: "Contains the customer’s last name."
+            required: false
+            type: string
+            paramType: query
+          - name: ref
+            description:  "Contains the McAfee order reference number."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/mcafee/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Delete user.
+        notes: ""
+        nickname: deleteProvisioningMcaFee
+        type: deleteProvisioningMcaFee
+        parameters:
+          - name: key
+            description: "Specifies a unique identifier that the Partner assigns to a specific customer. This ID remains constant during the customer’s life time."
+            required: true
+            type: string
+            paramType: path
+          - name: sku
+            description:  "Specifies the product ID or the stock-keeping unit (SKU) number that the customer intends to purchase or cancel. Either McAfee provides SKUs to the Partner or the Partner specifies the SKUs to use. If the Partner provides SKUs, McAfee maps the Partner SKUs to the McAfee product IDs."
+            required: true
+            type: string
+            paramType: query
+          - name: partnerid
+            description:  "Specifies the number that McAfee assigns to each Partner."
+            required: true
+            type: string
+            paramType: query
+          - name: partnerref
+            description:  "Specifies a unique Partner order reference number associated with an order. The Partner sends the order number for the customer’s order."
+            required: false
+            type: string
+            paramType: query
+          - name: ref
+            description:  "Contains the McAfee order reference number."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+
+# COMPETIR
+  - path: /v2/competir/oi/provisioning/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve all generic information for a user."
+        notes: ""
+        nickname: getProvisioningCompetir
+        type: getProvisioningCompetir
+        parameters:
+          - name: key
+            description: The user ID to get.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+          - code: 200
+            message: OK
+
+  - path: /v2/competir/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Add a new given user.
+        notes: For the creation of a device is necessary to pass his id in the carrier and already it will be the same in key in competir.
+        nickname: postProvisioningCompetir
+        type: postProvisioningCompetir
+        parameters:
+          - name: key
+            description: The user ID of the user in the operator db.
+            required: true
+            type: string
+            paramType: path
+          - name: fsvas_email
+            description: The new email address of the user.
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+
+  - path: /v2/competir/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Update an existing user.
+        notes: For the update of a user is necessary to pass his id in the carrier and already it will be the same in key in competir.
+        nickname: putProvisioningCompetir
+        type: putProvisioningCompetir
+        parameters:
+          - name: key
+            description: The user ID of the update.
+            required: true
+            type: string
+            paramType: path
+          - name: fsvas_status
+            description:  "1 or 0 to active/desactive a user."
+            required: true
+            type: number
+            paramType: query
+          - name: fsvas_email
+            description: The new email address of the user.
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+
+  - path: /v2/competir/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Downgrade an existing user.
+        notes: 
+        nickname: deleteProvisioningCompetir
+        type: deleteProvisioningCompetir
+        parameters:
+          - name: key
+            description: The user ID form Downgrade.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+          - code: 200
+            message: OK
+
+# FUNAMBOL
+  - path: /v2/funambol/oi/provisioning/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve all generic information (first name, last name, ...) for a user."
+        notes: ""
+        nickname: getProvisioningFunambol
+        type: getProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID to get.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Add a new user.
+        notes: For the creation of a profile is necessary to pass his id in the carrier and already it will be the same in key in Funambol.
+        nickname: postProvisioningFunambol
+        type: postProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the new user. It is mandatory for a new user but it cannot be specified during an update. Note that it is not possible to change the username once defined.
+            required: true
+            type: string
+            paramType: path
+          - name: username
+            description: The username of the new user.
+            required: true
+            type: string
+            paramType: query
+          - name: password
+            description: The plain password of the new user (a-zA-Z0-9) max:16 mim:4.
+            required: true
+            type: password
+            paramType: query
+          - name: firstname
+            description: The first name of the new user.
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: The last name of the new user.
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description:  "The email of the new user."
+            required: false
+            type: string
+            paramType: query
+          - name: birthday
+            description: Date of birth (YYYYMMDD). Default is 19000101.
+            required: false
+            type: string
+            paramType: query
+          - name: l10n
+            description: "The locale of the new user, for example 'en-US'. To allow maximum flexibility of the localization code, this value is not validated. So any string is acceptable as a l10n parameter."
+            required: false
+            type: string
+            paramType: query
+          - name: mailinglist
+            description: Subscribe to the Portal mailing list (also known as the "keep me informed" flag).
+            required: false
+            type: bool
+            paramType: query
+          - name: male
+            description: Gender of the user (male or female). Default is male.
+            required: false
+            type: bool
+            paramType: query
+          - name: timezone
+            description: The timezone of the new user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+          - name: preferredcommunicationchannel
+            description: The preferred communication channel for receiving user communications. Possible values are "email" and "sms".
+            required: false
+            type: string
+            paramType: query
+          - name: email
+            description:  "true to send the welcome email, false otherwise. The parameter is false by default."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Update an existing user.
+        notes: For the update of a user is necessary to pass his id in the carrier and already it will be the same in key in Funambol.
+        nickname: putProvisioningFunambol
+        type: putProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the update.
+            required: true
+            type: string
+            paramType: path
+          - name: username
+            description: The new username of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description: The new email address of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: firstname
+            description: The new first name of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: The new last name of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: birthday
+            description: Date of birth (YYYYMMDD). Default is 19000101.
+            required: false
+            type: string
+            paramType: query
+          - name: l10n
+            description: "The new locale of the user, for example 'en-US'. To allow maximum flexibility of the localization code, this value is not validated. So any string is acceptable as a l10n parameter."
+            required: false
+            type: string
+            paramType: query
+          - name: mailinglist
+            description: Subscribe to the Portal mailing list (also known as the "keep me informed" flag).
+            required: false
+            type: bool
+            paramType: query
+          - name: male
+            description: Gender of the user (male or female). Default is male.
+            required: false
+            type: bool
+            paramType: query
+          - name: password
+            description: The plain new password of the user (a-zA-Z0-9) max:16 mim:4.
+            required: false
+            type: password
+            paramType: query
+          - name: oldpassword
+            description: "In case of change of password, the previous one. This field is mandatory when the password field is passed together to change the authenticated user password."
+            required: false
+            type: password
+            paramType: query
+          - name: timezone
+            description: The new timezone of the user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+          - name: preferredcommunicationchannel
+            description: The preferred communication channel for receiving user communications. Possible values are "email" and "sms".
+            required: false
+            type: string
+            paramType: query
+          - name: enabled
+            description: "(0 - Disabled, 1 - Enabled)."
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Delete an existing user.
+        notes: 
+        nickname: deleteProvisioningFunambol
+        type: deleteProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the user.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/roles/
+    operations:
+      - method: GET
+        summary: "Retrieve the list of roles."
+        notes: ""
+        nickname: getRolesFunambol
+        type: getRolesFunambol
+        responseMessages:
+  - path: /v2/funambol/oi/licenses/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the list of user roles."
+        notes: ""
+        nickname: getLicensesFunambol
+        type: getLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/licenses/{key}
+    operations:
+      - method: POST
+        summary: "Set the roles for an existing user."
+        notes: For the creation of a profile is necessary to pass his id in the carrier and already it will be the same in user_id in Funambol.
+        nickname: postLicensesFunambol
+        type: postLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: integer
+            paramType: path
+          - name: name
+            description: "Description of the role (not used)"
+            required: true
+            type: string
+            paramType: query
+          - name: description
+            description: "Name of the OneMediaHub role, for example standard or sync_user."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/licenses/{key}
+    operations:
+      - method: PUT
+        summary: "Change the roles for an existing user."
+        notes: ""
+        nickname: putLicensesFunambol
+        type: putLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: integer
+            paramType: path
+          - name: name
+            description: "Description of the role (not used)"
+            required: true
+            type: string
+            paramType: query
+          - name: description
+            description: "Name of the OneMediaHub role, for example standard or sync_user."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/login/
+    operations:
+      - method: POST
+        summary: "Log the user into the system."
+        notes: ""
+        nickname: postLoginFunambol
+        type: postLoginFunambol
+        parameters:
+          - name: login
+            description: "The username."
+            required: true
+            type: string
+            paramType: query
+          - name: password
+            description: "The password."
+            required: true
+            type: password
+            paramType: query
+          - name: cred-info
+            description: " if present with the value captcha.token it means that the server must also validate the CAPTCHA challenge. It can also be used to specify additional information about credentials (like their format.)"
+            required: false
+            type: string
+            paramType: query
+          - name: rememberme
+            description: "if present and true, the server will generate and return a persistent login cookie in the authentication response, if valid. If false, no persistent login cookie is returned. Default value is false. This parameter is used by the server only in a User security realm."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/logout/
+    operations:
+      - method: POST
+        summary: "Log out from the system."
+        notes: ""
+        nickname: postLogoutFunambol
+        type: postLogoutFunambol
+        responseMessages:
+  - path: /v2/funambol/oi/quota/{key}
+    operations:
+      - method: GET
+        summary: "Return the free storage space, used soft-deleted space, and storage space available quota for the user."
+        notes: ""
+        nickname: getQuotaFunambol
+        type: getQuotaFunambol
+        parameters:
+          - name: key
+            description: "The ID of the registered user."
+            required: true
+            type: string
+            paramType: path
+          - name: softdeleted
+            description: "if 'true', the used soft-deleted space is included in the response."
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/search/
+    operations:
+      - method: GET
+        summary: "Find user profiles that exactly match all the search conditions. The search is case insensitive and returns a list."
+        notes: ""
+        nickname: getSearchFunambol
+        type: getSearchFunambol
+        parameters:
+          - name: userid
+            description: "User key/username."
+            required: false
+            type: string
+            paramType: query
+          - name: firstname
+            description: "The user's first name."
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: "The user's last name."
+            required: false
+            type: string
+            paramType: query
+          - name: phonenumber
+            description: "The user's phone number."
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description: "Email address stored in the profile."
+            required: false
+            type: string
+            paramType: query
+          - name: active
+            description: "(true, false). If not present, a list of active and inactive users is returned; if true only the active ones, if false only the inactive."
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/devices/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the list of user phones."
+        notes: ""
+        nickname: getDevicesFunambol
+        type: getDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/devices/{key}
+    operations:
+      - method: POST
+        summary: "Add a new phone for a given user."
+        notes: "Only one device can be associated with a user."
+        nickname: postDevicesFunambol
+        type: postDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: integer
+            paramType: path
+          - name: phonenumber
+            description: "Number"
+            required: true
+            type: string
+            paramType: query
+          - name: modelid
+            description: "Given the model and manufacturer."
+            required: false
+            type: string
+            paramType: query
+          - name: carrierid
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: countrya2
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: devicename
+            description: "A custom device name/description."
+            required: false
+            type: string
+            paramType: query
+          - name: timezone
+            description: The timezone of the new user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/devices/{key}
+    operations:
+      - method: PUT
+        summary: "Change the phone for an existing user."
+        notes: ""
+        nickname: putDevicesFunambol
+        type: putDevicesFunambol
+        parameters:
+          - name: key
+            description: "The device ID of the device to be updated."
+            required: true
+            type: integer
+            paramType: path
+          - name: phonenumber
+            description: "Number"
+            required: false
+            type: string
+            paramType: query
+          - name: modelid
+            description: "Given the model and manufacturer."
+            required: false
+            type: string
+            paramType: query
+          - name: carrierid
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: countrya2
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: devicename
+            description: "A custom device name/description."
+            required: false
+            type: string
+            paramType: query
+          - name: timezone
+            description: "The timezone of the new user (America/Sao_Paulo)."
+            required: false
+            type: string
+            paramType: query
+          - name: active
+            description: "true/false"
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/devices/{key}
+    operations:
+      - method: DELETE
+        summary: "Delete a phone given the device ID."
+        notes: ""
+        nickname: deleteDevicesFunambol
+        type: deleteDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+          - name: deviceid
+            description: "The device ID of the device to be deleted. If the logged in user is not an administrator, only its device can be deleted."
+            required: true
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/funambol/oi/devices/{key}/unlink/{deviceid}
+    operations:
+      - method: DELETE
+        summary: "Unlink a device from the user's account using a given device ID."
+        notes: ""
+        nickname: deleteDevicesUnlinkFunambol
+        type: deleteDevicesUnlinkFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+          - name: deviceid
+            description: "The device ID of the device to be deleted. If the logged in user is not an administrator, only its device can be deleted."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/profile/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the last sync time for all devices associated to the given user."
+        notes: ""
+        nickname: getProfileFunambol
+        type: getProfileFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/pictures/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve pictures for the user."
+        notes: ""
+        nickname: getPicturesFunambol
+        type: getPicturesFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/videos/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve videos for the user."
+        notes: ""
+        nickname: getVideosFunambol
+        type: getVideosFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/audios/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve audio data for the user."
+        notes: ""
+        nickname: getAudiosFunambol
+        type: getAudiosFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/funambol/oi/files/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve files for the user."
+        notes: ""
+        nickname: getFilesFunambol
+        type: getFilesFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+
+# FUNAMBOLV3
+  - path: /v3/funambol/oi/provisioning/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve all generic information (first name, last name, ...) for a user."
+        notes: ""
+        nickname: getProvisioningFunambol
+        type: getProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID to get.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Add a new user.
+        notes: For the creation of a profile is necessary to pass his id in the carrier and already it will be the same in key in Funambol.
+        nickname: postProvisioningFunambol
+        type: postProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the new user. It is mandatory for a new user but it cannot be specified during an update. Note that it is not possible to change the username once defined.
+            required: true
+            type: string
+            paramType: path
+          - name: username
+            description: The username of the new user.
+            required: true
+            type: string
+            paramType: query
+          - name: password
+            description: The plain password of the new user (a-zA-Z0-9) max:16 mim:4.
+            required: true
+            type: password
+            paramType: query
+          - name: firstname
+            description: The first name of the new user.
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: The last name of the new user.
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description:  "The email of the new user."
+            required: false
+            type: string
+            paramType: query
+          - name: birthday
+            description: Date of birth (YYYYMMDD). Default is 19000101.
+            required: false
+            type: string
+            paramType: query
+          - name: l10n
+            description: "The locale of the new user, for example 'en-US'. To allow maximum flexibility of the localization code, this value is not validated. So any string is acceptable as a l10n parameter."
+            required: false
+            type: string
+            paramType: query
+          - name: mailinglist
+            description: Subscribe to the Portal mailing list (also known as the "keep me informed" flag).
+            required: false
+            type: bool
+            paramType: query
+          - name: male
+            description: Gender of the user (male or female). Default is male.
+            required: false
+            type: bool
+            paramType: query
+          - name: timezone
+            description: The timezone of the new user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+          - name: preferredcommunicationchannel
+            description: The preferred communication channel for receiving user communications. Possible values are "email" and "sms".
+            required: false
+            type: string
+            paramType: query
+          - name: email
+            description:  "true to send the welcome email, false otherwise. The parameter is false by default."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Update an existing user.
+        notes: For the update of a user is necessary to pass his id in the carrier and already it will be the same in key in Funambol.
+        nickname: putProvisioningFunambol
+        type: putProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the update.
+            required: true
+            type: string
+            paramType: path
+          - name: username
+            description: The new username of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description: The new email address of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: firstname
+            description: The new first name of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: The new last name of the user.
+            required: false
+            type: string
+            paramType: query
+          - name: birthday
+            description: Date of birth (YYYYMMDD). Default is 19000101.
+            required: false
+            type: string
+            paramType: query
+          - name: l10n
+            description: "The new locale of the user, for example 'en-US'. To allow maximum flexibility of the localization code, this value is not validated. So any string is acceptable as a l10n parameter."
+            required: false
+            type: string
+            paramType: query
+          - name: mailinglist
+            description: Subscribe to the Portal mailing list (also known as the "keep me informed" flag).
+            required: false
+            type: bool
+            paramType: query
+          - name: male
+            description: Gender of the user (male or female). Default is male.
+            required: false
+            type: bool
+            paramType: query
+          - name: password
+            description: The plain new password of the user (a-zA-Z0-9) max:16 mim:4.
+            required: false
+            type: password
+            paramType: query
+          - name: oldpassword
+            description: "In case of change of password, the previous one. This field is mandatory when the password field is passed together to change the authenticated user password."
+            required: false
+            type: password
+            paramType: query
+          - name: timezone
+            description: The new timezone of the user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+          - name: preferredcommunicationchannel
+            description: The preferred communication channel for receiving user communications. Possible values are "email" and "sms".
+            required: false
+            type: string
+            paramType: query
+          - name: enabled
+            description: "(0 - Disabled, 1 - Enabled)."
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Delete an existing user.
+        notes: 
+        nickname: deleteProvisioningFunambol
+        type: deleteProvisioningFunambol
+        parameters:
+          - name: key
+            description: The user ID of the user.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/roles/
+    operations:
+      - method: GET
+        summary: "Retrieve the list of roles."
+        notes: ""
+        nickname: getRolesFunambol
+        type: getRolesFunambol
+        responseMessages:
+  - path: /v3/funambol/oi/licenses/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the list of user roles."
+        notes: ""
+        nickname: getLicensesFunambol
+        type: getLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/licenses/{key}
+    operations:
+      - method: POST
+        summary: "Set the roles for an existing user."
+        notes: For the creation of a profile is necessary to pass his id in the carrier and already it will be the same in user_id in Funambol.
+        nickname: postLicensesFunambol
+        type: postLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: integer
+            paramType: path
+          - name: name
+            description: "Description of the role (not used)"
+            required: true
+            type: string
+            paramType: query
+          - name: description
+            description: "Name of the OneMediaHub role, for example standard or sync_user."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/licenses/{key}
+    operations:
+      - method: PUT
+        summary: "Change the roles for an existing user."
+        notes: ""
+        nickname: putLicensesFunambol
+        type: putLicensesFunambol
+        parameters:
+          - name: key
+            description: The user ID of the add a role.
+            required: true
+            type: integer
+            paramType: path
+          - name: name
+            description: "Description of the role (not used)"
+            required: true
+            type: string
+            paramType: query
+          - name: description
+            description: "Name of the OneMediaHub role, for example standard or sync_user."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/login/
+    operations:
+      - method: POST
+        summary: "Log the user into the system."
+        notes: ""
+        nickname: postLoginFunambol
+        type: postLoginFunambol
+        parameters:
+          - name: login
+            description: "The username."
+            required: true
+            type: string
+            paramType: query
+          - name: password
+            description: "The password."
+            required: true
+            type: password
+            paramType: query
+          - name: cred-info
+            description: " if present with the value captcha.token it means that the server must also validate the CAPTCHA challenge. It can also be used to specify additional information about credentials (like their format.)"
+            required: false
+            type: string
+            paramType: query
+          - name: rememberme
+            description: "if present and true, the server will generate and return a persistent login cookie in the authentication response, if valid. If false, no persistent login cookie is returned. Default value is false. This parameter is used by the server only in a User security realm."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/logout/
+    operations:
+      - method: POST
+        summary: "Log out from the system."
+        notes: ""
+        nickname: postLogoutFunambol
+        type: postLogoutFunambol
+        responseMessages:
+  - path: /v3/funambol/oi/quota/{key}
+    operations:
+      - method: GET
+        summary: "Return the free storage space, used soft-deleted space, and storage space available quota for the user."
+        notes: ""
+        nickname: getQuotaFunambol
+        type: getQuotaFunambol
+        parameters:
+          - name: key
+            description: "The ID of the registered user."
+            required: true
+            type: string
+            paramType: path
+          - name: softdeleted
+            description: "if 'true', the used soft-deleted space is included in the response."
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/search/
+    operations:
+      - method: GET
+        summary: "Find user profiles that exactly match all the search conditions. The search is case insensitive and returns a list."
+        notes: ""
+        nickname: getSearchFunambol
+        type: getSearchFunambol
+        parameters:
+          - name: userid
+            description: "User key/username."
+            required: false
+            type: string
+            paramType: query
+          - name: firstname
+            description: "The user's first name."
+            required: false
+            type: string
+            paramType: query
+          - name: lastname
+            description: "The user's last name."
+            required: false
+            type: string
+            paramType: query
+          - name: phonenumber
+            description: "The user's phone number."
+            required: false
+            type: string
+            paramType: query
+          - name: useremail
+            description: "Email address stored in the profile."
+            required: false
+            type: string
+            paramType: query
+          - name: active
+            description: "(true, false). If not present, a list of active and inactive users is returned; if true only the active ones, if false only the inactive."
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/devices/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the list of user phones."
+        notes: ""
+        nickname: getDevicesFunambol
+        type: getDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/devices/{key}
+    operations:
+      - method: POST
+        summary: "Add a new phone for a given user."
+        notes: "Only one device can be associated with a user."
+        nickname: postDevicesFunambol
+        type: postDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: integer
+            paramType: path
+          - name: phonenumber
+            description: "Number"
+            required: true
+            type: string
+            paramType: query
+          - name: modelid
+            description: "Given the model and manufacturer."
+            required: false
+            type: string
+            paramType: query
+          - name: carrierid
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: countrya2
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: devicename
+            description: "A custom device name/description."
+            required: false
+            type: string
+            paramType: query
+          - name: timezone
+            description: The timezone of the new user (America/Sao_Paulo).
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/devices/{key}
+    operations:
+      - method: PUT
+        summary: "Change the phone for an existing user."
+        notes: ""
+        nickname: putDevicesFunambol
+        type: putDevicesFunambol
+        parameters:
+          - name: key
+            description: "The device ID of the device to be updated."
+            required: true
+            type: integer
+            paramType: path
+          - name: phonenumber
+            description: "Number"
+            required: false
+            type: string
+            paramType: query
+          - name: modelid
+            description: "Given the model and manufacturer."
+            required: false
+            type: string
+            paramType: query
+          - name: carrierid
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: countrya2
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: devicename
+            description: "A custom device name/description."
+            required: false
+            type: string
+            paramType: query
+          - name: timezone
+            description: "The timezone of the new user (America/Sao_Paulo)."
+            required: false
+            type: string
+            paramType: query
+          - name: active
+            description: "true/false"
+            required: false
+            type: bolean
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/devices/{key}
+    operations:
+      - method: DELETE
+        summary: "Delete a phone given the device ID."
+        notes: ""
+        nickname: deleteDevicesFunambol
+        type: deleteDevicesFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+          - name: deviceid
+            description: "The device ID of the device to be deleted. If the logged in user is not an administrator, only its device can be deleted."
+            required: true
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v3/funambol/oi/devices/{key}/unlink/{deviceid}
+    operations:
+      - method: DELETE
+        summary: "Unlink a device from the user's account using a given device ID."
+        notes: ""
+        nickname: deleteDevicesUnlinkFunambol
+        type: deleteDevicesUnlinkFunambol
+        parameters:
+          - name: key
+            description: "The user ID of the add a phone."
+            required: true
+            type: string
+            paramType: path
+          - name: deviceid
+            description: "The device ID of the device to be deleted. If the logged in user is not an administrator, only its device can be deleted."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/profile/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve the last sync time for all devices associated to the given user."
+        notes: ""
+        nickname: getProfileFunambol
+        type: getProfileFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/pictures/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve pictures for the user."
+        notes: ""
+        nickname: getPicturesFunambol
+        type: getPicturesFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/videos/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve videos for the user."
+        notes: ""
+        nickname: getVideosFunambol
+        type: getVideosFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/audios/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve audio data for the user."
+        notes: ""
+        nickname: getAudiosFunambol
+        type: getAudiosFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v3/funambol/oi/files/{key}
+    operations:
+      - method: GET
+        summary: "Retrieve files for the user."
+        notes: ""
+        nickname: getFilesFunambol
+        type: getFilesFunambol
+        parameters:
+          - name: key
+            description: "The user ID to get."
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+
+# ANCHORFREE
+  - path: /v2/anchorfree/oi/provisioning/{key}
+    operations:
+      - method: GET
+        summary: Lista um usuario cadastrado na base do vendor.
+        notes: ""
+        nickname: getProvisioningAnchorFree
+        type: getProvisioningAnchorFree
+        parameters:
+          - name: key
+            description: "User Key in vendor"
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/anchorfree/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: "provisiona um usuario."
+        notes: ""
+        nickname: postProvisioningAnchorFree
+        type: postProvisioningAnchorFree
+        parameters:
+          - name: key
+            description: "User key in vendor"
+            required: true
+            type: string
+            paramType: path
+          - name: license_id
+            description: ""
+            required: true
+            type: integer
+            paramType: query
+          - name: username
+            description: ""
+            required: true
+            type: string
+            paramType: query
+          - name: carrier_id
+            description: 1 para default
+            required: false
+            type: string
+            paramType: query
+          - name: sub
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: given_name
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: family_name
+            description: ""
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/anchorfree/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Atualiza as informacoes de um usuario na base do vendor.
+        notes: Para a atualizacao de um usuario e necessario passar o id dele na operadora.
+        nickname: putProvisioningAnchorFree
+        type: putProvisioningAnchorFree
+        parameters:
+          - name: key
+            description: ""
+            required: true
+            type: string
+            paramType: path
+          - name: name
+            description: "Nome do usuario."
+            required: false
+            type: string
+            paramType: query
+          - name: carrier_id
+            description: ""
+            required: false
+            type: string
+            paramType: query
+          - name: locale
+            description: "Preferencia de linguagem do usuario. (pt-br)."
+            required: false
+            type: string
+            paramType: query
+          - name: license_id
+            description: Id da licenca.
+            required: false
+            type: string
+            paramType: query
+          - name: enabled
+            description: "(0 - Disabled, 1 - Enabled)."
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v2/anchorfree/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Deleta um usuario.
+        notes: Para a delecao de um usuario e necessario passar o id dele na operadora.
+        nickname: deleteProvisioningAnchorFree
+        type: deleteProvisioningAnchorFree
+        parameters:
+          - name: key
+            description: ""
+            required: true
+            type: string
+            paramType: path
+        responseMessages:
+  - path: /v2/anchorfree/oi/roles/
+    operations:
+      - method: GET
+        summary: "Recupera a lista de licenças."
+        notes: ""
+        nickname: getRolesAnchorFree
+        type: getRolesAnchorFree
+        responseMessages:
+  - path: /v2/anchorfree/oi/licenses/
+    operations:
+      - method: POST
+        summary: "Create a new license"
+        notes: ""
+        nickname: postLicensesAnchorFree
+        type: postLicensesAnchorFree
+        parameters:
+          - name: name
+            description: "Nome da licença"
+            required: true
+            type: string
+            paramType: query
+          - name: devices_limit
+            description: "Devices limit"
+            required: true
+            type: number
+            paramType: query
+          - name: sessions_limit
+            description: "Sessions limit"
+            required: true
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v2/anchorfree/oi/licenses/{key}
+    operations:
+      - method: PUT
+        summary: "Update a license"
+        notes: ""
+        nickname: putLicensesAnchorFree
+        type: putLicensesAnchorFree
+        parameters:
+          - name: key
+            description: "Id da licença."
+            required: true
+            type: string
+            paramType: path
+          - name: name
+            description: "Nome da licença"
+            required: false
+            type: string
+            paramType: query
+          - name: devices_limit
+            description: "Devices limit"
+            required: false
+            type: number
+            paramType: query
+          - name: sessions_limit
+            description: "Sessions limit"
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v2/anchorfree/oi/devices/{key}
+    operations:
+      - method: GET
+        summary: "Get all devices from user"
+        notes: ""
+        nickname: getDevicesAnchorFree
+        type: getDevicesAnchorFree
+        parameters:
+          - name: key
+            description: "User Key."
+            required: true
+            type: string
+            paramType: path
+          - name: page
+            description: "Page number (from 0 to N)"
+            required: false
+            type: number
+            default: "0"
+            paramType: query
+          - name: size
+            description: "Page size"
+            required: false
+            type: number
+            default: "50"
+            paramType: query
+        responseMessages:
+  - path: /v2/anchorfree/oi/devices/{key}
+    operations:
+      - method: DELETE
+        summary: "Delete device from user"
+        notes: ""
+        nickname: deleteDevicesAnchorFree
+        type: deleteDevicesAnchorFree
+        parameters:
+          - name: key
+            description: "User Key."
+            required: true
+            type: string
+            paramType: path
+          - name: device_id
+            description: "Device Id"
+            required: true
+            type: string
+            paramType: query
+        responseMessages:
+
+# PURESIGHT
+  - path: /v2/puresight/oi/provisioning/{key}
+    operations:
+      - method: GET
+        summary: Get user Info.
+        notes: Generates user specific report with optional values.
+        nickname: getProvisioningPuresight
+        type: getProvisioningPuresight
+        parameters:
+          - name: key
+            description: The user ID of the new user.
+            required: true
+            type: string
+            paramType: path
+          - name: showRegistrationAllowed
+            description: "Displays the number of licenses"
+            required: false
+            type: number
+            paramType: query
+          - name: showEndActivationDate
+            description: "Displays when the account expires(Values: 0 – do not show expiration date (default), 1 – show expiration date). If this parameter is selected, status of auto-Renewal will be displayed (0- no auto-renewal, 1 – auto-renewal activated)."
+            required: false
+            type: string
+            paramType: query
+          - name: showLicenseType
+            description: "An optional parameter that determines whether to show or not to show the users license type (CSDK/CSDK&ASDK). License type will not be displayed in case this parameter is not provided. (Values: 0 – do not show license type (default), 1 – show license type)."
+            required: false
+            type: string
+            paramType: query
+          - name: showAccountId
+            description: "Displays a unique account ID. (Values: 0 – do not show account ID (default), 1 – show account ID)."
+            required: false
+            type: string
+            paramType: query
+          - name: showExternalRef
+            description: "Displays an external reference to identify account on external systems. Values: 0 – do not show external reference 1 – show external reference)."
+            required: false
+            type: number
+            paramType: query
+          - name: showRegistrationUsed
+            description: "Displays how many licenses were installed and are in use."
+            required: false
+            type: number
+            paramType: query
+        responseMessages:
+  - path: /v2/puresight/oi/provisioning/{key}
+    operations:
+      - method: POST
+        summary: Create Validated Account.
+        notes: Create Validated PureSight Account (without the validation process) with additional parameters such as parent password and presetID.
+        nickname: postProvisioningPuresight
+        type: postProvisioningPuresight
+        parameters:
+          - name: key
+            description: The user ID of the new user.
+            required: true
+            type: string
+            paramType: path
+          - name: activationPeriodMonths
+            description: "Number of months for the account to be active"
+            required: true
+            type: number
+            paramType: query
+          - name: activationPeriodDays
+            description: "Number of days for the account to be active"
+            required: true
+            type: number
+            paramType: query
+          - name: licenseType
+            description: "0 – CSDK + ASDK + Facebook Module (default per brand). (0-3) only"
+            required: true
+            type: string
+            paramType: query
+          - name: password
+            description: "The parent password to login to the portal. The parent password must be 4-10 characters long"
+            required: true
+            type: password
+            paramType: query
+          - name: registrationAllowed
+            description: "Number of installations allowed for the account. (default=1)."
+            required: true
+            type: number
+            paramType: query
+          - name: lang
+            description: "The account language en – English pt-BR – Portuguese (Brasil) (default)."
+            required: false
+            type: string
+            paramType: query
+          - name: emailSecondary
+            description: "Secondary Unique email - will be used by the user for logging to PureSight portal"
+            required: false
+            type: string
+            paramType: query
+          - name: autoRenew
+            description: "Whether to renew the activation when it's over or not. Valid values: 0/1 1=on (default) 0=off."
+            required: false
+            type: bolean
+            paramType: query
+          - name: autoRenewMonths
+            description: "Indicates the number of months to renew in case autoRenew = 1."
+            required: false
+            type: number
+            paramType: query
+          - name: autoRenewDays
+            description: "Indicates the number of days to renew in case autoRenew == 1."
+            required: false
+            type: number
+            paramType: query
+          - name: activateUponActivation
+            description: "Indicates whether to activate the account immediately or only when the user installs the client."
+            required: false
+            type: string
+            paramType: query
+          - name: supportMobile
+            description: "1= (Default) PureSight can be installed on PC and mobile devices."
+            required: false
+            type: string
+            paramType: query
+          - name: externalRef
+            description: "Used by the ISP for saving external reference for the account."
+            required: false
+            type: string
+            paramType: query
+          - name: clear
+            description: "Indicates if parent password is in clear text or already encrypted. 1=Clear text (default) 0=Base64( on sha-1)."
+            required: false
+            type: string
+            paramType: query
+          - name: secretQuestionId
+            description: "The ID of the selected secret question, 1 Your most favorite or most hated teacher 2 Your most favorite or most hated song. 3 Your most favorite or most hated author. 4 Your most favorite or most hated food. (1-5) only."
+            required: false
+            type: string
+            paramType: query
+          - name: customQuestion
+            description: "The textual self defined secret question in case a user selects custom question instead of a given secret question"
+            required: false
+            type: string
+            paramType: query
+          - name: secretAnswer
+            description: "The textual answer of the secret question required to set up a new parent password in case the parent password got lost"
+            required: false
+            type: string
+            paramType: query
+          - name: presetId
+            description: "The ID for the selected preset 1 Play Age <6.  2 Pre Teen 6-10. 3 Young Teen 11-14 (default). 4 Young Adult 15-17. 5 Adult >18. (1-7) only."
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/puresight/oi/provisioning/{key}
+    operations:
+      - method: PUT
+        summary: Update Account.
+        notes: ""
+        nickname: putProvisioningPuresight
+        type: putProvisioningPuresight
+        parameters:
+          - name: key
+            description: The user ID of the new user.
+            required: true
+            type: string
+            paramType: path
+          - name: enabled
+            description: "(0 - Disabled, 1 - Enabled)."
+            required: false
+            type: number
+            paramType: query
+          - name: activationPeriodMonths
+            description: "Number of months for the account to be active (required to enabled)"
+            required: false
+            type: number
+            paramType: query
+          - name: activationPeriodDays
+            description: "Number of days for the account to be active (required to enabled)"
+            required: false
+            type: number
+            paramType: query
+          - name: password
+            description: "The new password to be inserted."
+            required: false
+            type: password
+            paramType: query
+          - name: clear
+            description: "Indicates if password is in clear text or already encrypted. 1=Clear text (default) 0=Base64( on sha-1)."
+            required: false
+            type: number
+            paramType: query
+          - name: newEmail
+            description: "The new email value."
+            required: false
+            type: string
+            paramType: query
+          - name: registrationCounter
+            description: "Number of licenses."
+            required: false
+            type: number
+            paramType: query
+
+        responseMessages:
+  - path: /v2/puresight/oi/provisioning/{key}
+    operations:
+      - method: DELETE
+        summary: Desactivate Account.
+        notes: "Stop the activation of a PureSight account, from a predefined date."
+        nickname: deleteProvisioningPuresight
+        type: deleteProvisioningPuresight
+        parameters:
+          - name: key
+            description: The user ID of the new user.
+            required: true
+            type: string
+            paramType: path
+          - name: endActivationDate
+            description: "End activation date (yyyy-mm-dd)"
+            required: false
+            type: string
+            paramType: query
+        responseMessages:
+  - path: /v2/puresight/oi/licenses/{key}
+    operations:
+      - method: POST
+        summary: Set license to account.
+        notes: "Add a number of allowed registrations (computers running PureSight PC) to an ISP-user. Any attempt to register with a Login Email that reached 0 allowed activations will re-sult in an activation error by the client."
+        nickname: postLicensesPuresight
+        type: postLicensesPuresight
+        parameters:
+          - name: key
+            description: The user ID of the new user.
+            required: true
+            type: string
+            paramType: path
+          - name: registrationCounter
+            description: "Number of installation to add/remove."
+            required: true
+            type: number
+            paramType: query
+        responseMessages:
+          - code: 200
+            message: OK
+

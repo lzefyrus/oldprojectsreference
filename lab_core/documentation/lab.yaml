@@ -1,0 +1,48 @@
+---
+swagger: "2.0"
+info:
+  description: "initial m2m integration "
+  version: "0.1"
+  title: "lab"
+  contact: {}
+host: "m2m.saracara.com.br"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+security:
+- API digest: []
+paths:
+  /clinic/results:
+    post:
+      summary: "Inform exams"
+      consumes: []
+      parameters:
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/Exams"
+      responses:
+        200:
+          description: "Status 200"
+        400:
+          description: "Status 400"
+        401:
+          description: "Status 401"
+        500:
+          description: "Status 500"
+securityDefinitions:
+  API digest:
+    type: "apiKey"
+    name: "Authentication"
+    in: "header"
+definitions:
+  Exams:
+    type: "array"
+    description: "List of Exams IDs "
+    items:
+      type: "number"
+    example: "[213123123,123123123,123312132]"

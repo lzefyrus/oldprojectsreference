@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/supplierPartnerOrderManagementEntities" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerOrderManagement/supplierPartnerOrderManagementEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+
+	<xs:import schemaLocation="GvtCommonEntities.xsd" namespace="http://www.gvt.com.br/GvtCommonEntities"/>
+
+	<xs:element name="orderPublicationIn">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customerOrder" type="tns:CustomerOrder"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orderPublicationOut">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="gvtBusinessServiceResponse" type="gvt:gvtBusinessServiceResponse"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="ProductAction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ADICIONAR"/>
+			<xs:enumeration value="DESCONECTAR"/>
+			<xs:enumeration value="BLOQUEAR"/>
+			<xs:enumeration value="DESBLOQUEAR"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="stateOrProvince">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AC"/>
+			<xs:enumeration value="AL"/>
+			<xs:enumeration value="AP"/>
+			<xs:enumeration value="AM"/>
+			<xs:enumeration value="BA"/>
+			<xs:enumeration value="CE"/>
+			<xs:enumeration value="DF"/>
+			<xs:enumeration value="ES"/>
+			<xs:enumeration value="GO"/>
+			<xs:enumeration value="MA"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="MS"/>
+			<xs:enumeration value="MG"/>
+			<xs:enumeration value="PA"/>
+			<xs:enumeration value="PB"/>
+			<xs:enumeration value="PR"/>
+			<xs:enumeration value="PE"/>
+			<xs:enumeration value="PI"/>
+			<xs:enumeration value="RJ"/>
+			<xs:enumeration value="RN"/>
+			<xs:enumeration value="RS"/>
+			<xs:enumeration value="RO"/>
+			<xs:enumeration value="RR"/>
+			<xs:enumeration value="SC"/>
+			<xs:enumeration value="SP"/>
+			<xs:enumeration value="SE"/>
+			<xs:enumeration value="TO"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Types -->
+	<!-- The type: com.sid.CustomerDomain.CustomerOrder -->
+	<xs:complexType name="CustomerOrder">
+		<xs:sequence>
+			<xs:element name="interactionDate" type="xs:dateTime" minOccurs="1" maxOccurs="1" nillable="false"/>
+			<xs:element name="involvesCustomer" type="tns:Customer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="purchaseOrderNumber" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+			<xs:element name="CustomerOrderComprisedOf" type="tns:CustomerOrderItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Types -->
+	<!-- The type: com.sid.CustomerDomain.Customer -->
+	<xs:complexType name="Customer">
+		<xs:sequence>
+			<xs:element name="documentNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Individual" type="tns:Individual" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="customerAddresses" type="tns:BrazilianUrbanPropertyAddress" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.CommonBusinessEntitiesDomain.Individual -->
+	<xs:complexType name="Individual">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="contact" type="tns:ContactMedium" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Types -->
+	<!-- The type: com.sid.CommonBusinessEntitiesDomain.ContactMedium -->
+	<xs:complexType name="ContactMedium">
+		<xs:sequence>
+			<xs:element name="mobilePhone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Especialização de Place -->
+	<!-- The type: com.sid.CommonBusinessEntitiesDomain.BrazilianUrbanPropertyAddress -->
+	<xs:complexType name="BrazilianUrbanPropertyAddress">
+		<xs:sequence>
+			<xs:element name="city" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="streetName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="country" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="stateOrProvince" type="tns:stateOrProvince" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="streetNrFirst" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="postcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="neighborhood" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="complement" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.CustomerDomain.CustomerOrderItem -->
+	<xs:complexType name="CustomerOrderItem">
+		<xs:sequence>
+			<xs:element name="productComponent" type="tns:ProductComponent" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.ProductDomain.ProductComponent -->
+	<xs:complexType name="ProductComponent">
+		<xs:sequence>
+			<xs:element name="productAction" type="tns:ProductAction" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+			<xs:element name="productSpecification" type="tns:AtomicProductSpecification" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- The type: com.sid.ProductDomain.AtomicProductSpecification -->
+	<xs:complexType name="AtomicProductSpecification">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="productNumber" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CustomerOrderCallback">
+		<xs:sequence>
+			<xs:element name="purchaseOrderNumber" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+			<xs:element name="interactionDate" type="xs:dateTime" minOccurs="1" maxOccurs="1" nillable="false"/>
+			<xs:element name="interactionStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

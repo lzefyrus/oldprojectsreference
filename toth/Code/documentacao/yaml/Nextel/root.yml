@@ -1,0 +1,5 @@
+apiVersion: 1.0.0
+swaggerVersion: "1.2"
+#basePath: "https://i-api.whitelabel.com.br"
+basePath: "http://ec2-52-3-6-173.compute-1.amazonaws.com:8889"
+#basePath: "http://192.168.56.102:8889"

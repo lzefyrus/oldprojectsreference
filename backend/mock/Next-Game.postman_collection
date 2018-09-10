@@ -1,0 +1,335 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Next Game",
+		"_postman_id": "305a4e3a-bea7-253c-d1e0-46f89c715186",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "{{baseuri}}/auth/login",
+					"request": {
+						"url": "{{baseuri}}/auth/login",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Facebook redirect login com code "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game",
+			"description": "",
+			"item": [
+				{
+					"name": "{{baseuri}}/api/gameapi/easy",
+					"request": {
+						"url": "{{baseuri}}/api/game/easy",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Retorna os dados do Jodo pelo nível passado"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/game/easy Não ganhou ",
+					"request": {
+						"url": "{{baseuri}}/api/game/easy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sequence\": \"b2|a1|c3|d4\"}"
+						},
+						"description": "Envia uma tentativa de sequencia"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/game/easy Ganhou ",
+					"request": {
+						"url": "{{baseuri}}/api/game/easy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sequence\": \"a1|b2|c3|d4\"}"
+						},
+						"description": "Envia uma tentativa de sequencia"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/game/easy Acabaram as vidas",
+					"request": {
+						"url": "{{baseuri}}/api/game/easy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sequence\": \"a1|b2\"}"
+						},
+						"description": "se enviar uma sequencia 'a1|b1' retornará que o jogador não tem nenhuma vida para jogar"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/game/easy já ganhou neste nível esta semana",
+					"request": {
+						"url": "{{baseuri}}/api/game/easy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sequence\": \"a1\"}"
+						},
+						"description": "se enviar a sequenci 'a1' retornará que o jogador já ganhou esse nível nessa semana"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/challenge",
+					"request": {
+						"url": "{{baseuri}}/api/challenge",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sequence\": \"a1|b2|c3|d4\"}"
+						},
+						"description": "retorna todos os níveis existentes e quais estão liberados para o jogo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tips",
+			"description": "",
+			"item": [
+				{
+					"name": "{{baseuri}}/api/tips/hard",
+					"request": {
+						"url": "{{baseuri}}/api/tips/hard",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Retornas as Dicas de cada nível de jogo"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/tips/medium Sem dicas",
+					"request": {
+						"url": "{{baseuri}}/api/tips/medium",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "não existem dicas para este nível"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "{{baseuri}}/api/user",
+					"request": {
+						"url": "{{baseuri}}/api/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Retorna os dados gravados do jogador"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/user",
+					"request": {
+						"url": "{{baseuri}}/api/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "be75c7b8469d4d57a051e7ca387ba384",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Grava os dados do jogador guando o mesmo acertou a sequencia de ícones"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseuri}}/api/user?missing=true",
+					"request": {
+						"url": "{{baseuri}}/api/user?missing=true",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"asd@asd.com\",\n\"state\": \"sp\",\n\"city\": \"sao paulo\",\n\"address\": \"rua das couves, 32\",\n\"optin\": true}"
+						},
+						"description": "Retorna os dados gravados do jogador contendo a informacõa que qual nivel do game ganho que ele não terminou"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

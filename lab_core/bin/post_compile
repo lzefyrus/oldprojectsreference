@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+echo "-----> I'm post-compile hook"
+echo "       Post compiling for APP_ENVIRONMENT $APP_ENVIRONMENT"
+
+if [ -f bin/run_migrate ]; then
+    echo "-----> Running run_migrate"
+    chmod +x bin/run_migrate
+    bin/run_migrate
+fi
+
+#python manage.py loaddata template_data
+echo "-----> Loaded basic template data"
+
+#if [ "$APP_ENVIRONMENT" == "production" ] || [ "$APP_ENVIRONMENT" == "homolog" ] || [ "$APP_ENVIRONMENT" == "dev" ] ; then
+#    echo "-----> loading fixture data"
+#    python manage.py loaddata test_data
+#fi
+
+
+echo "-----> Done with post-compile hook"

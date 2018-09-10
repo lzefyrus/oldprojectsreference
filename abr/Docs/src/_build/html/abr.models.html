@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>abr.models module &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="index.html" />
+    <link rel="up" title="ABR package" href="abr.html" />
+    <link rel="next" title="abr.utils module" href="abr.utils.html" />
+    <link rel="prev" title="abr.importer module" href="abr.importer.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="abr.html">ABR package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="abr.html#module">Module</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.importer.html">abr.importer module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">abr.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.utils.html">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="abr.importer.html" title="Previous Chapter: abr.importer module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; abr.importer mod...</span>
+    </a>
+  </li>
+  <li>
+    <a href="abr.utils.html" title="Next Chapter: abr.utils module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">abr.utils module &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/abr.models.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="module-abr.models">
+<span id="abr-models-module"></span><h1>abr.models module<a class="headerlink" href="#module-abr.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="abr.models.Cnl">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">Cnl</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#Cnl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.Cnl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>CNL information //sistemas.anatel.gov.br/areaarea/N_Download/Tela.asp</p>
+<dl class="attribute">
+<dt id="abr.models.Cnl.cnl">
+<code class="descname">cnl</code><a class="headerlink" href="#abr.models.Cnl.cnl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.cnl_cod">
+<code class="descname">cnl_cod</code><a class="headerlink" href="#abr.models.Cnl.cnl_cod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.cnl_local_area_cod">
+<code class="descname">cnl_local_area_cod</code><a class="headerlink" href="#abr.models.Cnl.cnl_local_area_cod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.created_at">
+<code class="descname">created_at</code><a class="headerlink" href="#abr.models.Cnl.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.ddd">
+<code class="descname">ddd</code><a class="headerlink" href="#abr.models.Cnl.ddd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.final_phone">
+<code class="descname">final_phone</code><a class="headerlink" href="#abr.models.Cnl.final_phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.geoposition">
+<code class="descname">geoposition</code><a class="headerlink" href="#abr.models.Cnl.geoposition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.Cnl.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.initial_phone">
+<code class="descname">initial_phone</code><a class="headerlink" href="#abr.models.Cnl.initial_phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.is_mobile">
+<code class="descname">is_mobile</code><a class="headerlink" href="#abr.models.Cnl.is_mobile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.operator">
+<code class="descname">operator</code><a class="headerlink" href="#abr.models.Cnl.operator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.operator_id">
+<code class="descname">operator_id</code><a class="headerlink" href="#abr.models.Cnl.operator_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.place">
+<code class="descname">place</code><a class="headerlink" href="#abr.models.Cnl.place" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.prefix">
+<code class="descname">prefix</code><a class="headerlink" href="#abr.models.Cnl.prefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.province">
+<code class="descname">province</code><a class="headerlink" href="#abr.models.Cnl.province" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.tarifation_cod">
+<code class="descname">tarifation_cod</code><a class="headerlink" href="#abr.models.Cnl.tarifation_cod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Cnl.uf">
+<code class="descname">uf</code><a class="headerlink" href="#abr.models.Cnl.uf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.models.Ddd">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">Ddd</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#Ddd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.Ddd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>ddd listing and geographoc states</p>
+<dl class="attribute">
+<dt id="abr.models.Ddd.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.Ddd.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Ddd.state">
+<code class="descname">state</code><a class="headerlink" href="#abr.models.Ddd.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.models.Header">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">Header</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#Header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.Header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>file name update convension</p>
+<dl class="attribute">
+<dt id="abr.models.Header.generated">
+<code class="descname">generated</code><a class="headerlink" href="#abr.models.Header.generated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Header.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.Header.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Header.number_of_items">
+<code class="descname">number_of_items</code><a class="headerlink" href="#abr.models.Header.number_of_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.models.Operator">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">Operator</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#Operator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.Operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>Brasilian phone operators</p>
+<dl class="attribute">
+<dt id="abr.models.Operator.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.Operator.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Operator.img_translate">
+<code class="descname">img_translate</code><a class="headerlink" href="#abr.models.Operator.img_translate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Operator.name">
+<code class="descname">name</code><a class="headerlink" href="#abr.models.Operator.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.models.Phone">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">Phone</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#Phone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.Phone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>transfered and already searched phones</p>
+<dl class="attribute">
+<dt id="abr.models.Phone.action">
+<code class="descname">action</code><a class="headerlink" href="#abr.models.Phone.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.activation_time">
+<code class="descname">activation_time</code><a class="headerlink" href="#abr.models.Phone.activation_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.created_at">
+<code class="descname">created_at</code><a class="headerlink" href="#abr.models.Phone.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.eot">
+<code class="descname">eot</code><a class="headerlink" href="#abr.models.Phone.eot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.Phone.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.is_mobile">
+<code class="descname">is_mobile</code><a class="headerlink" href="#abr.models.Phone.is_mobile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.new_spid">
+<code class="descname">new_spid</code><a class="headerlink" href="#abr.models.Phone.new_spid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.operator">
+<code class="descname">operator</code><a class="headerlink" href="#abr.models.Phone.operator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.portability_id">
+<code class="descname">portability_id</code><a class="headerlink" href="#abr.models.Phone.portability_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.portability_type">
+<code class="descname">portability_type</code><a class="headerlink" href="#abr.models.Phone.portability_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.start_time">
+<code class="descname">start_time</code><a class="headerlink" href="#abr.models.Phone.start_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.Phone.updated_at">
+<code class="descname">updated_at</code><a class="headerlink" href="#abr.models.Phone.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.models.TranslateOperator">
+<em class="property">class </em><code class="descclassname">abr.models.</code><code class="descname">TranslateOperator</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/models.html#TranslateOperator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.models.TranslateOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code></p>
+<p>abr site translation for normatized operators</p>
+<dl class="attribute">
+<dt id="abr.models.TranslateOperator.created_at">
+<code class="descname">created_at</code><a class="headerlink" href="#abr.models.TranslateOperator.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.TranslateOperator.id">
+<code class="descname">id</code><a class="headerlink" href="#abr.models.TranslateOperator.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.TranslateOperator.name">
+<code class="descname">name</code><a class="headerlink" href="#abr.models.TranslateOperator.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.TranslateOperator.operator">
+<code class="descname">operator</code><a class="headerlink" href="#abr.models.TranslateOperator.operator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.models.TranslateOperator.rn1">
+<code class="descname">rn1</code><a class="headerlink" href="#abr.models.TranslateOperator.rn1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

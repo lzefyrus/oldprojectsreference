@@ -1,0 +1,99 @@
+123456,Not Found,None
+887999,Not Found,None
+1100000130,Not Found,None
+1120100761,Not Found,None
+1120107076,Not Found,None
+1120107574,Not Found,None
+1120108377,Not Found,None
+1120108867,Not Found,None
+1120112146,Not Found,None
+1120113704,Not Found,None
+1120113780,Not Found,None
+1120119823,Not Found,None
+1120123038,net,True
+1120123276,Not Found,None
+1120124334,Not Found,None
+1120125246,Not Found,None
+1120126504,Not Found,None
+1120127194,Not Found,None
+1120127710,outros,True
+1120127843,Not Found,None
+1120128117,Not Found,None
+1120129238,Not Found,None
+1120129694,Not Found,None
+1120133120,Not Found,None
+1120133684,Not Found,None
+1120140045,Not Found,None
+1120141106,Not Found,None
+1120150275,Not Found,None
+1120150295,net,True
+1120152079,Not Found,None
+1120153643,Not Found,None
+1120154006,Not Found,None
+1120155155,Not Found,None
+1120155856,Not Found,None
+1120155881,Not Found,None
+1120157754,Not Found,None
+1120158412,Not Found,None
+1120158572,Not Found,None
+1120159284,net,True
+1120162492,Not Found,None
+1120162787,Not Found,None
+1120165303,Not Found,None
+1120167241,Not Found,None
+1120167634,Not Found,None
+1120168273,Not Found,None
+1120168374,Not Found,None
+1120173085,Not Found,None
+1120175994,net,True
+1120176352,Not Found,None
+1120176506,Not Found,None
+1120176643,net,True
+1120181423,Not Found,None
+1120181425,Not Found,None
+1120184061,Not Found,None
+1120184950,Not Found,None
+1120185057,Not Found,None
+1120185780,Not Found,None
+1120187448,Not Found,None
+1120192157,Not Found,None
+1120192556,Not Found,None
+1120199031,Not Found,None
+1120199103,Not Found,None
+1120210435,net,True
+1120212393,Not Found,None
+1120214553,net,True
+1120215588,Not Found,None
+1120232151,Not Found,None
+1120234090,Not Found,None
+1120243420,Not Found,None
+1120244975,Not Found,None
+1120250698,Not Found,None
+1120252153,net,True
+1120253169,Not Found,None
+1120254131,Not Found,None
+1120256004,Not Found,None
+1120256358,Not Found,None
+1120256452,Not Found,None
+1120259454,Not Found,None
+1120259522,Not Found,None
+1120261895,Not Found,None
+1120263811,Not Found,None
+1120265198,Not Found,None
+1120267059,Not Found,None
+1120267246,Not Found,None
+1120285439,Not Found,None
+1120289489,net,True
+1120300090,Not Found,None
+1120311000,Not Found,None
+1120311105,Not Found,None
+1120311589,Not Found,None
+1120312864,Not Found,None
+1120314793,Not Found,None
+1120315388,Not Found,None
+1120315791,Not Found,None
+1120316054,Not Found,None
+1120319470,Not Found,None
+1120324594,Not Found,None
+1120324856,net,True
+1120325468,Not Found,None

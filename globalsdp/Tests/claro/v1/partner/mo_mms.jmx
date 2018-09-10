@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.3" jmeter="2.8.20130705">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Global SDP - WIB Push Notification" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1442878578000</longProp>
+        <longProp name="ThreadGroup.end_time">1442878578000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/xml</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;REQUEST REQ_TYPE=&quot;Rcv_MMS_MO&quot;&gt;&#xd;
+&lt;MSG MSG_ID=&quot;000000000000000001030611281519268816&quot; /&gt;&#xd;
+&lt;ANUM&gt;1191000000&lt;/ANUM&gt;&#xd;
+&lt;BNUM&gt;303&lt;/BNUM&gt;&#xd;
+&lt;MMS&gt;&#xd;
+&lt;![CDATA[Subject%3A+Transferir%3A+mms+example%0AFrom%3A+%2B1176675225%2FTYPE%3DPLMN%40clarotorpedo.&#xd;
+com.br%0AX-MMS-Message-Type%3A+m-send-req%0AX-MMS-Message-ID%3A+5EC88AD6-7F0C-71DB-A9ED-&#xd;
+0A9077510000%0AX-MMS-Read-Reply%3A+No%0AX-MMS-&#xd;
+Priority%3A+normal%0ADate%3A+Tue%2C+28+Nov+2006+18%3A15%3A04+GMT%0AX-MMS-Delivery-&#xd;
+Report%3A+No%0AX-MMS-Message-Class%3A+personal%0AX-MMS-MMS-Version%3A+1.0%0AContent-&#xd;
+Type%3A+multipart%2Frelated%3BStart%3D%22%3CAB%3E%22%3BType%3D%22application%2Fsmil%22%3Bboundary%3&#xd;
+DBOUNDARY_CMG_MMSC_D7C2F036_1DD1_71B2_AB41%0ATo%3A+%2B303%2FTYPE%3DPLMN%40clarotorpedo.com.&#xd;
+br%0A%0A--BOUNDARY_CMG_MMSC_D7C2F036_1DD1_71B2_AB41%0D%0Acontent-&#xd;
+type%3Atext%2Fplain%3BName%3D%22text0.txt%22%3BCharset%3DUTF-8%0D%0Acontent-&#xd;
+id%3A+%3Ctext0.txt%3E%0D%0Acontent-transfer-encoding%3A7bit%0D%0A%0D%0Atext+content+sample%0D%0A--&#xd;
+BOUNDARY_CMG_MMSC_D7C2F036_1DD1_71B2_AB41%0D%0Acontent-&#xd;
+type%3Aimage%2Fgif%3BName%3D%22att1%22%0D%0Acontent-id%3A+%3CAA%3E%0D%0Acontent-transfer-&#xd;
+encoding%3A8bit%0D%0A%0D%0AGIF89a%15%00%0E%00%C2%A2%00%00%C3%BF%C3%BF%C3%BF%C3%BF%C3%&#xd;
+BFf%C3%BF%C3%8C%00%C3%BF%C2%993%C3%8Cf%00%00%C2%99%C3%8C%00%00%00%00%00%00%21%C3%B&#xd;
+9%04%01%00%00%07%00%2C%00%00%00%00%15%00%0E%00%00%03Xx%C2%BAgn%2CJ%27j%C2%80r%C2%B96z&#xd;
+%C2%BF%C3%98%24%5CC0VV%C3%88%18%C2%83u%C2%A2%C2%A8%0A%28%C2%ACi%C2%B7%02Pa%C3%B31&#xd;
+%C2%B3%C2%A7%40%C2%A0%050%C3%A8%04%3C%1F%076%C2%AC%1C%09%C3%89%1F%C3%8C%C2%82%C2&#xd;
+%8B%29f%C3%85%16%C2%810%C2%85%25%7D%C2%AC%C2%81%C2%A3Z%C3%A9%C2%A8%C2%94%0DLX%60%&#xd;
+3Eg%1A%C3%9B%01%C3%B4%C3%BD%7E%C2%B8%23%09%00%3B%0D%0A--&#xd;
+BOUNDARY_CMG_MMSC_D7C2F036_1DD1_71B2_AB41%0D%0Acontent-&#xd;
+type%3Aapplication%2Fsmil%3BName%3D%22siemens.smil%22%3BCharset%3DUTF-8%0D%0Acontent-&#xd;
+id%3A+%3CAB%3E%0D%0Acontent-transfer-&#xd;
+encoding%3A7bit%0D%0A%0D%0A%3Csmil%3E%3Chead%3E%3Clayout%3E%3Croot-&#xd;
+layout+height%3D%2280%22+width%3D%22101%22%2F%3E%0A%3Cregion+id%3D%22Image%22+fit%3D%22meet%22+h&#xd;
+eight%3D%2240%22+left%3D%220%22+top%3D%220%22+width%3D%22101%22%2F%3E%0A%3Cregion+id%3D%22Text&#xd;
+%22+fit%3D%22meet%22+height%3D%2240%22+left%3D%220%22+top%3D%2240%22+width%3D%22101%22%2F%3E%0&#xd;
+A%3C%2Flayout%3E%0A%3C%2Fhead%3E%0A%3Cbody%3E%3Cpar+dur%3D%2210000ms%22%3E%3Ctext+region%3D&#xd;
+%22Text%22+src%3D%22cid%3Atext0.txt%22%2F%3E%0A%3C%2Fpar%3E%0A%3Cpar+dur%3D%2210000ms%22%3E%3&#xd;
+Cimg+region%3D%22Image%22+src%3D%22cid%3AAA%22%2F%3E%0A%3C%2Fpar%3E%0A%3C%2Fbody%3E%0A%3C&#xd;
+%2Fsmil%3E%0A%0D%0A--BOUNDARY_CMG_MMSC_D7C2F036_1DD1_71B2_AB41--]]&gt;&#xd;
+&lt;/MMS&gt;&#xd;
+&lt;/REQUEST&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">10.170.128.55</stringProp>
+          <stringProp name="HTTPSampler.port">8888</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">claro/v1/mo/mms?userId=567f6ee58c744dc0a39dc8987c9417cd&amp;pwd=d9b475e7dd35436e91e6ae65f7432c2f</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

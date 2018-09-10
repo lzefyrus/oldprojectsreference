@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>abr.utils module &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="index.html" />
+    <link rel="up" title="ABR package" href="abr.html" />
+    <link rel="prev" title="abr.models module" href="abr.models.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#return">Return</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#not-ported-phone">Not ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#ported-phone">Ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#errors">Errors:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="abr.html">ABR package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="abr.html#module">Module</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.importer.html">abr.importer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.models.html">abr.models module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="abr.models.html" title="Previous Chapter: abr.models module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; abr.models modul...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/abr.utils.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="module-abr.utils">
+<span id="abr-utils-module"></span><h1>abr.utils module<a class="headerlink" href="#module-abr.utils" title="Permalink to this headline">¶</a></h1>
+<dl class="exception">
+<dt id="abr.utils.InvalidPhone">
+<em class="property">exception </em><code class="descclassname">abr.utils.</code><code class="descname">InvalidPhone</code><a class="reference internal" href="_modules/abr/utils.html#InvalidPhone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.InvalidPhone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>invalid formated phone Exception</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="abr.utils.PhoneNotFound">
+<em class="property">exception </em><code class="descclassname">abr.utils.</code><code class="descname">PhoneNotFound</code><a class="reference internal" href="_modules/abr/utils.html#PhoneNotFound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.PhoneNotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>phone not found Exception</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.checkMobile">
+<code class="descclassname">abr.utils.</code><code class="descname">checkMobile</code><span class="sig-paren">(</span><em>phone</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#checkMobile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.checkMobile" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if a phone number is mobile or landline</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>phone</strong> (<em>str</em>) &#8211; str phone number</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">is mobile or not</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.insertOperators">
+<code class="descclassname">abr.utils.</code><code class="descname">insertOperators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#insertOperators"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.insertOperators" title="Permalink to this definition">¶</a></dt>
+<dd><p>insert the normatized operators from file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.parsePhone">
+<code class="descclassname">abr.utils.</code><code class="descname">parsePhone</code><span class="sig-paren">(</span><em>phone</em>, <em>returnFull=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#parsePhone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.parsePhone" title="Permalink to this definition">¶</a></dt>
+<dd><p>parsers and returns the prefix of the phone. If full is required returns dict with all steps and info</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>phone</strong> (<em>str</em>) &#8211; phone number</li>
+<li><strong>returnFull</strong> (<em>bool</em>) &#8211; does all or not`</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">phone info</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dit</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.translateArbOperator">
+<code class="descclassname">abr.utils.</code><code class="descname">translateArbOperator</code><span class="sig-paren">(</span><em>lazy</em>, <em>op</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#translateArbOperator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.translateArbOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>search for the rn1 operator in database and adds if not found</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lazy</strong> (<em>dict</em>) &#8211; rn1 and operator database record (data cache)</li>
+<li><strong>op</strong> (<em>str</em>) &#8211; rn1 operator id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">lazy and operator record</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict, record</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.translateImage">
+<code class="descclassname">abr.utils.</code><code class="descname">translateImage</code><span class="sig-paren">(</span><em>url_img</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#translateImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.translateImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>parse the image name to operator name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url_img</strong> (<em>str</em>) &#8211; url of the image</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">operator</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">record</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="abr.utils.translateOperator">
+<code class="descclassname">abr.utils.</code><code class="descname">translateOperator</code><span class="sig-paren">(</span><em>lazy</em>, <em>operator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/utils.html#translateOperator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.utils.translateOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>search for the operator in database and adds if not found</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lazy</strong> (<em>dict</em>) &#8211; operator and operator database record (data cache)</li>
+<li><strong>op</strong> (<em>str</em>) &#8211; operator id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">lazy and operator record</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict, record</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

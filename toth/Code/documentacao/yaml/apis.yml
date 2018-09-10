@@ -1,0 +1,21 @@
+apis:
+  - path: Vivo
+    description: "Funambol, AnchorFree, Puresight, Fsecure, Assistencia, McaFee, Competir"
+  - path: GVT
+    description: "Funambol, AnchorFree, Puresight, Fsecure, Assistencia"
+  - path: Hero
+    description: "Funambol, AnchorFree, Puresight, Fsecure, Assistencia, Kaspersky"
+  - path: Oi
+    description: "Funambol, AnchorFree, Puresight, McaFee, Competir"
+  - path: Tim
+    description: "Funambol, AnchorFree, Puresight, Kaspersky, Competir"
+  - path: Terabox
+    description: "Funambol"
+  - path: Mcloud
+    description: "Funambol"
+  - path: Algar
+    description: "Funambol, AnchorFree, Puresight, Fsecure"
+  - path: Nextel
+    description: "Funambol, Kaspersky, Puresight"
+  - path: Qbe
+    description: "Kaspersky, Assistencia"

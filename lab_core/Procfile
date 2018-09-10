@@ -1,0 +1,5 @@
+web: NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program gunicorn lab_core.wsgi -w 2 --threads 3
+firebase_worker: celery worker -A lab_core -Q domain.tasks.send_general_kpi,domain.tasks.populate_firebase_results_ac_endpoint,domain.tasks.populate_firebase_results_rdi_endpoint,domain.tasks.expire_prescription_pieces,domain.tasks.send_users_report,domain.tasks.send_users_orders_report,domain.tasks.send_kpis_per_day_report -B --without-gossip --without-mingle --without-heartbeat
+results_worker: celery worker -A lab_core -Q domain.tasks.update_results,domain.tasks.zen_desk,domain.tasks.zendesk_adf  -B --without-gossip --without-mingle --without-heartbeat
+images_upload_worker: celery worker -A lab_core -Q domain.tasks.create_images -B --without-gossip --without-mingle --without-heartbeat
+firebase_push_worker: celery worker -A lab_core -Q domain.tasks.send_push_notification -B --without-gossip --without-mingle --without-heartbeat

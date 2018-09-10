@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>abr.importer module &mdash; ABR - Portabilidade Numérica 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/slate/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ABR - Portabilidade Numérica 1.0 documentation" href="index.html" />
+    <link rel="up" title="ABR package" href="abr.html" />
+    <link rel="next" title="abr.models module" href="abr.models.html" />
+    <link rel="prev" title="abr.delta_import module" href="abr.delta_import.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          ABR - Portabilidade Numérica</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#return">Return</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#not-ported-phone">Not ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#ported-phone">Ported phone:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#errors">Errors:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Plataforma de provisionameto - ABR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#technology">Technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#git-repo">GIT REPO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#servers">Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="main.html#packages-python-3-4">Packages - Python 3.4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="main.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="main.html#instalation">Instalation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="abr.html">ABR package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="abr.html#module">Module</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="abr.abr_site_parser.html">abr.abr_site_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.delta_import.html">abr.delta_import module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">abr.importer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.models.html">abr.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abr.utils.html">abr.utils module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="abr.delta_import.html" title="Previous Chapter: abr.delta_import module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; abr.delta_import...</span>
+    </a>
+  </li>
+  <li>
+    <a href="abr.models.html" title="Next Chapter: abr.models module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">abr.models modul... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/abr.importer.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="module-abr.importer">
+<span id="abr-importer-module"></span><h1>abr.importer module<a class="headerlink" href="#module-abr.importer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="abr.importer.AbrSite">
+<em class="property">class </em><code class="descclassname">abr.importer.</code><code class="descname">AbrSite</code><a class="reference internal" href="_modules/abr/importer.html#AbrSite"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.AbrSite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Main import for DDDs and Teleco default mobile operator numbers for each DDD available</p>
+<dl class="attribute">
+<dt id="abr.importer.AbrSite.DDD">
+<code class="descname">DDD</code><em class="property"> = ['0', '11', '12', '13', '14', '15', '16', '17', '18', '19', '21', '22', '24', '27', '28', '31', '32', '33', '34', '35', '37', '38', '41', '42', '43', '44', '45', '46', '47', '48', '49', '51', '53', '54', '55', '61', '62', '63', '64', '65', '66', '67', '68', '69', '7173', '74', '75', '77', '79', '81', '82', '83', '84', '85', '86', '87', '88', '89', '91', '92', '93', '94', '95', '96', '97', '98', '99']</em><a class="headerlink" href="#abr.importer.AbrSite.DDD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.importer.AbrSite.URL_OPERATORS">
+<code class="descname">URL_OPERATORS</code><em class="property"> = 'http://www.teleco.com.br/carrega_numeros_operadora.asp'</em><a class="headerlink" href="#abr.importer.AbrSite.URL_OPERATORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="abr.importer.AbrSite.URL_STATES">
+<code class="descname">URL_STATES</code><em class="property"> = 'http://www.anatel.gov.br/hotsites/CodigosNacionaisLocalidade/TelefoneCelular-CodigosDeArea.htm'</em><a class="headerlink" href="#abr.importer.AbrSite.URL_STATES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="abr.importer.AbrSite.getAreaCodes">
+<code class="descname">getAreaCodes</code><span class="sig-paren">(</span><em>run_all=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#AbrSite.getAreaCodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.AbrSite.getAreaCodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method for importing</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.importer.FileParseAbr">
+<em class="property">class </em><code class="descclassname">abr.importer.</code><code class="descname">FileParseAbr</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseAbr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseAbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Parsers the file and adds to the current phone data deltas or full file</p>
+<dl class="method">
+<dt id="abr.importer.FileParseAbr.bufcount">
+<code class="descname">bufcount</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseAbr.bufcount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseAbr.bufcount" title="Permalink to this definition">¶</a></dt>
+<dd><p>open the file 1M at a time</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="abr.importer.FileParseAbr.parseDate">
+<code class="descname">parseDate</code><span class="sig-paren">(</span><em>dateStr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseAbr.parseDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseAbr.parseDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>parses the date from file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dateStr</strong> (<em>str</em>) &#8211; umparsed date</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">datetime obj</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="abr.importer.FileParseAbr.readLines">
+<code class="descname">readLines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseAbr.readLines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseAbr.readLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>line reader and spliter for csv file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.importer.FileParseCnl">
+<em class="property">class </em><code class="descclassname">abr.importer.</code><code class="descname">FileParseCnl</code><span class="sig-paren">(</span><em>file</em>, <em>is_delta=True</em>, <em>is_mobile=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseCnl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseCnl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Parse CNL information by operator</p>
+<dl class="method">
+<dt id="abr.importer.FileParseCnl.processFile">
+<code class="descname">processFile</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseCnl.processFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseCnl.processFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>makes the parse and adds the data on the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; yelded line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="abr.importer.FileParseCnl.readLines">
+<code class="descname">readLines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseCnl.readLines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseCnl.readLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>:return:yelded line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="abr.importer.FileParseCnl.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/abr/importer.html#FileParseCnl.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.FileParseCnl.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>simple run script</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="abr.importer.Record">
+<em class="property">class </em><code class="descclassname">abr.importer.</code><code class="descname">Record</code><a class="reference internal" href="_modules/abr/importer.html#Record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#abr.importer.Record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>simple mock object</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Sandro Lourenço.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s0:definitions targetNamespace="http://alsb.telemar/wsdl/VerificarDisponibilidadeSaldoCliente" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteRequest" xmlns:s2="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteResponse" xmlns:s3="http://alsb.telemar/wsdl/VerificarDisponibilidadeSaldoCliente" xmlns:s4="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:types>
+    <xsd:schema elementFormDefault="unqualified" xmlns:crvreq="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteRequest" xmlns:crvres="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://alsb.telemar/wsdl/VerificarDisponibilidadeSaldoCliente" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteRequest" schemaLocation="VerificarDisponibilidadeSaldoClienteRequest.xsd"/>
+      <xsd:import namespace="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoClienteResponse" schemaLocation="VerificarDisponibilidadeSaldoClienteResponse.xsd"/>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="VerificarDisponibilidadeSaldoClienteRequest">
+    <s0:part element="s1:VerificarDisponibilidadeSaldoClienteRequest" name="VerificarDisponibilidadeSaldoClienteRequest"/>
+  </s0:message>
+  <s0:message name="VerificarDisponibilidadeSaldoClienteResponse">
+    <s0:part element="s2:VerificarDisponibilidadeSaldoClienteResponse" name="VerificarDisponibilidadeSaldoClienteResponse"/>
+  </s0:message>
+  <s0:portType name="VerificarDisponibilidadeSaldoClientePort">
+    <s0:operation name="VerificarDisponibilidadeSaldoCliente">
+      <s0:input message="s3:VerificarDisponibilidadeSaldoClienteRequest"/>
+      <s0:output message="s3:VerificarDisponibilidadeSaldoClienteResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="VerificarDisponibilidadeSaldoClienteSoap" type="s3:VerificarDisponibilidadeSaldoClientePort">
+    <s4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="VerificarDisponibilidadeSaldoCliente">
+      <s4:operation soapAction="http://alsb.telemar/xsd/VerificarDisponibilidadeSaldoCliente"/>
+      <s0:input>
+        <s4:body use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s4:body use="literal"/>
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="VerificarDisponibilidadeSaldoCliente">
+    <s0:port binding="s3:VerificarDisponibilidadeSaldoClienteSoap" name="VerificarDisponibilidadeSaldoClienteSoap">
+      <s4:address location="http://beaqasalsbocs.telemar:80/OCS/VerificarDisponibilidadeSaldoClienteProxySoap"/>
+    </s0:port>
+  </s0:service>
+</s0:definitions>

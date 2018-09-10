@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Local - SupplierPartnerProblemReportingManagement" resourceRoot="" soapui-version="4.5.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SupplierPartnerReportingManagementSOAP" type="wsdl" bindingName="{http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/}SupplierPartnerReportingManagementSOAP" soapVersion="1_1" anonymous="optional" definition="http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?wsdl"><con:part><con:url>http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions name="SupplierPartnerReportingManagement" targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.gvt.com.br/GvtCommonEntities" xmlns:WL5G3N2="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sce="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <!--includes-->
+      <xsd:import namespace="http://www.gvt.com.br/GvtCommonEntities" schemaLocation="http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?SCHEMA%2FCommons%2FInterfaces%2FSchemas%2FGvtCommonEntities"/>
+      <xsd:import namespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" schemaLocation="http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?SCHEMA%2FConsumerInterfaces%2FSupplierPartner%2FSupplierPartnerManagement%2FSupplierPartnerProblemReportingManagement%2FInterfaces%2FSchemas%2FsupplierPartnerReportingManagement"/>
+      <!--types-->
+      <xsd:element name="createCustomerProblemIn" nillable="false" type="sce:createCustomerProblemIn"/>
+      <xsd:element name="createCustomerProblemOut" nillable="false" type="sce:createCustomerProblemOut"/>
+      <xsd:element name="closeCustomerProblemIn" nillable="false" type="sce:closeCustomerProblemIn"/>
+      <xsd:element name="closeCustomerProblemOut" nillable="false" type="sce:closeCustomerProblemOut"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="GVTHeader">
+    <WL5G3N0:part element="WL5G3N1:version" name="GVTHeader"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="gvtBusinessServiceResponseFault">
+    <WL5G3N0:part element="WL5G3N1:gvtBusinessServiceResponseFault" name="fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createCustomerProblemRequest">
+    <WL5G3N0:part element="WL5G3N2:createCustomerProblemIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createCustomerProblemResponse">
+    <WL5G3N0:part element="WL5G3N2:createCustomerProblemOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeCustomerProblemRequest">
+    <WL5G3N0:part element="WL5G3N2:closeCustomerProblemIn" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="closeCustomerProblemResponse">
+    <WL5G3N0:part element="WL5G3N2:closeCustomerProblemOut" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="SupplierPartnerReportingManagement">
+    <WL5G3N0:operation name="createCustomerProblem">
+      <WL5G3N0:input message="WL5G3N2:createCustomerProblemRequest"/>
+      <WL5G3N0:output message="WL5G3N2:createCustomerProblemResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeCustomerProblem">
+      <WL5G3N0:input message="WL5G3N2:closeCustomerProblemRequest"/>
+      <WL5G3N0:output message="WL5G3N2:closeCustomerProblemResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:gvtBusinessServiceResponseFault" name="fault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="SupplierPartnerReportingManagementSOAP" type="WL5G3N2:SupplierPartnerReportingManagement">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="createCustomerProblem">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/createCustomerProblem"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="closeCustomerProblem">
+      <WL5G3N3:operation soapAction="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/>
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N2:GVTHeader" part="GVTHeader" use="literal"/>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N3:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="SupplierPartnerReportingManagement">
+    <WL5G3N0:port binding="WL5G3N2:SupplierPartnerReportingManagementSOAP" name="SupplierPartnerReportingManagementSOAP">
+      <WL5G3N3:address location="http://CTARO9-5018.gvt.net.br:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?SCHEMA%2FCommons%2FInterfaces%2FSchemas%2FGvtCommonEntities</con:url><con:content><![CDATA[<schema targetNamespace="http://www.gvt.com.br/GvtCommonEntities" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.gvt.com.br/GvtCommonEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="gvtBusinessServiceResponse">
+    <xs:sequence>
+      <xs:element name="responseStatus" type="tns:gvtBusinessServiceResponseStatus" minOccurs="1"/>
+      <xs:element name="messages" type="tns:gvtBusinessServiceResponseMessage" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="gvtBusinessServiceResponseStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESS"/>
+      <xs:enumeration value="BUSINESS_ERROR"/>
+      <xs:enumeration value="FATAL_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="gvtBusinessServiceResponseMessage">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>breve descricao em portugues relevante ao negocio do resultado da operacao</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statusCode" type="xs:string" minOccurs="1">
+        <annotation>
+          <documentation>codigo retorno gvt do resultado da operacao conforme definido em http://svuxpjir1:9090/display/CAPINT/Consumer+Interface+Proxys</documentation>
+        </annotation>
+      </xs:element>
+      <xs:element name="statusDetail" type="xs:string" minOccurs="1">
+        <annotation>
+          <documentation>descricao do status code</documentation>
+        </annotation>
+      </xs:element>
+      <xs:element name="system" type="xs:string" minOccurs="1">
+        <annotation>
+          <documentation>caso possivel informar qual sistema legado gvt resultou a falha</documentation>
+        </annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="version" nillable="true">
+    <xs:annotation>
+      <xs:documentation>Header GVT para versionamento de serviços. Guia de utilizacao em http://svuxpjir1:9090/display/CAPINT/Consumer+Interface+Proxys</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="4"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:simpleType name="TypeMessage">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CHANGE_STATUS"/>
+      <xs:enumeration value="CLOSE"/>
+      <xs:enumeration value="DONE"/>
+      <xs:enumeration value="NOT_DONE"/>
+      <xs:enumeration value="DEINSTALL_EQUIPMENT"/>
+      <xs:enumeration value="UPDATE_EQUIPMENT_INVENTORY"/>
+      <xs:enumeration value="REMOVE_EQUIPMENT_INVENTORY"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WorkforceAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ISSUE"/>
+      <xs:enumeration value="REAGENDAMENTO"/>
+      <xs:enumeration value="PENDENCIA"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="message">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Id da mensagem</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="tns:TypeMessage" minOccurs="1">
+        <annotation>
+          <documentation>tipo da mensagem</documentation>
+        </annotation>
+      </xs:element>
+      <xs:element name="startDateTime" type="xs:dateTime" minOccurs="1">
+        <annotation>
+          <documentation>Hora de inicio do processamento da mensagem</documentation>
+        </annotation>
+      </xs:element>
+      <xs:element name="endDateTime" type="xs:dateTime" minOccurs="1">
+        <annotation>
+          <documentation>Hora de finalização do processamento da mensagem</documentation>
+        </annotation>
+      </xs:element>
+      <xs:element name="status" type="xs:string" minOccurs="1">
+        <annotation>
+          <documentation>Situação da mensagem</documentation>
+        </annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gvtBusinessServiceResponseFault">
+    <xs:sequence>
+      <xs:element name="gvtBusinessServiceResponse" type="tns:gvtBusinessServiceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gvtBusinessServiceResponseFault" type="tns:gvtBusinessServiceResponseFault"/>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?SCHEMA%2FConsumerInterfaces%2FSupplierPartner%2FSupplierPartnerManagement%2FSupplierPartnerProblemReportingManagement%2FInterfaces%2FSchemas%2FsupplierPartnerReportingManagement</con:url><con:content><![CDATA[<schema targetNamespace="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+  <import schemaLocation="http://localhost:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement?SCHEMA%2FCommons%2FInterfaces%2FSchemas%2FGvtCommonEntities" namespace="http://www.gvt.com.br/GvtCommonEntities"/>
+  <!--Types-->
+  <xs:complexType name="createCustomerProblemIn">
+    <xs:sequence>
+      <xs:element name="customerProblem" type="tns:CustomerProblem" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createCustomerProblemOut">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+  <!--closeCustomerProblem-->
+  <xs:complexType name="closeCustomerProblemIn">
+    <xs:sequence>
+      <xs:element name="customerOrderCallback" type="tns:CustomerProblemCallBack" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="closeCustomerProblemOut">
+    <xs:sequence>
+      <xs:element name="gvtBusinessServiceResponse" type="gvt:gvtBusinessServiceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--The type: com.sid.CustomerDomain.CustomerProblem-->
+  <xs:complexType name="CustomerProblem">
+    <xs:sequence>
+      <xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="interactionDate" type="xs:dateTime" minOccurs="1" maxOccurs="1" nillable="false"/>
+      <xs:element name="description " type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="involvesCustomer" type="tns:Customer" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="orderProtocol" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="InvolvesProduct" type="tns:ProductBundle" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="CustomerProblemType" type="tns:AtomicTypification" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--The type: com.sid.CustomerDomain.Customer-->
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element name="documentNumber" type="xs:string" minOccurs="1"/>
+      <xs:element name="Individual" type="tns:Individual" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="contactabelVia" type="tns:ContactMedium" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--The type: com.sid.CommonBusinessEntitiesDomain.Individual-->
+  <xs:complexType name="Individual">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductBundle">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="1"/>
+      <xs:element name="ProductSpecification" type="tns:ProductSpecification" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductSpecification">
+    <xs:sequence>
+      <xs:element name="productNumber" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Types-->
+  <xs:complexType name="AtomicTypification">
+    <xs:sequence>
+      <xs:element name="label" type="xs:string" minOccurs="1"/>
+      <xs:element name="value" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactMedium">
+    <xs:sequence>
+      <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomerProblemCallBack">
+    <xs:sequence>
+      <xs:element name="ID" type="xs:string" minOccurs="1"/>
+      <xs:element name="interactionDateComplete" type="dateTime" minOccurs="1"/>
+      <xs:element name="interactionStatus" type="xs:string" minOccurs="1"/>
+      <xs:element name="description" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://CTARO9-5018.gvt.net.br:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement</con:endpoint><con:endpoint>http://CTARO9-5018:8088/mockSupplierPartnerReportingManagementSOAP</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem" name="closeCustomerProblem" bindingOperationName="closeCustomerProblem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://CTARO9-5018:8088/mockSupplierPartnerReportingManagementSOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+   <soapenv:Header>
+      <gvt:version>?</gvt:version>
+   </soapenv:Header>
+   <soapenv:Body>
+      <sup:closeCustomerProblemIn>
+         <!--Optional:-->
+         <sup1:customerOrderCallback>
+            <sup1:ID>?</sup1:ID>
+            <sup1:interactionDateComplete>?</sup1:interactionDateComplete>
+            <sup1:interactionStatus>?</sup1:interactionStatus>
+            <sup1:description>?</sup1:description>
+         </sup1:customerOrderCallback>
+      </sup:closeCustomerProblemIn>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/createCustomerProblem" name="createCustomerProblem" bindingOperationName="createCustomerProblem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://CTARO9-5018.gvt.net.br:7001/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+   <soapenv:Header>
+      <gvt:version>?</gvt:version>
+   </soapenv:Header>
+   <soapenv:Body>
+      <sup:createCustomerProblemIn>
+         <!--Optional:-->
+         <sup1:customerProblem>
+            <sup1:ID>?</sup1:ID>
+            <sup1:interactionDate>?</sup1:interactionDate>
+            <sup1:description>?</sup1:description>
+            <sup1:involvesCustomer>
+               <sup1:documentNumber>?</sup1:documentNumber>
+               <sup1:Individual>
+                  <sup1:name>?</sup1:name>
+               </sup1:Individual>
+               <!--Optional:-->
+               <sup1:contactabelVia>
+                  <!--Optional:-->
+                  <sup1:email>?</sup1:email>
+               </sup1:contactabelVia>
+            </sup1:involvesCustomer>
+            <sup1:orderProtocol>?</sup1:orderProtocol>
+            <!--1 or more repetitions:-->
+            <sup1:InvolvesProduct>
+               <sup1:serviceId>?</sup1:serviceId>
+               <sup1:name>?</sup1:name>
+               <sup1:ProductSpecification>
+                  <sup1:productNumber>?</sup1:productNumber>
+               </sup1:ProductSpecification>
+            </sup1:InvolvesProduct>
+            <!--1 or more repetitions:-->
+            <sup1:CustomerProblemType>
+               <sup1:label>?</sup1:label>
+               <sup1:value>?</sup1:value>
+            </sup1:CustomerProblemType>
+         </sup1:customerProblem>
+      </sup:createCustomerProblemIn>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/createCustomerProblem"/></con:call></con:operation></con:interface><con:mockService port="8088" path="/mockSupplierPartnerReportingManagementSOAP" host="CTARO9-5018" name="SupplierPartnerReportingManagementSOAP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="closeCustomerProblem" interface="SupplierPartnerReportingManagementSOAP" operation="closeCustomerProblem"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sup:closeCustomerProblemOut>
+         <sup1:gvtBusinessServiceResponse>
+            <gvt:responseStatus>BUSINESS_ERROR</gvt:responseStatus>
+            <!--Zero or more repetitions:-->
+            <gvt:messages>
+               <gvt:description>Ocorreu um erro na postagem na fila de conclusão da solicitação de serviço.</gvt:description>
+               <gvt:statusCode>8.02-005</gvt:statusCode>
+               <gvt:statusDetail>Ocorreu um erro na postagem na fila de conclusão da solicitação de serviço.</gvt:statusDetail>
+               <gvt:system>QUEUE</gvt:system>
+            </gvt:messages>
+         </sup1:gvtBusinessServiceResponse>
+      </sup:closeCustomerProblemOut>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/></con:response><con:response name="Response 2" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities" xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sup:closeCustomerProblemOut>
+         <sup1:gvtBusinessServiceResponse>
+            <gvt:responseStatus>SUCCESS</gvt:responseStatus>
+            <!--Zero or more repetitions:-->
+            <gvt:messages>
+               <gvt:description>Operação realizada com Sucesso</gvt:description>
+               <gvt:statusCode>0</gvt:statusCode>
+               <gvt:statusDetail>Operação realizada com Sucesso</gvt:statusDetail>
+               <gvt:system>QUEUE</gvt:system>
+            </gvt:messages>
+         </sup1:gvtBusinessServiceResponse>
+      </sup:closeCustomerProblemOut>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/></con:response><con:response name="Response 3" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+      <gvt:version>?</gvt:version>
+   </soapenv:Header>
+   <soapenv:Body xmlns:gvt="http://www.gvt.com.br/GvtCommonEntities" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/" xmlns:sup1="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/supplierPartnerReportingManagementEntities">
+      <soapenv:Fault>
+         <faultcode>soap-env:Server</faultcode>
+         <faultstring>Error in operation : closeCustomerProblem</faultstring>
+         <faultactor>/SupplierPartner/SupplierPartnerManagement/SupplierPartnerProblemReportingManagement/SupplierPartnerProblemReportingManagement</faultactor>
+         <detail>
+            <gvt:gvtBusinessServiceResponseFault>
+               <gvt:gvtBusinessServiceResponse>
+                  <gvt:responseStatus>FATAL_ERROR</gvt:responseStatus>
+                  <gvt:messages>
+                     <gvt:description>com.bea.wli.sb.stages.StageException: {err}XP0021: "?": can not cast to {http://www.w3.org/2001/XMLSchema}double: error: double: Invalid double value: ?</gvt:description>
+                     <gvt:statusCode>3</gvt:statusCode>
+                     <gvt:statusDetail>Erro não tratador pelo fluxo de serviço</gvt:statusDetail>
+                     <gvt:system>CONSUMER</gvt:system>
+                  </gvt:messages>
+               </gvt:gvtBusinessServiceResponse>
+            </gvt:gvtBusinessServiceResponseFault>
+         </detail>
+      </soapenv:Fault>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/closeCustomerProblem"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="createCustomerProblem" interface="SupplierPartnerReportingManagementSOAP" operation="createCustomerProblem"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sup="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sup:createCustomerProblemOut/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.gvt.com.br/SupplierPartner/SupplierPartnerManagement/SupplierPartnerReportingManagement/SupplierPartnerReportingManagement/createCustomerProblem"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>

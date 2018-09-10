@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sara Care - KPI</title>
+</head>
+<body>
+<header class="banner">
+    <h1>Atendimentos x Prescrições por status e data de agendamento</h1>
+</header>
+
+<section>
+    <table border="1" cellpadding="1" cellspacing="1">
+        <thead>
+            <tr>
+                <th colspan="3">Mensal</th>
+            </tr>
+            <tr>
+                <th>Data do exame</th>
+                <th>Última alteração</th>
+                <th>Status</th>
+                <th>Unidade</th>
+                <th>Pasciente</th>
+                <th>Telefone</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for k in schedules.items reversed %}
+            <tr>
+                <td>{{ k.scheduled_time }}</td>
+                <td>{{ k.modified }}</td>
+                <td>{{ k.se_status }}</td>
+                <td>{{ k.name }}</td>
+                <td>{{ k.full_name}}</td>
+                <td>{{ k.phone }}</td>
+                <td>{{ k.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

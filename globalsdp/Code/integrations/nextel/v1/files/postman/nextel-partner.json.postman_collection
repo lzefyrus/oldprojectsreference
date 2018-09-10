@@ -1,0 +1,56 @@
+{
+	"id": "75060bfe-bb56-0640-630a-4c04dcf7910b",
+	"name": "nextel-partner",
+	"description": "",
+	"order": [
+		"9184c69f-fa5a-6550-ad40-0d5fe87cd0f5",
+		"9e6333b1-c7a1-db66-60bf-086ecde2456d"
+	],
+	"folders": [],
+	"timestamp": 1449074645809,
+	"owner": "154767",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "9184c69f-fa5a-6550-ad40-0d5fe87cd0f5",
+			"headers": "Content-Type: text/xml\n",
+			"url": "http://10.170.128.55:8888/nextel/v1/mo",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1449076484478,
+			"name": "mo",
+			"description": "Send mo from Nextel to backend",
+			"collectionId": "75060bfe-bb56-0640-630a-4c04dcf7910b",
+			"responses": [],
+			"rawModeData": "<smsmo_request company_id=\"7\" service_id=\"23\">\n   <carrier_id>8</carrier_id>\n   <dispatcher_id>18</dispatcher_id>\n   <application_id>41</application_id>\n   <message_id>A434FD01</message_id>\n   <session_id>A434FDB2</session_id>\n   <large_account>500</large_account>\n   <source country_code=\"\">3191234567</source>\n   <request_datetime>2005021205</request_datetime>\n   <text binary=\"false\">ALO</text>\n</smsmo_request>"
+		},
+		{
+			"id": "9e6333b1-c7a1-db66-60bf-086ecde2456d",
+			"headers": "Content-Type: text/xml\n",
+			"url": "http://10.170.128.55:8888/nextel/v1/notification/authentication",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1449076909286,
+			"name": "notification",
+			"description": "Receive signature/auth notification from Nextel",
+			"collectionId": "75060bfe-bb56-0640-630a-4c04dcf7910b",
+			"responses": [],
+			"rawModeData": "<notification_request status=\"12\" application_id=\"1\">\n\t<dispatcher_id>18</dispatcher_id>\n\t<message_id>A434FD01</message_id>\n\t<smsc_message_id>09923DF1</smsc_message_id>\n\t<source>500</source>\n\t<destination>3191234567</destination>\n    <request_datetime>2005021205</request_datetime>\n    <notification_datetime>2005021205</notification_datetime>\n    <package id=\"A434FD01\" index=\"1\"/>\n    <app_specific_id>Teste</app_specific_id>\n    <description code=\"0\">Message delivered to destination</description> \n</notification_request>"
+		}
+	]
+}

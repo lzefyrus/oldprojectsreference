@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSResponse" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://alsb.telemar/xsd/EfetuarDebitoSemReservaSaldoOCSResponse">
+	<xs:element name="EfetuarDebitoSemReservaSaldoOCSResponse" type="tns:EfetuarDebitoSemReservaSaldoOCSResponseType"/>
+
+	<xs:complexType name="EfetuarDebitoSemReservaSaldoOCSResponseType">
+		<xs:sequence>		
+			<xs:element name="codigoStatus" type="xs:integer" minOccurs="1" maxOccurs="1"/>	
+			<xs:element name="codigoPrePos" type="xs:string" minOccurs="1" maxOccurs="1" nillable="true"/>				
+			<xs:element name="saldo" type="xs:string" minOccurs="1" maxOccurs="1" nillable="true"/>
+			<xs:element name="identificadorSessao" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="identificadorTransacao" type="xs:string" minOccurs="1" maxOccurs="1" nillable="true"/>
+		</xs:sequence>				
+	</xs:complexType>
+</xs:schema>

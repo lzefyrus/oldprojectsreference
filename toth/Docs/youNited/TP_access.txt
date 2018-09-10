@@ -1,0 +1,3 @@
+Endpoint base URL: https://safeavenue-tp.sp.f-secure.com/api/vivo/v2.1/
+Username: vivo-fsvas-api
+Password: 7;T9K'BH+)4gX

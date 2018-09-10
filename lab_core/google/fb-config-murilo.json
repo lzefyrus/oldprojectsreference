@@ -1,0 +1,19 @@
+{
+  "apiKey": "AIzaSyDlseaExuGGdrYurd1Re33L7AMd0MrSgUE",
+  "authDomain": "sara-162516.firebaseapp.com",
+  "databaseURL": "https://sara-162516.firebaseio.com",
+  "storageBucket": "sara-162516.appspot.com",
+  "messagingSenderId": "823799614044",
+  "serviceAccount": {
+    "type": "service_account",
+    "project_id": "sara-162516",
+    "private_key_id": "8201e1e590e591eadcf655bdb12f597e9993c4ed",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDEokFy+Z5ZbyOL\naiUFF/jE/SkQYsVgBCcbWFwOXeItI+SgD2tDgqkI8KIAtieKkPKiiquPBYIrQyM/\ns8QsjpOX1OCLB+FqTp8PYfWN4EyPlsmsUb44BzSlutWFIh8iF2D9WxbxJifC3YZq\nu8R7JfYpOH/EUmD/Eo/UdkWrcUJT/+u8Dt+5GN+59y+d9ZBZMuc2pSzCTrhDZ+cw\nrx29ipbiTMj+InZUFO3ldlbfQWf5wM8Z8F+sTGrByT/xn4OeCA1jT4paMu2X6puV\nFl4MrZxJ+DzGnP81+Pa/QGFz1cdGrSkDLelw74ctp83VkjgDZK/TuIiNMTjjRAnU\nAH8x0mzLAgMBAAECggEAKMlnPgwdFnwBKXf4+deBGItSqz1xp3r1Ca0IW0qKEcby\nM2k/XJ+LpHkVgYRHK2zph2GwOFhyKbshYqNNO9jPMJ1NfklCLqTkRXKSVr2B4/7p\nEj9ab5C/EOlyRM1RG+cxjRwJ5Dd/4+HDcfxEwy6aou4/Ql+8EuysvOtThD5X/cgo\n4U23DN8lxrtfo8bmUNDSkROw2RbVYqKizGXSz0IHjK20BuiLRFATUb08Z8YhrzMr\nLSMm2yAYpSj/cpC/F6ATV8hhWdSjFWQrsqjYEEFGHCJX5pycze4pMqGH3UlGCfK1\nM+kJ2JYaks/VgEtOc6NRvKsCjTvIWojokzGKWNtwQQKBgQDoUihRFuebEoGeWQ/a\nXXzv0xn/ydTPt7NarXEOAtwZiTZrEBetmaFOLZDbhuzPTpYIK9BetBuFZJRTol+N\n8nLjt3wkYRyhRH2r6I1K/bbf4jhKxKGDrP1NFyVbC0L+6YpGmhjZ+ASf5X/FTiFC\n54e1/h6h3tSeANlgqE/jEpMimwKBgQDYrO5FhG82dQspG36pS8MpCA3BzYII6Kio\nZuhalZEsDnO4zQAVlXDOWXaPQAb7UodFoAEepKw2Db47wB/NIxrtCQxv/NDniY/x\nZA9x3/jWl7mKt0keTqlYqjN1nSsILkTCkrIyqEMDvQTjIGp3GybiQdUfgtD0tNHg\nRUyLzmMpkQKBgDRhEaX2vBFCgubovaJGIb0Qo3QAVXLfwBhZsnuuOWGohhRtdGk3\nkh7GNzrHmOzEkx8Ugc5YXTweCTMyEMk4OJ8O53ZsTsAtaQgxTmnx+iFQJ9DztFaz\n0ghnh4yXZWuDzCFO7Pt359MFM2GQ0/75pKdrvAxS6S0Wk+wvBpPzxCixAoGAX/zU\nHZXa0swtIovco9E9Zur7dTS+e4XeWaQlISQLSPIqD985P1aRv8hgPnvF3AamiJCm\njlWzOMsD0GJ/dBguMH4GtYHRZhFJ5E1IjlEDYsWaW7pwuO1uFipoW51B2ADvUyc7\nrDdgYMKW7KuKnrM3mZpCeRAx04ZbR7hLfc/znBECgYEAxwFhMwzJTK1ptjlCOuFT\nPg7rEqS34hfN46HOtjlpvkNfssCiCZSl9n2b0EfRnJl3exrSBaXTiE8gZZMe6rTK\newW33EpwLGgqKCGH62ElihfTGcwRHG7j1NGyBKQC9DWBVrAIGSQ2fiLTAvSGgCCC\naq6eqzhKG8/QVDMSIGaiF38=\n-----END PRIVATE KEY-----\n",
+    "client_email": "sara-162516@appspot.gserviceaccount.com",
+    "client_id": "114824834432708368791",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sara-162516%40appspot.gserviceaccount.com"
+  }
+}

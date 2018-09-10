@@ -1,0 +1,18 @@
+{
+  "apiKey": "AIzaSyBwg9nHMd_X4sDbP6OfFNSNcFWU8wJkHJE",
+  "authDomain": "dasa-marcio.firebaseio.com",
+  "databaseURL": "https://dasa-marcio.firebaseio.com",
+  "storageBucket": "dasa-marcio.appspot.com",
+  "serviceAccount": {
+    "type": "service_account",
+    "project_id": "dasa-marcio",
+    "private_key_id": "69e68e117953549ddc9ca29264f6da49b2b08356",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCZCKtg2Ul9xGQ4\nJIUMnnayfKkym1V/1xn2rbfYX/A+H0X7GT1rts9VlpRfJIVo59k8vphFTLsRYaXE\nDWEKYt6BXlLnEF7uj9/ZS0S/VOS4H2uLtMYSTey8ZLm9Y3mKqTkw1KDivvhjnx7p\n3K2JYqwB0ua6/iD/KkBrdLSGjCIsOjEJjLoMISspZJVyWYD2f4CXM+ywEZBReBXo\nbUyw0Rs7Oqql8GLnyKuQhAlz9YPpoArpdulxUfhMkadHs0EQt1bsy4OEiVN/1d7o\nNXn9pytFVM0Wb0pyYyLW0YbuQ1CDsIc1zge6kNmI/5c9iXRs0U7jgC4cuTIXc5DH\n4Ls4WmKVAgMBAAECggEAM7Milr8BnXwGMZNg4ZD9X7JOxPqGSYClVFl+5RoQQyR0\nk26E+glSBUOwT246peTB1sw7DBpujmIzSscMVCJvsjvn/QjiUW0IvlO3332yIWP4\nBMQnMFLkGgdbWpirHIWr/QuwaLoElz9QBcjYVbQgkSMrcNve0OV4yvSr8lKQTuk6\nGWtJIKJVPuXgXtEvSgLb1lhml9YiMTL9AfFr37xJS5EFTjnQwkmJND8qgvNfbZnJ\nIlhdBpLl8WaxJNLtiu/ItRQWcTGmWeexHs6NJnNgC0J6yzLFt3E+juSiTID2Uvq0\nJiulgzmemXv+qpe+3xPeQYQ/aGL68eO3CaDzoXBVpwKBgQDJ56RKDsNieu2GH3kJ\nOLGgwCkj8NLGwTjWWZmPPqFrEKIpPPobovbBb3koGhYzNndUgly50Zv67Sl4rhOG\nFHArhHV47dxd5H1kRCIwse9ZviEjvF5fNe1ZN0N/kDgi1BTcR8yQriojF5GUAjDB\njzOHAJc8wuA9JQ2uYtJcHnnVXwKBgQDCCQnObXK2pacsl468oO/IgSWt5uP5mJrM\nRND0oFkJDhK3kOXHYtsiwk/wsu8Zd0qmzarr3765m2i7ETPk470SKBdgxzPUdNkD\nd02jFx0y3xaXvXNzLJu8XAWMYA7tPLYC7ATy8rgmR8ZQWNfu3xZ46mn5wV+yY4Mk\n53hN5zF4iwKBgQC1qs+QMyhqe+EsRTVKrtBkq4JY7F86prDVbVlWIixrgVPndw4z\nv7X25q5E/vPqsJ8+Uu3L5GZMqQgfpcG7arhi75QjcyJM+UI57XQ2DGQog4Kd/OeN\nE6C0HZ2GMeXQsLL0YUYXCB6x5IsAedgU0Ryz5DwwV8gcPDLLLe/JI0LMUQKBgHzD\niwas4YIH6gKGQUWQxh3KzQuQ1y36ri6CYUmqgRWNcwONq/IU4orrHrPKmmtphRrU\nS/73E5ANGb6PRSr8NOqj1MRp0i3eJFxSLh2cEy5OvBw9uSppmIn5Magda/unefFP\nCa+d2kLjC+VF+zKhR7XgJNxvNrVhv0XPgE+3RNwZAoGAPjkfAR7o1D/RbTFoM3az\nfSDq+usNeocV5Obo3vhw3g+QqfLgpTw+YNxFZsxz0Az4h/J4b5j9zSNpgciLb7r3\neU1l3HSXUON0dm3a8MVKXkDiGhh1XaIFTKIxdfVKAHMguBF8mqq2KO25wynvEbH9\nxnmRR4Ojqm88XVIm6ZpWUng=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-6yahv@dasa-marcio.iam.gserviceaccount.com",
+    "client_id": "111039682242924492690",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6yahv%40dasa-marcio.iam.gserviceaccount.com"
+  }
+}
